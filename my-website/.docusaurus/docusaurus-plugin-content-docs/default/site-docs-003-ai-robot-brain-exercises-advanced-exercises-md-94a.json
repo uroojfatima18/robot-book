@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/exercises/advanced-exercises",
+  "title": "Advanced Tier Exercises",
+  "description": "Test Your Skills in Costmaps, Planners, RL, and Sim-to-Real",
+  "source": "@site/docs/003-ai-robot-brain/exercises/advanced-exercises.md",
+  "sourceDirName": "003-ai-robot-brain/exercises",
+  "slug": "/ai-robot-brain/exercises/advanced-exercises",
+  "permalink": "/docs/ai-robot-brain/exercises/advanced-exercises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/exercises/advanced-exercises.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ROS 2 Refresher (Chapter 1 Reference)",
+    "permalink": "/docs/ai-robot-brain/beginner/refresher-ros2"
+  },
+  "next": {
+    "title": "Beginner Tier Exercises",
+    "permalink": "/docs/ai-robot-brain/exercises/beginner-exercises"
+  }
+}

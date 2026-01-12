@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/exercises/intermediate-exercises",
+  "title": "Intermediate Tier Exercises",
+  "description": "Test Your Skills in Perception, TF2, SLAM, and Navigation",
+  "source": "@site/docs/003-ai-robot-brain/exercises/intermediate-exercises.md",
+  "sourceDirName": "003-ai-robot-brain/exercises",
+  "slug": "/ai-robot-brain/exercises/intermediate-exercises",
+  "permalink": "/docs/ai-robot-brain/exercises/intermediate-exercises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/exercises/intermediate-exercises.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Beginner Tier Exercises",
+    "permalink": "/docs/ai-robot-brain/exercises/beginner-exercises"
+  },
+  "next": {
+    "title": "I1: Camera and Depth Data Processing",
+    "permalink": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing"
+  }
+}

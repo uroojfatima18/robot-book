@@ -1,0 +1,1946 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
+          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "D:\\Urooj\\UroojCode\\robot-book\\my-website\\sidebars.js",
+          "contentPath": "D:\\Urooj\\UroojCode\\robot-book\\my-website\\docs",
+          "contentPathLocalized": "D:\\Urooj\\UroojCode\\robot-book\\my-website\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "docs": [
+            {
+              "id": "ai-robot-brain/advanced/A1-costmap-configuration",
+              "title": "A1: Costmap Configuration",
+              "description": "Customizing Navigation Cost Maps for Your Robot",
+              "source": "@site/docs/003-ai-robot-brain/advanced/A1-costmap-configuration.md",
+              "sourceDirName": "003-ai-robot-brain/advanced",
+              "slug": "/ai-robot-brain/advanced/A1-costmap-configuration",
+              "permalink": "/docs/ai-robot-brain/advanced/A1-costmap-configuration",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/A1-costmap-configuration.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 4: AI-Robot Brain (NVIDIA Isaac)",
+                "permalink": "/docs/ai-robot-brain/"
+              },
+              "next": {
+                "title": "A2: Planners and Behavior Trees",
+                "permalink": "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees"
+              }
+            },
+            {
+              "id": "ai-robot-brain/advanced/A2-planners-behavior-trees",
+              "title": "A2: Planners and Behavior Trees",
+              "description": "Customizing Path Planning and Navigation Behaviors",
+              "source": "@site/docs/003-ai-robot-brain/advanced/A2-planners-behavior-trees.md",
+              "sourceDirName": "003-ai-robot-brain/advanced",
+              "slug": "/ai-robot-brain/advanced/A2-planners-behavior-trees",
+              "permalink": "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/A2-planners-behavior-trees.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "A1: Costmap Configuration",
+                "permalink": "/docs/ai-robot-brain/advanced/A1-costmap-configuration"
+              },
+              "next": {
+                "title": "A3: Reinforcement Learning Fundamentals",
+                "permalink": "/docs/ai-robot-brain/advanced/A3-reinforcement-learning"
+              }
+            },
+            {
+              "id": "ai-robot-brain/advanced/A3-reinforcement-learning",
+              "title": "A3: Reinforcement Learning Fundamentals",
+              "description": "Teaching Robots to Learn from Experience",
+              "source": "@site/docs/003-ai-robot-brain/advanced/A3-reinforcement-learning.md",
+              "sourceDirName": "003-ai-robot-brain/advanced",
+              "slug": "/ai-robot-brain/advanced/A3-reinforcement-learning",
+              "permalink": "/docs/ai-robot-brain/advanced/A3-reinforcement-learning",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/A3-reinforcement-learning.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "A2: Planners and Behavior Trees",
+                "permalink": "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees"
+              },
+              "next": {
+                "title": "A4: Sim-to-Real Transfer",
+                "permalink": "/docs/ai-robot-brain/advanced/A4-sim-to-real"
+              }
+            },
+            {
+              "id": "ai-robot-brain/advanced/A4-sim-to-real",
+              "title": "A4: Sim-to-Real Transfer",
+              "description": "Deploying Learned Policies on Real Robots",
+              "source": "@site/docs/003-ai-robot-brain/advanced/A4-sim-to-real.md",
+              "sourceDirName": "003-ai-robot-brain/advanced",
+              "slug": "/ai-robot-brain/advanced/A4-sim-to-real",
+              "permalink": "/docs/ai-robot-brain/advanced/A4-sim-to-real",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/A4-sim-to-real.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "A3: Reinforcement Learning Fundamentals",
+                "permalink": "/docs/ai-robot-brain/advanced/A3-reinforcement-learning"
+              },
+              "next": {
+                "title": "Pre-trained Policies",
+                "permalink": "/docs/ai-robot-brain/advanced/pretrained/"
+              }
+            },
+            {
+              "id": "ai-robot-brain/advanced/pretrained/README",
+              "title": "Pre-trained Policies",
+              "description": "This directory contains pre-trained ONNX policy files for sim-to-real deployment.",
+              "source": "@site/docs/003-ai-robot-brain/advanced/pretrained/README.md",
+              "sourceDirName": "003-ai-robot-brain/advanced/pretrained",
+              "slug": "/ai-robot-brain/advanced/pretrained/",
+              "permalink": "/docs/ai-robot-brain/advanced/pretrained/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/pretrained/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "A4: Sim-to-Real Transfer",
+                "permalink": "/docs/ai-robot-brain/advanced/A4-sim-to-real"
+              },
+              "next": {
+                "title": "B1: Introduction to Robotic Perception",
+                "permalink": "/docs/ai-robot-brain/beginner/B1-introduction-perception"
+              }
+            },
+            {
+              "id": "ai-robot-brain/beginner/B1-introduction-perception",
+              "title": "B1: Introduction to Robotic Perception",
+              "description": "How Robots See and Understand Their World",
+              "source": "@site/docs/003-ai-robot-brain/beginner/B1-introduction-perception.md",
+              "sourceDirName": "003-ai-robot-brain/beginner",
+              "slug": "/ai-robot-brain/beginner/B1-introduction-perception",
+              "permalink": "/docs/ai-robot-brain/beginner/B1-introduction-perception",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/B1-introduction-perception.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Pre-trained Policies",
+                "permalink": "/docs/ai-robot-brain/advanced/pretrained/"
+              },
+              "next": {
+                "title": "B2: Understanding Sensor Types",
+                "permalink": "/docs/ai-robot-brain/beginner/B2-sensor-types"
+              }
+            },
+            {
+              "id": "ai-robot-brain/beginner/B2-sensor-types",
+              "title": "B2: Understanding Sensor Types",
+              "description": "The Eyes and Ears of Your Robot",
+              "source": "@site/docs/003-ai-robot-brain/beginner/B2-sensor-types.md",
+              "sourceDirName": "003-ai-robot-brain/beginner",
+              "slug": "/ai-robot-brain/beginner/B2-sensor-types",
+              "permalink": "/docs/ai-robot-brain/beginner/B2-sensor-types",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/B2-sensor-types.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "B1: Introduction to Robotic Perception",
+                "permalink": "/docs/ai-robot-brain/beginner/B1-introduction-perception"
+              },
+              "next": {
+                "title": "B3: SLAM and Navigation Concepts",
+                "permalink": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro"
+              }
+            },
+            {
+              "id": "ai-robot-brain/beginner/B3-slam-navigation-intro",
+              "title": "B3: SLAM and Navigation Concepts",
+              "description": "How Robots Map Their World and Find Their Way",
+              "source": "@site/docs/003-ai-robot-brain/beginner/B3-slam-navigation-intro.md",
+              "sourceDirName": "003-ai-robot-brain/beginner",
+              "slug": "/ai-robot-brain/beginner/B3-slam-navigation-intro",
+              "permalink": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/B3-slam-navigation-intro.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "B2: Understanding Sensor Types",
+                "permalink": "/docs/ai-robot-brain/beginner/B2-sensor-types"
+              },
+              "next": {
+                "title": "Color-Blind Safe Diagram Palette",
+                "permalink": "/docs/ai-robot-brain/beginner/diagrams/palette"
+              }
+            },
+            {
+              "id": "ai-robot-brain/beginner/diagrams/palette",
+              "title": "Color-Blind Safe Diagram Palette",
+              "description": "Reference: NFR-002 - All diagrams must use color-blind safe palettes",
+              "source": "@site/docs/003-ai-robot-brain/beginner/diagrams/palette.md",
+              "sourceDirName": "003-ai-robot-brain/beginner/diagrams",
+              "slug": "/ai-robot-brain/beginner/diagrams/palette",
+              "permalink": "/docs/ai-robot-brain/beginner/diagrams/palette",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/diagrams/palette.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "B3: SLAM and Navigation Concepts",
+                "permalink": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro"
+              },
+              "next": {
+                "title": "Gazebo & Digital Twin Refresher (Chapter 2 Reference)",
+                "permalink": "/docs/ai-robot-brain/beginner/refresher-gazebo"
+              }
+            },
+            {
+              "id": "ai-robot-brain/beginner/refresher-gazebo",
+              "title": "Gazebo & Digital Twin Refresher (Chapter 2 Reference)",
+              "description": "Use this refresher when: Lessons reference simulation concepts from Chapter 2",
+              "source": "@site/docs/003-ai-robot-brain/beginner/refresher-gazebo.md",
+              "sourceDirName": "003-ai-robot-brain/beginner",
+              "slug": "/ai-robot-brain/beginner/refresher-gazebo",
+              "permalink": "/docs/ai-robot-brain/beginner/refresher-gazebo",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/refresher-gazebo.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Color-Blind Safe Diagram Palette",
+                "permalink": "/docs/ai-robot-brain/beginner/diagrams/palette"
+              },
+              "next": {
+                "title": "ROS 2 Refresher (Chapter 1 Reference)",
+                "permalink": "/docs/ai-robot-brain/beginner/refresher-ros2"
+              }
+            },
+            {
+              "id": "ai-robot-brain/beginner/refresher-ros2",
+              "title": "ROS 2 Refresher (Chapter 1 Reference)",
+              "description": "Use this refresher when: Lessons reference ROS 2 concepts from Chapter 1",
+              "source": "@site/docs/003-ai-robot-brain/beginner/refresher-ros2.md",
+              "sourceDirName": "003-ai-robot-brain/beginner",
+              "slug": "/ai-robot-brain/beginner/refresher-ros2",
+              "permalink": "/docs/ai-robot-brain/beginner/refresher-ros2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/refresher-ros2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Gazebo & Digital Twin Refresher (Chapter 2 Reference)",
+                "permalink": "/docs/ai-robot-brain/beginner/refresher-gazebo"
+              },
+              "next": {
+                "title": "Advanced Tier Exercises",
+                "permalink": "/docs/ai-robot-brain/exercises/advanced-exercises"
+              }
+            },
+            {
+              "id": "ai-robot-brain/exercises/advanced-exercises",
+              "title": "Advanced Tier Exercises",
+              "description": "Test Your Skills in Costmaps, Planners, RL, and Sim-to-Real",
+              "source": "@site/docs/003-ai-robot-brain/exercises/advanced-exercises.md",
+              "sourceDirName": "003-ai-robot-brain/exercises",
+              "slug": "/ai-robot-brain/exercises/advanced-exercises",
+              "permalink": "/docs/ai-robot-brain/exercises/advanced-exercises",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/exercises/advanced-exercises.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ROS 2 Refresher (Chapter 1 Reference)",
+                "permalink": "/docs/ai-robot-brain/beginner/refresher-ros2"
+              },
+              "next": {
+                "title": "Beginner Tier Exercises",
+                "permalink": "/docs/ai-robot-brain/exercises/beginner-exercises"
+              }
+            },
+            {
+              "id": "ai-robot-brain/exercises/beginner-exercises",
+              "title": "Beginner Tier Exercises",
+              "description": "Test Your Understanding of Perception, Sensors, and Navigation Concepts",
+              "source": "@site/docs/003-ai-robot-brain/exercises/beginner-exercises.md",
+              "sourceDirName": "003-ai-robot-brain/exercises",
+              "slug": "/ai-robot-brain/exercises/beginner-exercises",
+              "permalink": "/docs/ai-robot-brain/exercises/beginner-exercises",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/exercises/beginner-exercises.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Advanced Tier Exercises",
+                "permalink": "/docs/ai-robot-brain/exercises/advanced-exercises"
+              },
+              "next": {
+                "title": "Intermediate Tier Exercises",
+                "permalink": "/docs/ai-robot-brain/exercises/intermediate-exercises"
+              }
+            },
+            {
+              "id": "ai-robot-brain/exercises/intermediate-exercises",
+              "title": "Intermediate Tier Exercises",
+              "description": "Test Your Skills in Perception, TF2, SLAM, and Navigation",
+              "source": "@site/docs/003-ai-robot-brain/exercises/intermediate-exercises.md",
+              "sourceDirName": "003-ai-robot-brain/exercises",
+              "slug": "/ai-robot-brain/exercises/intermediate-exercises",
+              "permalink": "/docs/ai-robot-brain/exercises/intermediate-exercises",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/exercises/intermediate-exercises.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Beginner Tier Exercises",
+                "permalink": "/docs/ai-robot-brain/exercises/beginner-exercises"
+              },
+              "next": {
+                "title": "I1: Camera and Depth Data Processing",
+                "permalink": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing"
+              }
+            },
+            {
+              "id": "ai-robot-brain/intermediate/I1-camera-depth-processing",
+              "title": "I1: Camera and Depth Data Processing",
+              "description": "Building Your First Perception Pipeline in ROS 2",
+              "source": "@site/docs/003-ai-robot-brain/intermediate/I1-camera-depth-processing.md",
+              "sourceDirName": "003-ai-robot-brain/intermediate",
+              "slug": "/ai-robot-brain/intermediate/I1-camera-depth-processing",
+              "permalink": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/intermediate/I1-camera-depth-processing.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intermediate Tier Exercises",
+                "permalink": "/docs/ai-robot-brain/exercises/intermediate-exercises"
+              },
+              "next": {
+                "title": "I2: TF2 Coordinate Frames",
+                "permalink": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames"
+              }
+            },
+            {
+              "id": "ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+              "title": "I2: TF2 Coordinate Frames",
+              "description": "Managing Coordinate Transforms for Multi-Sensor Robots",
+              "source": "@site/docs/003-ai-robot-brain/intermediate/I2-tf2-coordinate-frames.md",
+              "sourceDirName": "003-ai-robot-brain/intermediate",
+              "slug": "/ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+              "permalink": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/intermediate/I2-tf2-coordinate-frames.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "I1: Camera and Depth Data Processing",
+                "permalink": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing"
+              },
+              "next": {
+                "title": "I3: SLAM Toolbox Configuration",
+                "permalink": "/docs/ai-robot-brain/intermediate/I3-slam-toolbox"
+              }
+            },
+            {
+              "id": "ai-robot-brain/intermediate/I3-slam-toolbox",
+              "title": "I3: SLAM Toolbox Configuration",
+              "description": "Building Maps with SLAM in ROS 2",
+              "source": "@site/docs/003-ai-robot-brain/intermediate/I3-slam-toolbox.md",
+              "sourceDirName": "003-ai-robot-brain/intermediate",
+              "slug": "/ai-robot-brain/intermediate/I3-slam-toolbox",
+              "permalink": "/docs/ai-robot-brain/intermediate/I3-slam-toolbox",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/intermediate/I3-slam-toolbox.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "I2: TF2 Coordinate Frames",
+                "permalink": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames"
+              },
+              "next": {
+                "title": "I4: Nav2 Basics",
+                "permalink": "/docs/ai-robot-brain/intermediate/I4-nav2-basics"
+              }
+            },
+            {
+              "id": "ai-robot-brain/intermediate/I4-nav2-basics",
+              "title": "I4: Nav2 Basics",
+              "description": "Autonomous Navigation with the ROS 2 Navigation Stack",
+              "source": "@site/docs/003-ai-robot-brain/intermediate/I4-nav2-basics.md",
+              "sourceDirName": "003-ai-robot-brain/intermediate",
+              "slug": "/ai-robot-brain/intermediate/I4-nav2-basics",
+              "permalink": "/docs/ai-robot-brain/intermediate/I4-nav2-basics",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/intermediate/I4-nav2-basics.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "I3: SLAM Toolbox Configuration",
+                "permalink": "/docs/ai-robot-brain/intermediate/I3-slam-toolbox"
+              },
+              "next": {
+                "title": "Chapter 4: Workflow Orchestration",
+                "permalink": "/docs/workflow-orchestration/"
+              }
+            },
+            {
+              "id": "ai-robot-brain/README",
+              "title": "Chapter 4: AI-Robot Brain (NVIDIA Isaac)",
+              "description": "Teaching Robots to See, Navigate, and Learn",
+              "source": "@site/docs/003-ai-robot-brain/README.md",
+              "sourceDirName": "003-ai-robot-brain",
+              "slug": "/ai-robot-brain/",
+              "permalink": "/docs/ai-robot-brain/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 2: Digital Twin & Simulation - Introduction",
+                "permalink": "/docs/digital-twin/introduction"
+              },
+              "next": {
+                "title": "A1: Costmap Configuration",
+                "permalink": "/docs/ai-robot-brain/advanced/A1-costmap-configuration"
+              }
+            },
+            {
+              "id": "digital-twin/advanced/A1-data-synchronization",
+              "title": "A1: Digital Twin Architecture",
+              "description": "Design data synchronization patterns for bidirectional robot-simulation communication.",
+              "source": "@site/docs/02-digital-twin/advanced/A1-data-synchronization.md",
+              "sourceDirName": "02-digital-twin/advanced",
+              "slug": "/digital-twin/advanced/A1-data-synchronization",
+              "permalink": "/docs/digital-twin/advanced/A1-data-synchronization",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/advanced/A1-data-synchronization.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 2: Digital Twin & Simulation",
+                "permalink": "/docs/digital-twin/"
+              },
+              "next": {
+                "title": "A2: Building the Bridge Node",
+                "permalink": "/docs/digital-twin/advanced/A2-building-bridge"
+              }
+            },
+            {
+              "id": "digital-twin/advanced/A2-building-bridge",
+              "title": "A2: Building the Bridge Node",
+              "description": "Implement a bidirectional synchronization bridge between physical and simulated robots.",
+              "source": "@site/docs/02-digital-twin/advanced/A2-building-bridge.md",
+              "sourceDirName": "02-digital-twin/advanced",
+              "slug": "/digital-twin/advanced/A2-building-bridge",
+              "permalink": "/docs/digital-twin/advanced/A2-building-bridge",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/advanced/A2-building-bridge.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "A1: Digital Twin Architecture",
+                "permalink": "/docs/digital-twin/advanced/A1-data-synchronization"
+              },
+              "next": {
+                "title": "AI Training Architecture Diagram",
+                "permalink": "/docs/digital-twin/advanced/assets/diagrams/ai-training-architecture"
+              }
+            },
+            {
+              "id": "digital-twin/advanced/assets/diagrams/ai-training-architecture",
+              "title": "AI Training Architecture Diagram",
+              "description": "This document provides the architectural diagram for integrating digital twin simulation with AI/ML training pipelines.",
+              "source": "@site/docs/02-digital-twin/advanced/assets/diagrams/ai-training-architecture.md",
+              "sourceDirName": "02-digital-twin/advanced/assets/diagrams",
+              "slug": "/digital-twin/advanced/assets/diagrams/ai-training-architecture",
+              "permalink": "/docs/digital-twin/advanced/assets/diagrams/ai-training-architecture",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/advanced/assets/diagrams/ai-training-architecture.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "A2: Building the Bridge Node",
+                "permalink": "/docs/digital-twin/advanced/A2-building-bridge"
+              },
+              "next": {
+                "title": "B1: What is a Digital Twin?",
+                "permalink": "/docs/digital-twin/beginner/B1-digital-twin-concepts"
+              }
+            },
+            {
+              "id": "digital-twin/beginner/B1-digital-twin-concepts",
+              "title": "B1: What is a Digital Twin?",
+              "description": "Understanding the virtual-physical synchronization paradigm for humanoid robotics.",
+              "source": "@site/docs/02-digital-twin/beginner/B1-digital-twin-concepts.md",
+              "sourceDirName": "02-digital-twin/beginner",
+              "slug": "/digital-twin/beginner/B1-digital-twin-concepts",
+              "permalink": "/docs/digital-twin/beginner/B1-digital-twin-concepts",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/beginner/B1-digital-twin-concepts.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "AI Training Architecture Diagram",
+                "permalink": "/docs/digital-twin/advanced/assets/diagrams/ai-training-architecture"
+              },
+              "next": {
+                "title": "B2: Running Your First Simulation",
+                "permalink": "/docs/digital-twin/beginner/B2-first-simulation"
+              }
+            },
+            {
+              "id": "digital-twin/beginner/B2-first-simulation",
+              "title": "B2: Running Your First Simulation",
+              "description": "Launch Gazebo and interact with a pre-built humanoid world.",
+              "source": "@site/docs/02-digital-twin/beginner/B2-first-simulation.md",
+              "sourceDirName": "02-digital-twin/beginner",
+              "slug": "/digital-twin/beginner/B2-first-simulation",
+              "permalink": "/docs/digital-twin/beginner/B2-first-simulation",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/beginner/B2-first-simulation.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "B1: What is a Digital Twin?",
+                "permalink": "/docs/digital-twin/beginner/B1-digital-twin-concepts"
+              },
+              "next": {
+                "title": "Exercise 01: Launch World",
+                "permalink": "/docs/digital-twin/exercises/exercise-01-launch-world"
+              }
+            },
+            {
+              "id": "digital-twin/exercises/exercise-01-launch-world",
+              "title": "Exercise 01: Launch World",
+              "description": "Practice launching Gazebo and exploring a simulation world.",
+              "source": "@site/docs/02-digital-twin/exercises/exercise-01-launch-world.md",
+              "sourceDirName": "02-digital-twin/exercises",
+              "slug": "/digital-twin/exercises/exercise-01-launch-world",
+              "permalink": "/docs/digital-twin/exercises/exercise-01-launch-world",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/exercises/exercise-01-launch-world.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "B2: Running Your First Simulation",
+                "permalink": "/docs/digital-twin/beginner/B2-first-simulation"
+              },
+              "next": {
+                "title": "Exercise 02: Create World",
+                "permalink": "/docs/digital-twin/exercises/exercise-02-create-world"
+              }
+            },
+            {
+              "id": "digital-twin/exercises/exercise-02-create-world",
+              "title": "Exercise 02: Create World",
+              "description": "Build a custom simulation world from scratch.",
+              "source": "@site/docs/02-digital-twin/exercises/exercise-02-create-world.md",
+              "sourceDirName": "02-digital-twin/exercises",
+              "slug": "/digital-twin/exercises/exercise-02-create-world",
+              "permalink": "/docs/digital-twin/exercises/exercise-02-create-world",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/exercises/exercise-02-create-world.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Exercise 01: Launch World",
+                "permalink": "/docs/digital-twin/exercises/exercise-01-launch-world"
+              },
+              "next": {
+                "title": "Exercise 03: Build Bridge",
+                "permalink": "/docs/digital-twin/exercises/exercise-03-build-bridge"
+              }
+            },
+            {
+              "id": "digital-twin/exercises/exercise-03-build-bridge",
+              "title": "Exercise 03: Build Bridge",
+              "description": "Implement and test a digital twin bridge node.",
+              "source": "@site/docs/02-digital-twin/exercises/exercise-03-build-bridge.md",
+              "sourceDirName": "02-digital-twin/exercises",
+              "slug": "/digital-twin/exercises/exercise-03-build-bridge",
+              "permalink": "/docs/digital-twin/exercises/exercise-03-build-bridge",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/exercises/exercise-03-build-bridge.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Exercise 02: Create World",
+                "permalink": "/docs/digital-twin/exercises/exercise-02-create-world"
+              },
+              "next": {
+                "title": "Chapter 2 Glossary: Digital Twin & Simulation",
+                "permalink": "/docs/digital-twin/glossary"
+              }
+            },
+            {
+              "id": "digital-twin/glossary",
+              "title": "Chapter 2 Glossary: Digital Twin & Simulation",
+              "description": "Quick reference for key terms used throughout the Digital Twin chapter.",
+              "source": "@site/docs/02-digital-twin/glossary.md",
+              "sourceDirName": "02-digital-twin",
+              "slug": "/digital-twin/glossary",
+              "permalink": "/docs/digital-twin/glossary",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/glossary.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Exercise 03: Build Bridge",
+                "permalink": "/docs/digital-twin/exercises/exercise-03-build-bridge"
+              },
+              "next": {
+                "title": "I1: Building Simulation Worlds",
+                "permalink": "/docs/digital-twin/intermediate/I1-building-worlds"
+              }
+            },
+            {
+              "id": "digital-twin/intermediate/I1-building-worlds",
+              "title": "I1: Building Simulation Worlds",
+              "description": "Create custom Gazebo world files with physics, lighting, and terrain.",
+              "source": "@site/docs/02-digital-twin/intermediate/I1-building-worlds.md",
+              "sourceDirName": "02-digital-twin/intermediate",
+              "slug": "/digital-twin/intermediate/I1-building-worlds",
+              "permalink": "/docs/digital-twin/intermediate/I1-building-worlds",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/intermediate/I1-building-worlds.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 2 Glossary: Digital Twin & Simulation",
+                "permalink": "/docs/digital-twin/glossary"
+              },
+              "next": {
+                "title": "I2: Spawning and Controlling Models",
+                "permalink": "/docs/digital-twin/intermediate/I2-spawning-models"
+              }
+            },
+            {
+              "id": "digital-twin/intermediate/I2-spawning-models",
+              "title": "I2: Spawning and Controlling Models",
+              "description": "Spawn URDF humanoid models and control joints programmatically.",
+              "source": "@site/docs/02-digital-twin/intermediate/I2-spawning-models.md",
+              "sourceDirName": "02-digital-twin/intermediate",
+              "slug": "/digital-twin/intermediate/I2-spawning-models",
+              "permalink": "/docs/digital-twin/intermediate/I2-spawning-models",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/intermediate/I2-spawning-models.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "I1: Building Simulation Worlds",
+                "permalink": "/docs/digital-twin/intermediate/I1-building-worlds"
+              },
+              "next": {
+                "title": "Chapter 2: Digital Twin & Simulation - Introduction",
+                "permalink": "/docs/digital-twin/introduction"
+              }
+            },
+            {
+              "id": "digital-twin/introduction",
+              "title": "Chapter 2: Digital Twin & Simulation - Introduction",
+              "description": "From ROS 2 commands to virtual robots: Building the simulation layer for safe, rapid, and scalable robot development.",
+              "source": "@site/docs/02-digital-twin/introduction.md",
+              "sourceDirName": "02-digital-twin",
+              "slug": "/digital-twin/introduction",
+              "permalink": "/docs/digital-twin/introduction",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/introduction.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "I2: Spawning and Controlling Models",
+                "permalink": "/docs/digital-twin/intermediate/I2-spawning-models"
+              },
+              "next": {
+                "title": "Chapter 4: AI-Robot Brain (NVIDIA Isaac)",
+                "permalink": "/docs/ai-robot-brain/"
+              }
+            },
+            {
+              "id": "digital-twin/README",
+              "title": "Chapter 2: Digital Twin & Simulation",
+              "description": "Create a virtual robot replica that mirrors and controls your physical humanoid.",
+              "source": "@site/docs/02-digital-twin/README.md",
+              "sourceDirName": "02-digital-twin",
+              "slug": "/digital-twin/",
+              "permalink": "/docs/digital-twin/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter Summary & Reflection",
+                "permalink": "/docs/ros2-nervous-system/chapter_1_summary"
+              },
+              "next": {
+                "title": "A1: Digital Twin Architecture",
+                "permalink": "/docs/digital-twin/advanced/A1-data-synchronization"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/advanced/a_lesson1_urdf_humanoid",
+              "title": "URDF & Humanoid Robot Description",
+              "description": "Learning Objectives",
+              "source": "@site/docs/01-ros2-nervous-system/advanced/01-urdf-humanoid.md",
+              "sourceDirName": "01-ros2-nervous-system/advanced",
+              "slug": "/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid",
+              "permalink": "/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/advanced/01-urdf-humanoid.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "id": "a_lesson1_urdf_humanoid",
+                "title": "URDF & Humanoid Robot Description",
+                "tier": "advanced",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "2-3 hours",
+                "prerequisites": [
+                  "i_lesson2_python_ros"
+                ]
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Advanced Tier: Complex ROS 2 Architectures",
+                "permalink": "/docs/ros2-nervous-system/advanced/"
+              },
+              "next": {
+                "title": "Advanced ROS 2 Patterns & AI Integration",
+                "permalink": "/docs/ros2-nervous-system/advanced/a_lesson2_advanced_patterns"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/advanced/a_lesson2_advanced_patterns",
+              "title": "Advanced ROS 2 Patterns & AI Integration",
+              "description": "Learning Objectives",
+              "source": "@site/docs/01-ros2-nervous-system/advanced/02-advanced-patterns.md",
+              "sourceDirName": "01-ros2-nervous-system/advanced",
+              "slug": "/ros2-nervous-system/advanced/a_lesson2_advanced_patterns",
+              "permalink": "/docs/ros2-nervous-system/advanced/a_lesson2_advanced_patterns",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/advanced/02-advanced-patterns.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "id": "a_lesson2_advanced_patterns",
+                "title": "Advanced ROS 2 Patterns & AI Integration",
+                "tier": "advanced",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "2-3 hours",
+                "prerequisites": [
+                  "a_lesson1_urdf_humanoid"
+                ]
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "URDF & Humanoid Robot Description",
+                "permalink": "/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid"
+              },
+              "next": {
+                "title": "Advanced Tier Exercises",
+                "permalink": "/docs/ros2-nervous-system/advanced/exercises/advanced-exercises"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/advanced/chapter_1_advanced_tier",
+              "title": "Advanced Tier: Complex ROS 2 Architectures",
+              "description": "Welcome to the Advanced Tier",
+              "source": "@site/docs/01-ros2-nervous-system/advanced/README.md",
+              "sourceDirName": "01-ros2-nervous-system/advanced",
+              "slug": "/ros2-nervous-system/advanced/",
+              "permalink": "/docs/ros2-nervous-system/advanced/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/advanced/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "chapter_1_advanced_tier",
+                "title": "Advanced Tier: Complex ROS 2 Architectures",
+                "tier": "advanced",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "2-4 hours"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "CHAPTER 1: The Robotic Nervous System (ROS 2)",
+                "permalink": "/docs/ros2-nervous-system/"
+              },
+              "next": {
+                "title": "URDF & Humanoid Robot Description",
+                "permalink": "/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/advanced/exercises/advanced-exercises",
+              "title": "Advanced Tier Exercises",
+              "description": "Chapter: Chapter 1 - The Robotic Nervous System (ROS 2)",
+              "source": "@site/docs/01-ros2-nervous-system/advanced/exercises/advanced-exercises.md",
+              "sourceDirName": "01-ros2-nervous-system/advanced/exercises",
+              "slug": "/ros2-nervous-system/advanced/exercises/advanced-exercises",
+              "permalink": "/docs/ros2-nervous-system/advanced/exercises/advanced-exercises",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/advanced/exercises/advanced-exercises.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Advanced ROS 2 Patterns & AI Integration",
+                "permalink": "/docs/ros2-nervous-system/advanced/a_lesson2_advanced_patterns"
+              },
+              "next": {
+                "title": "AI-Assisted Learning Prompts: Advanced Tier",
+                "permalink": "/docs/ros2-nervous-system/ai-prompts/advanced-prompts"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/ai-prompts/advanced-prompts",
+              "title": "AI-Assisted Learning Prompts: Advanced Tier",
+              "description": "Chapter: Chapter 1 - The Robotic Nervous System (ROS 2)",
+              "source": "@site/docs/01-ros2-nervous-system/ai-prompts/advanced-prompts.md",
+              "sourceDirName": "01-ros2-nervous-system/ai-prompts",
+              "slug": "/ros2-nervous-system/ai-prompts/advanced-prompts",
+              "permalink": "/docs/ros2-nervous-system/ai-prompts/advanced-prompts",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/ai-prompts/advanced-prompts.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Advanced Tier Exercises",
+                "permalink": "/docs/ros2-nervous-system/advanced/exercises/advanced-exercises"
+              },
+              "next": {
+                "title": "Beginner Tier AI Learning Prompts",
+                "permalink": "/docs/ros2-nervous-system/ai-prompts/beginner_ai_prompts"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/ai-prompts/beginner_ai_prompts",
+              "title": "Beginner Tier AI Learning Prompts",
+              "description": "This document provides curated prompts for AI assistants (Claude, ChatGPT, etc.) to help reinforce learning from the Beginner tier lessons. These prompts are designed to deepen understanding through explanation, debugging help, and exploration.",
+              "source": "@site/docs/01-ros2-nervous-system/ai-prompts/beginner-prompts.md",
+              "sourceDirName": "01-ros2-nervous-system/ai-prompts",
+              "slug": "/ros2-nervous-system/ai-prompts/beginner_ai_prompts",
+              "permalink": "/docs/ros2-nervous-system/ai-prompts/beginner_ai_prompts",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/ai-prompts/beginner-prompts.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "beginner_ai_prompts",
+                "title": "Beginner Tier AI Learning Prompts",
+                "tier": "beginner",
+                "chapter": "chapter_1_ros2"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "AI-Assisted Learning Prompts: Advanced Tier",
+                "permalink": "/docs/ros2-nervous-system/ai-prompts/advanced-prompts"
+              },
+              "next": {
+                "title": "Intermediate Tier AI Learning Prompts",
+                "permalink": "/docs/ros2-nervous-system/ai-prompts/intermediate_ai_prompts"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/ai-prompts/intermediate_ai_prompts",
+              "title": "Intermediate Tier AI Learning Prompts",
+              "description": "This document provides curated prompts for AI assistants to help reinforce learning from the Intermediate tier lessons on creating ROS 2 Python nodes.",
+              "source": "@site/docs/01-ros2-nervous-system/ai-prompts/intermediate-prompts.md",
+              "sourceDirName": "01-ros2-nervous-system/ai-prompts",
+              "slug": "/ros2-nervous-system/ai-prompts/intermediate_ai_prompts",
+              "permalink": "/docs/ros2-nervous-system/ai-prompts/intermediate_ai_prompts",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/ai-prompts/intermediate-prompts.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "intermediate_ai_prompts",
+                "title": "Intermediate Tier AI Learning Prompts",
+                "tier": "intermediate",
+                "chapter": "chapter_1_ros2"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Beginner Tier AI Learning Prompts",
+                "permalink": "/docs/ros2-nervous-system/ai-prompts/beginner_ai_prompts"
+              },
+              "next": {
+                "title": "Beginner Tier: ROS 2 Fundamentals",
+                "permalink": "/docs/ros2-nervous-system/beginner/"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/beginner/b_lesson1_intro",
+              "title": "Introduction to ROS 2",
+              "description": "Learning Objectives",
+              "source": "@site/docs/01-ros2-nervous-system/beginner/01-intro-to-ros2.md",
+              "sourceDirName": "01-ros2-nervous-system/beginner",
+              "slug": "/ros2-nervous-system/beginner/b_lesson1_intro",
+              "permalink": "/docs/ros2-nervous-system/beginner/b_lesson1_intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/beginner/01-intro-to-ros2.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "id": "b_lesson1_intro",
+                "title": "Introduction to ROS 2",
+                "tier": "beginner",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "1-2 hours",
+                "prerequisites": []
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Beginner Tier: ROS 2 Fundamentals",
+                "permalink": "/docs/ros2-nervous-system/beginner/"
+              },
+              "next": {
+                "title": "Basic Sensors Overview",
+                "permalink": "/docs/ros2-nervous-system/beginner/b_lesson2_sensors"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/beginner/b_lesson2_sensors",
+              "title": "Basic Sensors Overview",
+              "description": "Learning Objectives",
+              "source": "@site/docs/01-ros2-nervous-system/beginner/02-sensors-overview.md",
+              "sourceDirName": "01-ros2-nervous-system/beginner",
+              "slug": "/ros2-nervous-system/beginner/b_lesson2_sensors",
+              "permalink": "/docs/ros2-nervous-system/beginner/b_lesson2_sensors",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/beginner/02-sensors-overview.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "id": "b_lesson2_sensors",
+                "title": "Basic Sensors Overview",
+                "tier": "beginner",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "1 hour",
+                "prerequisites": [
+                  "b_lesson1_intro"
+                ]
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Introduction to ROS 2",
+                "permalink": "/docs/ros2-nervous-system/beginner/b_lesson1_intro"
+              },
+              "next": {
+                "title": "Beginner Tier Exercises",
+                "permalink": "/docs/ros2-nervous-system/beginner/exercises/beginner_exercises"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/beginner/chapter_1_beginner_tier",
+              "title": "Beginner Tier: ROS 2 Fundamentals",
+              "description": "Welcome to the Beginner Tier",
+              "source": "@site/docs/01-ros2-nervous-system/beginner/README.md",
+              "sourceDirName": "01-ros2-nervous-system/beginner",
+              "slug": "/ros2-nervous-system/beginner/",
+              "permalink": "/docs/ros2-nervous-system/beginner/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/beginner/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "chapter_1_beginner_tier",
+                "title": "Beginner Tier: ROS 2 Fundamentals",
+                "tier": "beginner",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "2-4 hours"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intermediate Tier AI Learning Prompts",
+                "permalink": "/docs/ros2-nervous-system/ai-prompts/intermediate_ai_prompts"
+              },
+              "next": {
+                "title": "Introduction to ROS 2",
+                "permalink": "/docs/ros2-nervous-system/beginner/b_lesson1_intro"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/beginner/exercises/beginner_exercises",
+              "title": "Beginner Tier Exercises",
+              "description": "This document consolidates all exercises from the Beginner tier lessons for easy reference and self-assessment.",
+              "source": "@site/docs/01-ros2-nervous-system/beginner/exercises/beginner-exercises.md",
+              "sourceDirName": "01-ros2-nervous-system/beginner/exercises",
+              "slug": "/ros2-nervous-system/beginner/exercises/beginner_exercises",
+              "permalink": "/docs/ros2-nervous-system/beginner/exercises/beginner_exercises",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/beginner/exercises/beginner-exercises.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "beginner_exercises",
+                "title": "Beginner Tier Exercises",
+                "tier": "beginner",
+                "chapter": "chapter_1_ros2"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Basic Sensors Overview",
+                "permalink": "/docs/ros2-nervous-system/beginner/b_lesson2_sensors"
+              },
+              "next": {
+                "title": "ROS 2 Glossary",
+                "permalink": "/docs/ros2-nervous-system/chapter_1_glossary"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/chapter_1_glossary",
+              "title": "ROS 2 Glossary",
+              "description": "A consolidated reference of key terms used throughout Chapter 1. Refer back to this glossary whenever you encounter unfamiliar terminology.",
+              "source": "@site/docs/01-ros2-nervous-system/glossary.md",
+              "sourceDirName": "01-ros2-nervous-system",
+              "slug": "/ros2-nervous-system/chapter_1_glossary",
+              "permalink": "/docs/ros2-nervous-system/chapter_1_glossary",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/glossary.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "chapter_1_glossary",
+                "title": "ROS 2 Glossary",
+                "chapter": "chapter_1_ros2"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Beginner Tier Exercises",
+                "permalink": "/docs/ros2-nervous-system/beginner/exercises/beginner_exercises"
+              },
+              "next": {
+                "title": "Intermediate Tier: Hands-On ROS 2 Programming",
+                "permalink": "/docs/ros2-nervous-system/intermediate/"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/chapter_1_introduction",
+              "title": "Introduction: The Robotic Nervous System",
+              "description": "The Nervous System Metaphor",
+              "source": "@site/docs/01-ros2-nervous-system/introduction.md",
+              "sourceDirName": "01-ros2-nervous-system",
+              "slug": "/ros2-nervous-system/chapter_1_introduction",
+              "permalink": "/docs/ros2-nervous-system/chapter_1_introduction",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/introduction.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "chapter_1_introduction",
+                "title": "Introduction: The Robotic Nervous System",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "15 minutes"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intermediate Tier Exercises",
+                "permalink": "/docs/ros2-nervous-system/intermediate/exercises/intermediate_exercises"
+              },
+              "next": {
+                "title": "Chapter Summary & Reflection",
+                "permalink": "/docs/ros2-nervous-system/chapter_1_summary"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/chapter_1_summary",
+              "title": "Chapter Summary & Reflection",
+              "description": "Overview",
+              "source": "@site/docs/01-ros2-nervous-system/summary.md",
+              "sourceDirName": "01-ros2-nervous-system",
+              "slug": "/ros2-nervous-system/chapter_1_summary",
+              "permalink": "/docs/ros2-nervous-system/chapter_1_summary",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/summary.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "chapter_1_summary",
+                "title": "Chapter Summary & Reflection",
+                "chapter": "chapter_1_ros2"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Introduction: The Robotic Nervous System",
+                "permalink": "/docs/ros2-nervous-system/chapter_1_introduction"
+              },
+              "next": {
+                "title": "Chapter 2: Digital Twin & Simulation",
+                "permalink": "/docs/digital-twin/"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/intermediate/chapter_1_intermediate_tier",
+              "title": "Intermediate Tier: Hands-On ROS 2 Programming",
+              "description": "Welcome to the Intermediate Tier",
+              "source": "@site/docs/01-ros2-nervous-system/intermediate/README.md",
+              "sourceDirName": "01-ros2-nervous-system/intermediate",
+              "slug": "/ros2-nervous-system/intermediate/",
+              "permalink": "/docs/ros2-nervous-system/intermediate/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/intermediate/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "chapter_1_intermediate_tier",
+                "title": "Intermediate Tier: Hands-On ROS 2 Programming",
+                "tier": "intermediate",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "2-4 hours"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ROS 2 Glossary",
+                "permalink": "/docs/ros2-nervous-system/chapter_1_glossary"
+              },
+              "next": {
+                "title": "Nodes, Topics, Services, and Actions",
+                "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson1_nodes_topics"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/intermediate/exercises/intermediate_exercises",
+              "title": "Intermediate Tier Exercises",
+              "description": "This document consolidates all exercises from the Intermediate tier lessons for easy reference and self-assessment.",
+              "source": "@site/docs/01-ros2-nervous-system/intermediate/exercises/intermediate-exercises.md",
+              "sourceDirName": "01-ros2-nervous-system/intermediate/exercises",
+              "slug": "/ros2-nervous-system/intermediate/exercises/intermediate_exercises",
+              "permalink": "/docs/ros2-nervous-system/intermediate/exercises/intermediate_exercises",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/intermediate/exercises/intermediate-exercises.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "intermediate_exercises",
+                "title": "Intermediate Tier Exercises",
+                "tier": "intermediate",
+                "chapter": "chapter_1_ros2"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Python ROS Bridge (rclpy)",
+                "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson2_python_ros"
+              },
+              "next": {
+                "title": "Introduction: The Robotic Nervous System",
+                "permalink": "/docs/ros2-nervous-system/chapter_1_introduction"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/intermediate/i_lesson1_nodes_topics",
+              "title": "Nodes, Topics, Services, and Actions",
+              "description": "Learning Objectives",
+              "source": "@site/docs/01-ros2-nervous-system/intermediate/01-nodes-topics.md",
+              "sourceDirName": "01-ros2-nervous-system/intermediate",
+              "slug": "/ros2-nervous-system/intermediate/i_lesson1_nodes_topics",
+              "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson1_nodes_topics",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/intermediate/01-nodes-topics.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "id": "i_lesson1_nodes_topics",
+                "title": "Nodes, Topics, Services, and Actions",
+                "tier": "intermediate",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "2-3 hours",
+                "prerequisites": [
+                  "b_lesson1_intro",
+                  "b_lesson2_sensors"
+                ]
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Intermediate Tier: Hands-On ROS 2 Programming",
+                "permalink": "/docs/ros2-nervous-system/intermediate/"
+              },
+              "next": {
+                "title": "Python ROS Bridge (rclpy)",
+                "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson2_python_ros"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/intermediate/i_lesson2_python_ros",
+              "title": "Python ROS Bridge (rclpy)",
+              "description": "Learning Objectives",
+              "source": "@site/docs/01-ros2-nervous-system/intermediate/02-python-ros-bridge.md",
+              "sourceDirName": "01-ros2-nervous-system/intermediate",
+              "slug": "/ros2-nervous-system/intermediate/i_lesson2_python_ros",
+              "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson2_python_ros",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/intermediate/02-python-ros-bridge.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "id": "i_lesson2_python_ros",
+                "title": "Python ROS Bridge (rclpy)",
+                "tier": "intermediate",
+                "chapter": "chapter_1_ros2",
+                "estimated_time": "2-3 hours",
+                "prerequisites": [
+                  "i_lesson1_nodes_topics"
+                ]
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Nodes, Topics, Services, and Actions",
+                "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson1_nodes_topics"
+              },
+              "next": {
+                "title": "Intermediate Tier Exercises",
+                "permalink": "/docs/ros2-nervous-system/intermediate/exercises/intermediate_exercises"
+              }
+            },
+            {
+              "id": "ros2-nervous-system/README",
+              "title": "CHAPTER 1: The Robotic Nervous System (ROS 2)",
+              "description": "---",
+              "source": "@site/docs/01-ros2-nervous-system/README.md",
+              "sourceDirName": "01-ros2-nervous-system",
+              "slug": "/ros2-nervous-system/",
+              "permalink": "/docs/ros2-nervous-system/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Advanced Tier: Complex ROS 2 Architectures",
+                "permalink": "/docs/ros2-nervous-system/advanced/"
+              }
+            },
+            {
+              "id": "workflow-orchestration/beginner/b1_pipelines_flows_triggers",
+              "title": "Pipelines, Flows, and Triggers",
+              "description": "Learning Objectives",
+              "source": "@site/docs/04-workflow-orchestration/beginner/B1-pipelines-flows-triggers.md",
+              "sourceDirName": "04-workflow-orchestration/beginner",
+              "slug": "/workflow-orchestration/beginner/b1_pipelines_flows_triggers",
+              "permalink": "/docs/workflow-orchestration/beginner/b1_pipelines_flows_triggers",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/04-workflow-orchestration/beginner/B1-pipelines-flows-triggers.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "b1_pipelines_flows_triggers",
+                "title": "Pipelines, Flows, and Triggers",
+                "tier": "beginner",
+                "chapter": "chapter_4_workflow",
+                "estimated_time": "1-2 hours",
+                "prerequisites": []
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 4: Workflow Orchestration",
+                "permalink": "/docs/workflow-orchestration/"
+              },
+              "next": {
+                "title": "State Machines (Conceptual Introduction)",
+                "permalink": "/docs/workflow-orchestration/beginner/b2_state_machines_concepts"
+              }
+            },
+            {
+              "id": "workflow-orchestration/beginner/b2_state_machines_concepts",
+              "title": "State Machines (Conceptual Introduction)",
+              "description": "Learning Objectives",
+              "source": "@site/docs/04-workflow-orchestration/beginner/B2-state-machines-concepts.md",
+              "sourceDirName": "04-workflow-orchestration/beginner",
+              "slug": "/workflow-orchestration/beginner/b2_state_machines_concepts",
+              "permalink": "/docs/workflow-orchestration/beginner/b2_state_machines_concepts",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/04-workflow-orchestration/beginner/B2-state-machines-concepts.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "b2_state_machines_concepts",
+                "title": "State Machines (Conceptual Introduction)",
+                "tier": "beginner",
+                "chapter": "chapter_4_workflow",
+                "estimated_time": "1 hour",
+                "prerequisites": [
+                  "b1_pipelines_flows_triggers"
+                ]
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Pipelines, Flows, and Triggers",
+                "permalink": "/docs/workflow-orchestration/beginner/b1_pipelines_flows_triggers"
+              },
+              "next": {
+                "title": "Chapter 4: Workflow Orchestration - Glossary",
+                "permalink": "/docs/workflow-orchestration/glossary"
+              }
+            },
+            {
+              "id": "workflow-orchestration/glossary",
+              "title": "Chapter 4: Workflow Orchestration - Glossary",
+              "description": "A",
+              "source": "@site/docs/04-workflow-orchestration/glossary.md",
+              "sourceDirName": "04-workflow-orchestration",
+              "slug": "/workflow-orchestration/glossary",
+              "permalink": "/docs/workflow-orchestration/glossary",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/04-workflow-orchestration/glossary.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "State Machines (Conceptual Introduction)",
+                "permalink": "/docs/workflow-orchestration/beginner/b2_state_machines_concepts"
+              },
+              "next": {
+                "title": "Chapter 4: Workflow Orchestration - Introduction",
+                "permalink": "/docs/workflow-orchestration/introduction"
+              }
+            },
+            {
+              "id": "workflow-orchestration/introduction",
+              "title": "Chapter 4: Workflow Orchestration - Introduction",
+              "description": "This chapter introduces the concept of multi-component robotic workflows with state machines, pipeline orchestration, and recovery mechanisms in ROS 2. Students will learn how robots can combine multiple processes into one continuous workflow, handle complex tasks, monitor ongoing processes, detect issues, and make adjustments in real-time without human micromanagement.",
+              "source": "@site/docs/04-workflow-orchestration/introduction.md",
+              "sourceDirName": "04-workflow-orchestration",
+              "slug": "/workflow-orchestration/introduction",
+              "permalink": "/docs/workflow-orchestration/introduction",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/04-workflow-orchestration/introduction.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 4: Workflow Orchestration - Glossary",
+                "permalink": "/docs/workflow-orchestration/glossary"
+              }
+            },
+            {
+              "id": "workflow-orchestration/README",
+              "title": "Chapter 4: Workflow Orchestration",
+              "description": "Overview",
+              "source": "@site/docs/04-workflow-orchestration/README.md",
+              "sourceDirName": "04-workflow-orchestration",
+              "slug": "/workflow-orchestration/",
+              "permalink": "/docs/workflow-orchestration/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/04-workflow-orchestration/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "I4: Nav2 Basics",
+                "permalink": "/docs/ai-robot-brain/intermediate/I4-nav2-basics"
+              },
+              "next": {
+                "title": "Pipelines, Flows, and Triggers",
+                "permalink": "/docs/workflow-orchestration/beginner/b1_pipelines_flows_triggers"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "category",
+                "label": "CHAPTER 1: The Robotic Nervous System (ROS 2)",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Advanced Tier: Complex ROS 2 Architectures",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/advanced/a_lesson1_urdf_humanoid"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/advanced/a_lesson2_advanced_patterns"
+                      },
+                      {
+                        "type": "category",
+                        "label": "exercises",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "ros2-nervous-system/advanced/exercises/advanced-exercises"
+                          }
+                        ]
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "ros2-nervous-system/advanced/chapter_1_advanced_tier"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "ai-prompts",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/ai-prompts/advanced-prompts"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/ai-prompts/beginner_ai_prompts"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/ai-prompts/intermediate_ai_prompts"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Beginner Tier: ROS 2 Fundamentals",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/beginner/b_lesson1_intro"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/beginner/b_lesson2_sensors"
+                      },
+                      {
+                        "type": "category",
+                        "label": "exercises",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "ros2-nervous-system/beginner/exercises/beginner_exercises"
+                          }
+                        ]
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "ros2-nervous-system/beginner/chapter_1_beginner_tier"
+                    }
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ros2-nervous-system/chapter_1_glossary"
+                  },
+                  {
+                    "type": "category",
+                    "label": "Intermediate Tier: Hands-On ROS 2 Programming",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/intermediate/i_lesson1_nodes_topics"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ros2-nervous-system/intermediate/i_lesson2_python_ros"
+                      },
+                      {
+                        "type": "category",
+                        "label": "exercises",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "ros2-nervous-system/intermediate/exercises/intermediate_exercises"
+                          }
+                        ]
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "ros2-nervous-system/intermediate/chapter_1_intermediate_tier"
+                    }
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ros2-nervous-system/chapter_1_introduction"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ros2-nervous-system/chapter_1_summary"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "ros2-nervous-system/README"
+                }
+              },
+              {
+                "type": "category",
+                "label": "Chapter 2: Digital Twin & Simulation",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "advanced",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/advanced/A1-data-synchronization"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/advanced/A2-building-bridge"
+                      },
+                      {
+                        "type": "category",
+                        "label": "assets",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "category",
+                            "label": "diagrams",
+                            "collapsible": true,
+                            "collapsed": true,
+                            "items": [
+                              {
+                                "type": "doc",
+                                "id": "digital-twin/advanced/assets/diagrams/ai-training-architecture"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "beginner",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/beginner/B1-digital-twin-concepts"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/beginner/B2-first-simulation"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "exercises",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/exercises/exercise-01-launch-world"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/exercises/exercise-02-create-world"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/exercises/exercise-03-build-bridge"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "doc",
+                    "id": "digital-twin/glossary"
+                  },
+                  {
+                    "type": "category",
+                    "label": "intermediate",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/intermediate/I1-building-worlds"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "digital-twin/intermediate/I2-spawning-models"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "doc",
+                    "id": "digital-twin/introduction"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "digital-twin/README"
+                }
+              },
+              {
+                "type": "category",
+                "label": "Chapter 4: AI-Robot Brain (NVIDIA Isaac)",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "advanced",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/advanced/A1-costmap-configuration"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/advanced/A2-planners-behavior-trees"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/advanced/A3-reinforcement-learning"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/advanced/A4-sim-to-real"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Pre-trained Policies",
+                        "id": "ai-robot-brain/advanced/pretrained/README"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "beginner",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/beginner/B1-introduction-perception"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/beginner/B2-sensor-types"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/beginner/B3-slam-navigation-intro"
+                      },
+                      {
+                        "type": "category",
+                        "label": "diagrams",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "ai-robot-brain/beginner/diagrams/palette"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/beginner/refresher-gazebo"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/beginner/refresher-ros2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "exercises",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/exercises/advanced-exercises"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/exercises/beginner-exercises"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/exercises/intermediate-exercises"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "intermediate",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/intermediate/I1-camera-depth-processing"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/intermediate/I2-tf2-coordinate-frames"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/intermediate/I3-slam-toolbox"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "ai-robot-brain/intermediate/I4-nav2-basics"
+                      }
+                    ]
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "ai-robot-brain/README"
+                }
+              },
+              {
+                "type": "category",
+                "label": "Chapter 4: Workflow Orchestration",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "beginner",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "workflow-orchestration/beginner/b1_pipelines_flows_triggers"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "workflow-orchestration/beginner/b2_state_machines_concepts"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "doc",
+                    "id": "workflow-orchestration/glossary"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "workflow-orchestration/introduction"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "workflow-orchestration/README"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": "/blog/tags",
+      "blogTagsPaginated": []
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/auth",
+        "source": "@site/src/pages/auth.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/login",
+        "source": "@site/src/pages/login.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/signup",
+        "source": "@site/src/pages/signup.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/what-you-learn",
+        "source": "@site/src/pages/what-you-learn.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

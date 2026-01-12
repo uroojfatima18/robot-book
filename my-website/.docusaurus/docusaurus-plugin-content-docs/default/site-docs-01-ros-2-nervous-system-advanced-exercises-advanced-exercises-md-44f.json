@@ -1,0 +1,24 @@
+{
+  "id": "ros2-nervous-system/advanced/exercises/advanced-exercises",
+  "title": "Advanced Tier Exercises",
+  "description": "Chapter: Chapter 1 - The Robotic Nervous System (ROS 2)",
+  "source": "@site/docs/01-ros2-nervous-system/advanced/exercises/advanced-exercises.md",
+  "sourceDirName": "01-ros2-nervous-system/advanced/exercises",
+  "slug": "/ros2-nervous-system/advanced/exercises/advanced-exercises",
+  "permalink": "/docs/ros2-nervous-system/advanced/exercises/advanced-exercises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/advanced/exercises/advanced-exercises.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Advanced ROS 2 Patterns & AI Integration",
+    "permalink": "/docs/ros2-nervous-system/advanced/a_lesson2_advanced_patterns"
+  },
+  "next": {
+    "title": "AI-Assisted Learning Prompts: Advanced Tier",
+    "permalink": "/docs/ros2-nervous-system/ai-prompts/advanced-prompts"
+  }
+}

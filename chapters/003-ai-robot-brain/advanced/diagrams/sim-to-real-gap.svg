@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" role="img" aria-labelledby="title desc">
+  <title id="title">Sim-to-Real Gap</title>
+  <desc id="desc">Diagram illustrating the simulation-to-reality transfer gap. On the left side, a simulated robot operates in a simplified digital environment with perfect physics, no sensor noise, and instant actuator response. On the right side, a real robot faces complex physics, noisy sensors, and actuator delays. The center shows the 'gap' between these domains with arrows indicating domain randomization and system identification as bridging techniques.</desc>
+
+  <style>
+    .title { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .subtitle { font-family: sans-serif; font-size: 12px; fill: #000000; text-anchor: middle; }
+    .label { font-family: sans-serif; font-size: 10px; fill: #000000; }
+    .box { stroke: #000000; stroke-width: 2; }
+    .sim { fill: #56B4E9; }
+    .real { fill: #E69F00; }
+    .gap { fill: #D55E00; }
+    .bridge { fill: #009E73; }
+  </style>
+
+  <!-- Simulation side -->
+  <rect x="30" y="50" width="280" height="250" rx="15" class="box sim" fill-opacity="0.3"/>
+  <rect x="30" y="50" width="280" height="40" rx="15" class="box sim"/>
+  <text x="170" y="77" class="title" fill="#FFFFFF">Simulation</text>
+
+  <!-- Sim robot representation -->
+  <rect x="100" y="130" width="120" height="60" rx="10" fill="#FFFFFF" stroke="#000" stroke-width="2"/>
+  <text x="160" y="165" class="subtitle">Robot Model</text>
+
+  <!-- Sim characteristics -->
+  <g transform="translate(50, 210)">
+    <text x="0" y="0" class="label" fill="#009E73">+ Perfect physics</text>
+    <text x="0" y="18" class="label" fill="#009E73">+ No sensor noise</text>
+    <text x="0" y="36" class="label" fill="#009E73">+ Instant response</text>
+    <text x="0" y="54" class="label" fill="#009E73">+ Controlled environment</text>
+    <text x="0" y="72" class="label" fill="#009E73">+ Fast training (GPU)</text>
+  </g>
+
+  <!-- Real world side -->
+  <rect x="490" y="50" width="280" height="250" rx="15" class="box real" fill-opacity="0.3"/>
+  <rect x="490" y="50" width="280" height="40" rx="15" class="box real"/>
+  <text x="630" y="77" class="title">Real World</text>
+
+  <!-- Real robot representation -->
+  <rect x="560" y="130" width="120" height="60" rx="10" fill="#FFFFFF" stroke="#000" stroke-width="2"/>
+  <text x="620" y="155" class="subtitle">Physical</text>
+  <text x="620" y="172" class="subtitle">Robot</text>
+  <!-- Noise squiggles -->
+  <path d="M 560 145 Q 555 150 560 155 Q 565 160 560 165" stroke="#D55E00" stroke-width="2" fill="none"/>
+  <path d="M 680 145 Q 685 150 680 155 Q 675 160 680 165" stroke="#D55E00" stroke-width="2" fill="none"/>
+
+  <!-- Real characteristics -->
+  <g transform="translate(510, 210)">
+    <text x="0" y="0" class="label" fill="#D55E00">- Complex physics</text>
+    <text x="0" y="18" class="label" fill="#D55E00">- Sensor noise</text>
+    <text x="0" y="36" class="label" fill="#D55E00">- Actuator delays</text>
+    <text x="0" y="54" class="label" fill="#D55E00">- Dynamic environment</text>
+    <text x="0" y="72" class="label" fill="#D55E00">- Real consequences</text>
+  </g>
+
+  <!-- The GAP -->
+  <rect x="340" y="100" width="120" height="150" rx="10" fill="#D55E00" fill-opacity="0.2" stroke="#D55E00" stroke-width="3" stroke-dasharray="10,5"/>
+  <text x="400" y="140" class="title" fill="#D55E00">GAP</text>
+  <text x="400" y="165" class="subtitle" fill="#D55E00">Policy may fail!</text>
+
+  <!-- Bridging arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#009E73"/>
+    </marker>
+  </defs>
+
+  <!-- Domain Randomization arrow -->
+  <path d="M 310 175 L 340 175" stroke="#009E73" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="250" y="175" class="subtitle" fill="#009E73" text-anchor="end">Domain</text>
+  <text x="250" y="192" class="subtitle" fill="#009E73" text-anchor="end">Randomization</text>
+
+  <!-- System Identification arrow -->
+  <path d="M 490 175 L 460 175" stroke="#009E73" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="550" y="175" class="subtitle" fill="#009E73" text-anchor="start">System</text>
+  <text x="550" y="192" class="subtitle" fill="#009E73" text-anchor="start">Identification</text>
+
+  <!-- Success annotation -->
+  <rect x="340" y="260" width="120" height="30" rx="5" class="box bridge"/>
+  <text x="400" y="280" class="subtitle" fill="#FFFFFF">Bridged!</text>
+</svg>

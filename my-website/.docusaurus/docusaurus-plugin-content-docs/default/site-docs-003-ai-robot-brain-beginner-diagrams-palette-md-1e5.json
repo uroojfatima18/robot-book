@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/beginner/diagrams/palette",
+  "title": "Color-Blind Safe Diagram Palette",
+  "description": "Reference: NFR-002 - All diagrams must use color-blind safe palettes",
+  "source": "@site/docs/003-ai-robot-brain/beginner/diagrams/palette.md",
+  "sourceDirName": "003-ai-robot-brain/beginner/diagrams",
+  "slug": "/ai-robot-brain/beginner/diagrams/palette",
+  "permalink": "/docs/ai-robot-brain/beginner/diagrams/palette",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/diagrams/palette.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "B3: SLAM and Navigation Concepts",
+    "permalink": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro"
+  },
+  "next": {
+    "title": "Gazebo & Digital Twin Refresher (Chapter 2 Reference)",
+    "permalink": "/docs/ai-robot-brain/beginner/refresher-gazebo"
+  }
+}

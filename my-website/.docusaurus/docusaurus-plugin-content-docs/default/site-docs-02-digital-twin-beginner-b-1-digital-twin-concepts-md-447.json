@@ -1,0 +1,24 @@
+{
+  "id": "digital-twin/beginner/B1-digital-twin-concepts",
+  "title": "B1: What is a Digital Twin?",
+  "description": "Understanding the virtual-physical synchronization paradigm for humanoid robotics.",
+  "source": "@site/docs/02-digital-twin/beginner/B1-digital-twin-concepts.md",
+  "sourceDirName": "02-digital-twin/beginner",
+  "slug": "/digital-twin/beginner/B1-digital-twin-concepts",
+  "permalink": "/docs/digital-twin/beginner/B1-digital-twin-concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/beginner/B1-digital-twin-concepts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI Training Architecture Diagram",
+    "permalink": "/docs/digital-twin/advanced/assets/diagrams/ai-training-architecture"
+  },
+  "next": {
+    "title": "B2: Running Your First Simulation",
+    "permalink": "/docs/digital-twin/beginner/B2-first-simulation"
+  }
+}

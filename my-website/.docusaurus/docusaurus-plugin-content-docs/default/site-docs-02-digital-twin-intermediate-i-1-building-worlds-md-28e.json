@@ -1,0 +1,24 @@
+{
+  "id": "digital-twin/intermediate/I1-building-worlds",
+  "title": "I1: Building Simulation Worlds",
+  "description": "Create custom Gazebo world files with physics, lighting, and terrain.",
+  "source": "@site/docs/02-digital-twin/intermediate/I1-building-worlds.md",
+  "sourceDirName": "02-digital-twin/intermediate",
+  "slug": "/digital-twin/intermediate/I1-building-worlds",
+  "permalink": "/docs/digital-twin/intermediate/I1-building-worlds",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/intermediate/I1-building-worlds.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2 Glossary: Digital Twin & Simulation",
+    "permalink": "/docs/digital-twin/glossary"
+  },
+  "next": {
+    "title": "I2: Spawning and Controlling Models",
+    "permalink": "/docs/digital-twin/intermediate/I2-spawning-models"
+  }
+}

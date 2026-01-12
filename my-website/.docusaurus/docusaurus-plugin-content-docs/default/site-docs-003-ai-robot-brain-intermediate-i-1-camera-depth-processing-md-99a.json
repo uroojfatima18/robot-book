@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/intermediate/I1-camera-depth-processing",
+  "title": "I1: Camera and Depth Data Processing",
+  "description": "Building Your First Perception Pipeline in ROS 2",
+  "source": "@site/docs/003-ai-robot-brain/intermediate/I1-camera-depth-processing.md",
+  "sourceDirName": "003-ai-robot-brain/intermediate",
+  "slug": "/ai-robot-brain/intermediate/I1-camera-depth-processing",
+  "permalink": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/intermediate/I1-camera-depth-processing.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Intermediate Tier Exercises",
+    "permalink": "/docs/ai-robot-brain/exercises/intermediate-exercises"
+  },
+  "next": {
+    "title": "I2: TF2 Coordinate Frames",
+    "permalink": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames"
+  }
+}

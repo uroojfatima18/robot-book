@@ -1,0 +1,24 @@
+{
+  "id": "digital-twin/intermediate/I2-spawning-models",
+  "title": "I2: Spawning and Controlling Models",
+  "description": "Spawn URDF humanoid models and control joints programmatically.",
+  "source": "@site/docs/02-digital-twin/intermediate/I2-spawning-models.md",
+  "sourceDirName": "02-digital-twin/intermediate",
+  "slug": "/digital-twin/intermediate/I2-spawning-models",
+  "permalink": "/docs/digital-twin/intermediate/I2-spawning-models",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/intermediate/I2-spawning-models.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "I1: Building Simulation Worlds",
+    "permalink": "/docs/digital-twin/intermediate/I1-building-worlds"
+  },
+  "next": {
+    "title": "Chapter 2: Digital Twin & Simulation - Introduction",
+    "permalink": "/docs/digital-twin/introduction"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "digital-twin/exercises/exercise-02-create-world",
+  "title": "Exercise 02: Create World",
+  "description": "Build a custom simulation world from scratch.",
+  "source": "@site/docs/02-digital-twin/exercises/exercise-02-create-world.md",
+  "sourceDirName": "02-digital-twin/exercises",
+  "slug": "/digital-twin/exercises/exercise-02-create-world",
+  "permalink": "/docs/digital-twin/exercises/exercise-02-create-world",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/exercises/exercise-02-create-world.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Exercise 01: Launch World",
+    "permalink": "/docs/digital-twin/exercises/exercise-01-launch-world"
+  },
+  "next": {
+    "title": "Exercise 03: Build Bridge",
+    "permalink": "/docs/digital-twin/exercises/exercise-03-build-bridge"
+  }
+}

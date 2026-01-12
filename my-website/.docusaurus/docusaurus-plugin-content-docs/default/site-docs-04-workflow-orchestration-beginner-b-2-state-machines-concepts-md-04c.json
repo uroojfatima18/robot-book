@@ -1,0 +1,33 @@
+{
+  "id": "workflow-orchestration/beginner/b2_state_machines_concepts",
+  "title": "State Machines (Conceptual Introduction)",
+  "description": "Learning Objectives",
+  "source": "@site/docs/04-workflow-orchestration/beginner/B2-state-machines-concepts.md",
+  "sourceDirName": "04-workflow-orchestration/beginner",
+  "slug": "/workflow-orchestration/beginner/b2_state_machines_concepts",
+  "permalink": "/docs/workflow-orchestration/beginner/b2_state_machines_concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/04-workflow-orchestration/beginner/B2-state-machines-concepts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "b2_state_machines_concepts",
+    "title": "State Machines (Conceptual Introduction)",
+    "tier": "beginner",
+    "chapter": "chapter_4_workflow",
+    "estimated_time": "1 hour",
+    "prerequisites": [
+      "b1_pipelines_flows_triggers"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pipelines, Flows, and Triggers",
+    "permalink": "/docs/workflow-orchestration/beginner/b1_pipelines_flows_triggers"
+  },
+  "next": {
+    "title": "Chapter 4: Workflow Orchestration - Glossary",
+    "permalink": "/docs/workflow-orchestration/glossary"
+  }
+}

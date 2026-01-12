@@ -1,0 +1,89 @@
+<!-- behavior_tree_example.xml -->
+<!-- Custom navigation behavior tree with waypoint following and custom recovery -->
+<!--
+  Usage: Copy to your package and configure in Nav2 params:
+    bt_navigator:
+      ros__parameters:
+        default_bt_xml_filename: "/path/to/behavior_tree_example.xml"
+
+  BT Node Types:
+    - SequenceStar: Execute children in order, restart from beginning on failure
+    - PipelineSequence: Execute children in order, tick all running children
+    - RecoveryNode: Try main task, then recovery sequence on failure
+    - RateController: Limit execution rate of child
+    - Action nodes: ComputePathToPose, FollowPath, Spin, BackUp, Wait, etc.
+-->
+<root main_tree_to_execute="MainTree">
+  <!-- Main navigation tree -->
+  <BehaviorTree ID="MainTree">
+    <RecoveryNode number_of_retries="3" name="NavigateRecovery">
+
+      <!-- Primary navigation sequence -->
+      <PipelineSequence name="NavigateWithReplanning">
+
+        <!-- Compute path at 1Hz max rate -->
+        <RateController hz="1.0">
+          <ComputePathToPose goal="{goal}" path="{path}"
+            planner_id="GridBased"/>
+        </RateController>
+
+        <!-- Follow the computed path -->
+        <FollowPath path="{path}" controller_id="FollowPath"/>
+
+      </PipelineSequence>
+
+      <!-- Recovery behaviors when navigation fails -->
+      <SequenceStar name="RecoverySequence">
+
+        <!-- Step 1: Clear costmaps to remove stale obstacles -->
+        <ClearEntireCostmap name="ClearGlobalCostmap"
+          service_name="global_costmap/clear_entirely_global_costmap"/>
+        <ClearEntireCostmap name="ClearLocalCostmap"
+          service_name="local_costmap/clear_entirely_local_costmap"/>
+
+        <!-- Step 2: Wait briefly for costmap to rebuild -->
+        <Wait wait_duration="2.0"/>
+
+        <!-- Step 3: Spin to scan the environment (90 degrees = 1.57 rad) -->
+        <Spin spin_dist="1.57"/>
+
+        <!-- Step 4: Back up to create space (30cm) -->
+        <BackUp backup_dist="0.3" backup_speed="0.1"/>
+
+        <!-- Step 5: Wait again before retrying -->
+        <Wait wait_duration="1.0"/>
+
+      </SequenceStar>
+
+    </RecoveryNode>
+  </BehaviorTree>
+
+  <!-- Alternative: Waypoint following tree -->
+  <BehaviorTree ID="WaypointFollower">
+    <SequenceStar name="WaypointSequence">
+
+      <!-- Navigate to each waypoint in order -->
+      <RecoveryNode number_of_retries="2" name="WP1Recovery">
+        <NavigateToPose goal="{waypoint_1}"/>
+        <SequenceStar>
+          <ClearEntireCostmap service_name="global_costmap/clear_entirely_global_costmap"/>
+          <Wait wait_duration="1.0"/>
+        </SequenceStar>
+      </RecoveryNode>
+
+      <Wait wait_duration="3.0" name="PauseAtWP1"/>
+
+      <RecoveryNode number_of_retries="2" name="WP2Recovery">
+        <NavigateToPose goal="{waypoint_2}"/>
+        <SequenceStar>
+          <ClearEntireCostmap service_name="global_costmap/clear_entirely_global_costmap"/>
+          <Wait wait_duration="1.0"/>
+        </SequenceStar>
+      </RecoveryNode>
+
+      <Wait wait_duration="3.0" name="PauseAtWP2"/>
+
+    </SequenceStar>
+  </BehaviorTree>
+
+</root>

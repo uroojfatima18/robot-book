@@ -1,0 +1,308 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "ros2-nervous-system/README",
+          "docs": [
+            {
+              "id": "ai-robot-brain/advanced/A1-costmap-configuration",
+              "path": "/docs/ai-robot-brain/advanced/A1-costmap-configuration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/advanced/A2-planners-behavior-trees",
+              "path": "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/advanced/A3-reinforcement-learning",
+              "path": "/docs/ai-robot-brain/advanced/A3-reinforcement-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/advanced/A4-sim-to-real",
+              "path": "/docs/ai-robot-brain/advanced/A4-sim-to-real",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/advanced/pretrained/README",
+              "path": "/docs/ai-robot-brain/advanced/pretrained/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/B1-introduction-perception",
+              "path": "/docs/ai-robot-brain/beginner/B1-introduction-perception",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/B2-sensor-types",
+              "path": "/docs/ai-robot-brain/beginner/B2-sensor-types",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/B3-slam-navigation-intro",
+              "path": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/diagrams/palette",
+              "path": "/docs/ai-robot-brain/beginner/diagrams/palette",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/refresher-gazebo",
+              "path": "/docs/ai-robot-brain/beginner/refresher-gazebo",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/refresher-ros2",
+              "path": "/docs/ai-robot-brain/beginner/refresher-ros2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/exercises/advanced-exercises",
+              "path": "/docs/ai-robot-brain/exercises/advanced-exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/exercises/beginner-exercises",
+              "path": "/docs/ai-robot-brain/exercises/beginner-exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/exercises/intermediate-exercises",
+              "path": "/docs/ai-robot-brain/exercises/intermediate-exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/I1-camera-depth-processing",
+              "path": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+              "path": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/I3-slam-toolbox",
+              "path": "/docs/ai-robot-brain/intermediate/I3-slam-toolbox",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/I4-nav2-basics",
+              "path": "/docs/ai-robot-brain/intermediate/I4-nav2-basics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/README",
+              "path": "/docs/ai-robot-brain/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/advanced/A1-data-synchronization",
+              "path": "/docs/digital-twin/advanced/A1-data-synchronization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/advanced/A2-building-bridge",
+              "path": "/docs/digital-twin/advanced/A2-building-bridge",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/advanced/assets/diagrams/ai-training-architecture",
+              "path": "/docs/digital-twin/advanced/assets/diagrams/ai-training-architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/beginner/B1-digital-twin-concepts",
+              "path": "/docs/digital-twin/beginner/B1-digital-twin-concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/beginner/B2-first-simulation",
+              "path": "/docs/digital-twin/beginner/B2-first-simulation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/exercises/exercise-01-launch-world",
+              "path": "/docs/digital-twin/exercises/exercise-01-launch-world",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/exercises/exercise-02-create-world",
+              "path": "/docs/digital-twin/exercises/exercise-02-create-world",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/exercises/exercise-03-build-bridge",
+              "path": "/docs/digital-twin/exercises/exercise-03-build-bridge",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/glossary",
+              "path": "/docs/digital-twin/glossary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/intermediate/I1-building-worlds",
+              "path": "/docs/digital-twin/intermediate/I1-building-worlds",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/intermediate/I2-spawning-models",
+              "path": "/docs/digital-twin/intermediate/I2-spawning-models",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/introduction",
+              "path": "/docs/digital-twin/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/README",
+              "path": "/docs/digital-twin/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/advanced/a_lesson1_urdf_humanoid",
+              "path": "/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/advanced/a_lesson2_advanced_patterns",
+              "path": "/docs/ros2-nervous-system/advanced/a_lesson2_advanced_patterns",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/advanced/chapter_1_advanced_tier",
+              "path": "/docs/ros2-nervous-system/advanced/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/advanced/exercises/advanced-exercises",
+              "path": "/docs/ros2-nervous-system/advanced/exercises/advanced-exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/ai-prompts/advanced-prompts",
+              "path": "/docs/ros2-nervous-system/ai-prompts/advanced-prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/ai-prompts/beginner_ai_prompts",
+              "path": "/docs/ros2-nervous-system/ai-prompts/beginner_ai_prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/ai-prompts/intermediate_ai_prompts",
+              "path": "/docs/ros2-nervous-system/ai-prompts/intermediate_ai_prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/beginner/b_lesson1_intro",
+              "path": "/docs/ros2-nervous-system/beginner/b_lesson1_intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/beginner/b_lesson2_sensors",
+              "path": "/docs/ros2-nervous-system/beginner/b_lesson2_sensors",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/beginner/chapter_1_beginner_tier",
+              "path": "/docs/ros2-nervous-system/beginner/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/beginner/exercises/beginner_exercises",
+              "path": "/docs/ros2-nervous-system/beginner/exercises/beginner_exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/chapter_1_glossary",
+              "path": "/docs/ros2-nervous-system/chapter_1_glossary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/chapter_1_introduction",
+              "path": "/docs/ros2-nervous-system/chapter_1_introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/chapter_1_summary",
+              "path": "/docs/ros2-nervous-system/chapter_1_summary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/intermediate/chapter_1_intermediate_tier",
+              "path": "/docs/ros2-nervous-system/intermediate/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/intermediate/exercises/intermediate_exercises",
+              "path": "/docs/ros2-nervous-system/intermediate/exercises/intermediate_exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/intermediate/i_lesson1_nodes_topics",
+              "path": "/docs/ros2-nervous-system/intermediate/i_lesson1_nodes_topics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/intermediate/i_lesson2_python_ros",
+              "path": "/docs/ros2-nervous-system/intermediate/i_lesson2_python_ros",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2-nervous-system/README",
+              "path": "/docs/ros2-nervous-system/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/beginner/b1_pipelines_flows_triggers",
+              "path": "/docs/workflow-orchestration/beginner/b1_pipelines_flows_triggers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/beginner/b2_state_machines_concepts",
+              "path": "/docs/workflow-orchestration/beginner/b2_state_machines_concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/glossary",
+              "path": "/docs/workflow-orchestration/glossary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/introduction",
+              "path": "/docs/workflow-orchestration/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/README",
+              "path": "/docs/workflow-orchestration/",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/ros2-nervous-system/",
+                "label": "CHAPTER 1: The Robotic Nervous System (ROS 2)"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

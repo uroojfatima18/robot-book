@@ -1,0 +1,29 @@
+{
+  "id": "ros2-nervous-system/ai-prompts/intermediate_ai_prompts",
+  "title": "Intermediate Tier AI Learning Prompts",
+  "description": "This document provides curated prompts for AI assistants to help reinforce learning from the Intermediate tier lessons on creating ROS 2 Python nodes.",
+  "source": "@site/docs/01-ros2-nervous-system/ai-prompts/intermediate-prompts.md",
+  "sourceDirName": "01-ros2-nervous-system/ai-prompts",
+  "slug": "/ros2-nervous-system/ai-prompts/intermediate_ai_prompts",
+  "permalink": "/docs/ros2-nervous-system/ai-prompts/intermediate_ai_prompts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/ai-prompts/intermediate-prompts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intermediate_ai_prompts",
+    "title": "Intermediate Tier AI Learning Prompts",
+    "tier": "intermediate",
+    "chapter": "chapter_1_ros2"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Beginner Tier AI Learning Prompts",
+    "permalink": "/docs/ros2-nervous-system/ai-prompts/beginner_ai_prompts"
+  },
+  "next": {
+    "title": "Beginner Tier: ROS 2 Fundamentals",
+    "permalink": "/docs/ros2-nervous-system/beginner/"
+  }
+}

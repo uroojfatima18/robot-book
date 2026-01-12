@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/advanced/A4-sim-to-real",
+  "title": "A4: Sim-to-Real Transfer",
+  "description": "Deploying Learned Policies on Real Robots",
+  "source": "@site/docs/003-ai-robot-brain/advanced/A4-sim-to-real.md",
+  "sourceDirName": "003-ai-robot-brain/advanced",
+  "slug": "/ai-robot-brain/advanced/A4-sim-to-real",
+  "permalink": "/docs/ai-robot-brain/advanced/A4-sim-to-real",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/A4-sim-to-real.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "A3: Reinforcement Learning Fundamentals",
+    "permalink": "/docs/ai-robot-brain/advanced/A3-reinforcement-learning"
+  },
+  "next": {
+    "title": "Pre-trained Policies",
+    "permalink": "/docs/ai-robot-brain/advanced/pretrained/"
+  }
+}

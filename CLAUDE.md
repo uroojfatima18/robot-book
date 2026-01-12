@@ -208,3 +208,17 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Git repository with Markdown files (001-ros2-chapter)
+- Python 3.10+, Markdown for content, ROS 2 Humble/Iron + ROS 2, Nav2, SLAM Toolbox, OpenCV, cv_bridge, tf2_ros, Gazebo (003-isaac-ai-brain)
+- Markdown files for content, YAML for ROS 2 configs, PNG/SVG for diagrams (003-isaac-ai-brain)
+- Python 3.10+ (ROS 2 compatible) + ROS 2 Humble/Iron, rclpy, std_msgs, std_srvs, sensor_msgs, geometry_msgs, nav_msgs, Gazebo Sim (004-workflow-orchestration)
+- YAML configuration files for ROS 2 parameters and launch configs (004-workflow-orchestration)
+- Python 3.10+ (ROS 2 compatible) + ROS 2 Humble/Iron, rclpy, std_msgs, sensor_msgs, geometry_msgs, TurtleBot3 packages (005-adaptive-robotics-chapter)
+- JSON files for decision logs, YAML for configuration parameters (005-adaptive-robotics-chapter)
+- TypeScript 5.x, Node.js 18+ + Next.js 14 (App Router), Better Auth, Drizzle ORM, @qdrant/js-client-rest, @google/genai, OpenAI SDK (006-rag-chatbot-auth)
+- Neon PostgreSQL (relational), Qdrant Cloud (vectors) (006-rag-chatbot-auth)
+
+## Recent Changes
+- 001-ros2-chapter: Added Git repository with Markdown files

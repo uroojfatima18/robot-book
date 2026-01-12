@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+  "title": "I2: TF2 Coordinate Frames",
+  "description": "Managing Coordinate Transforms for Multi-Sensor Robots",
+  "source": "@site/docs/003-ai-robot-brain/intermediate/I2-tf2-coordinate-frames.md",
+  "sourceDirName": "003-ai-robot-brain/intermediate",
+  "slug": "/ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+  "permalink": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/intermediate/I2-tf2-coordinate-frames.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "I1: Camera and Depth Data Processing",
+    "permalink": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing"
+  },
+  "next": {
+    "title": "I3: SLAM Toolbox Configuration",
+    "permalink": "/docs/ai-robot-brain/intermediate/I3-slam-toolbox"
+  }
+}

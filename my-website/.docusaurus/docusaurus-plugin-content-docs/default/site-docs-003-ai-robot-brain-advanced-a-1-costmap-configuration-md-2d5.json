@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/advanced/A1-costmap-configuration",
+  "title": "A1: Costmap Configuration",
+  "description": "Customizing Navigation Cost Maps for Your Robot",
+  "source": "@site/docs/003-ai-robot-brain/advanced/A1-costmap-configuration.md",
+  "sourceDirName": "003-ai-robot-brain/advanced",
+  "slug": "/ai-robot-brain/advanced/A1-costmap-configuration",
+  "permalink": "/docs/ai-robot-brain/advanced/A1-costmap-configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/A1-costmap-configuration.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: AI-Robot Brain (NVIDIA Isaac)",
+    "permalink": "/docs/ai-robot-brain/"
+  },
+  "next": {
+    "title": "A2: Planners and Behavior Trees",
+    "permalink": "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees"
+  }
+}

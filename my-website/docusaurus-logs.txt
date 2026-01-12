@@ -1,0 +1,9 @@
+
+> my-website@0.1.0 start
+> docusaurus start
+
+
+ ------------------------------------------------------------------------------                                                                                                          Update available 3.1.0 → 3.9.2                                                                                                                 To upgrade Docusaurus packages with the latest version, run the                                       following command:                                        `npm i @docusaurus/core@latest @docusaurus/preset-classic@latest                @docusaurus/module-type-aliases@latest @docusaurus/types@latest`                                                                                         ------------------------------------------------------------------------------ 
+
+[INFO] Starting the development server...
+[ERROR] Something is already running on port 3000.

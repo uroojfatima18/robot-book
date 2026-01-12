@@ -1,0 +1,24 @@
+{
+  "id": "digital-twin/introduction",
+  "title": "Chapter 2: Digital Twin & Simulation - Introduction",
+  "description": "From ROS 2 commands to virtual robots: Building the simulation layer for safe, rapid, and scalable robot development.",
+  "source": "@site/docs/02-digital-twin/introduction.md",
+  "sourceDirName": "02-digital-twin",
+  "slug": "/digital-twin/introduction",
+  "permalink": "/docs/digital-twin/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/introduction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "I2: Spawning and Controlling Models",
+    "permalink": "/docs/digital-twin/intermediate/I2-spawning-models"
+  },
+  "next": {
+    "title": "Chapter 4: AI-Robot Brain (NVIDIA Isaac)",
+    "permalink": "/docs/ai-robot-brain/"
+  }
+}

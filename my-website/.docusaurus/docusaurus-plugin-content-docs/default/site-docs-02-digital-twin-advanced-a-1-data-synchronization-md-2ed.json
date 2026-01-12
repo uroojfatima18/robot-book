@@ -1,0 +1,24 @@
+{
+  "id": "digital-twin/advanced/A1-data-synchronization",
+  "title": "A1: Digital Twin Architecture",
+  "description": "Design data synchronization patterns for bidirectional robot-simulation communication.",
+  "source": "@site/docs/02-digital-twin/advanced/A1-data-synchronization.md",
+  "sourceDirName": "02-digital-twin/advanced",
+  "slug": "/digital-twin/advanced/A1-data-synchronization",
+  "permalink": "/docs/digital-twin/advanced/A1-data-synchronization",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/advanced/A1-data-synchronization.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Digital Twin & Simulation",
+    "permalink": "/docs/digital-twin/"
+  },
+  "next": {
+    "title": "A2: Building the Bridge Node",
+    "permalink": "/docs/digital-twin/advanced/A2-building-bridge"
+  }
+}

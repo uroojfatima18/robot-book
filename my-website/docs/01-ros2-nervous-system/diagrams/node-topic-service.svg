@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Chapter 1: The Robotic Nervous System (ROS 2)
+  Diagram: Node Communication Patterns
+  Alt-text: Three communication patterns showing Topics (publish-subscribe),
+  Services (request-response), and Actions (goal-feedback-result)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">ROS 2 Node Communication Patterns</title>
+  <desc id="desc">Diagram illustrating three ROS 2 communication patterns: Topics use publish-subscribe for streaming data, Services use request-response for one-time operations, and Actions use goal-feedback-result for long-running tasks.</desc>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="450" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a2e">ROS 2 Communication Patterns</text>
+
+  <!-- ========== TOPICS SECTION ========== -->
+  <rect x="30" y="60" width="260" height="240" rx="10" fill="#e8f4f8" stroke="#0077b6" stroke-width="2"/>
+  <text x="160" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#0077b6">TOPICS</text>
+  <text x="160" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">(Publish-Subscribe)</text>
+
+  <!-- Publisher Node -->
+  <rect x="50" y="130" width="90" height="50" rx="5" fill="#0077b6"/>
+  <text x="95" y="160" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Publisher</text>
+
+  <!-- Topic -->
+  <rect x="90" y="200" width="100" height="30" rx="15" fill="#48cae4" stroke="#0077b6" stroke-width="2"/>
+  <text x="140" y="220" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#023e8a">/sensor/data</text>
+
+  <!-- Subscriber Nodes -->
+  <rect x="50" y="250" width="70" height="40" rx="5" fill="#0077b6"/>
+  <text x="85" y="275" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Sub 1</text>
+
+  <rect x="140" y="250" width="70" height="40" rx="5" fill="#0077b6"/>
+  <text x="175" y="275" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Sub 2</text>
+
+  <!-- Topic Arrows -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0077b6"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fd7e14"/>
+    </marker>
+  </defs>
+
+  <line x1="95" y1="180" x2="130" y2="200" stroke="#0077b6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <line x1="130" y1="230" x2="95" y2="250" stroke="#0077b6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <line x1="150" y1="230" x2="170" y2="250" stroke="#0077b6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <text x="55" y="195" font-family="Arial, sans-serif" font-size="9" fill="#495057">publish</text>
+  <text x="185" y="245" font-family="Arial, sans-serif" font-size="9" fill="#495057">subscribe</text>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <rect x="320" y="60" width="260" height="240" rx="10" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="450" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#28a745">SERVICES</text>
+  <text x="450" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">(Request-Response)</text>
+
+  <!-- Client Node -->
+  <rect x="340" y="140" width="90" height="50" rx="5" fill="#28a745"/>
+  <text x="385" y="170" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Client</text>
+
+  <!-- Server Node -->
+  <rect x="480" y="140" width="90" height="50" rx="5" fill="#28a745"/>
+  <text x="525" y="170" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Server</text>
+
+  <!-- Service Box -->
+  <rect x="375" y="210" width="110" height="30" rx="5" fill="#a3cfbb" stroke="#28a745" stroke-width="2"/>
+  <text x="430" y="230" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#155724">/add_two_ints</text>
+
+  <!-- Request/Response Arrows -->
+  <path d="M 430 165 Q 470 120 510 165" stroke="#28a745" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  <path d="M 480 175 Q 450 220 405 175" stroke="#28a745" stroke-width="2" fill="none" stroke-dasharray="5,3" marker-end="url(#arrow-green)"/>
+
+  <text x="460" y="115" font-family="Arial, sans-serif" font-size="9" fill="#155724">request</text>
+  <text x="420" y="220" font-family="Arial, sans-serif" font-size="9" fill="#155724">response</text>
+
+  <!-- Timing note -->
+  <text x="450" y="270" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#495057" font-style="italic">Synchronous: Client waits</text>
+
+  <!-- ========== ACTIONS SECTION ========== -->
+  <rect x="610" y="60" width="260" height="240" rx="10" fill="#fff3cd" stroke="#fd7e14" stroke-width="2"/>
+  <text x="740" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fd7e14">ACTIONS</text>
+  <text x="740" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">(Goal-Feedback-Result)</text>
+
+  <!-- Action Client -->
+  <rect x="630" y="130" width="90" height="50" rx="5" fill="#fd7e14"/>
+  <text x="675" y="150" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Action</text>
+  <text x="675" y="165" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Client</text>
+
+  <!-- Action Server -->
+  <rect x="770" y="130" width="90" height="50" rx="5" fill="#fd7e14"/>
+  <text x="815" y="150" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Action</text>
+  <text x="815" y="165" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Server</text>
+
+  <!-- Goal Arrow -->
+  <line x1="720" y1="145" x2="765" y2="145" stroke="#fd7e14" stroke-width="2" marker-end="url(#arrow-orange)"/>
+  <text x="742" y="138" font-family="Arial, sans-serif" font-size="9" fill="#856404">goal</text>
+
+  <!-- Feedback Arrows (multiple) -->
+  <line x1="770" y1="165" x2="725" y2="165" stroke="#fd7e14" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arrow-orange)"/>
+  <text x="747" y="178" font-family="Arial, sans-serif" font-size="9" fill="#856404">feedback...</text>
+
+  <!-- Result Arrow -->
+  <path d="M 815 180 L 815 240 L 675 240 L 675 180" stroke="#fd7e14" stroke-width="2" fill="none" marker-end="url(#arrow-orange)"/>
+  <text x="745" y="255" font-family="Arial, sans-serif" font-size="9" fill="#856404">result</text>
+
+  <!-- Timing note -->
+  <text x="740" y="285" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#495057" font-style="italic">Async: Long-running tasks</text>
+
+  <!-- ========== COMPARISON TABLE ========== -->
+  <rect x="30" y="330" width="840" height="250" rx="10" fill="white" stroke="#dee2e6" stroke-width="2"/>
+  <text x="450" y="360" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1a1a2e">When to Use Each Pattern</text>
+
+  <!-- Table Headers -->
+  <line x1="30" y1="380" x2="870" y2="380" stroke="#dee2e6" stroke-width="1"/>
+  <text x="170" y="400" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#495057">Pattern</text>
+  <text x="380" y="400" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#495057">Best For</text>
+  <text x="620" y="400" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#495057">Example Use Cases</text>
+  <text x="800" y="400" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#495057">Timing</text>
+
+  <line x1="30" y1="415" x2="870" y2="415" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Topics Row -->
+  <rect x="50" y="425" width="120" height="25" rx="3" fill="#e8f4f8"/>
+  <text x="110" y="443" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#0077b6" font-weight="bold">Topics</text>
+  <text x="380" y="443" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Streaming data, sensors</text>
+  <text x="620" y="443" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Camera feed, IMU data, cmd_vel</text>
+  <text x="800" y="443" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Async</text>
+
+  <!-- Services Row -->
+  <rect x="50" y="460" width="120" height="25" rx="3" fill="#d4edda"/>
+  <text x="110" y="478" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#28a745" font-weight="bold">Services</text>
+  <text x="380" y="478" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Quick calculations, queries</text>
+  <text x="620" y="478" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Get parameters, compute path</text>
+  <text x="800" y="478" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Sync</text>
+
+  <!-- Actions Row -->
+  <rect x="50" y="495" width="120" height="25" rx="3" fill="#fff3cd"/>
+  <text x="110" y="513" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#fd7e14" font-weight="bold">Actions</text>
+  <text x="380" y="513" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Long tasks with progress</text>
+  <text x="620" y="513" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Navigate to goal, pick object</text>
+  <text x="800" y="513" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#495057">Async</text>
+
+  <!-- Key insight -->
+  <text x="450" y="560" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6c757d" font-style="italic">
+    Tip: Topics for data streams, Services for quick operations, Actions for cancellable long tasks
+  </text>
+</svg>

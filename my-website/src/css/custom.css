@@ -1,0 +1,269 @@
+/* ==========================================================================
+   ROBOTICS THEME SYSTEM - 2026 DESIGN LANGUAGE
+   ========================================================================== */
+
+:root {
+  /* --- Color Palette: Cyberpunk / High-Tech --- */
+  
+  /* Primary: Electric Cyan */
+  --ifm-color-primary: #00f3ff;
+  --ifm-color-primary-dark: #00dbe6;
+  --ifm-color-primary-darker: #00c4ce;
+  --ifm-color-primary-darkest: #00a2aa;
+  --ifm-color-primary-light: #29f5ff;
+  --ifm-color-primary-lighter: #52f8ff;
+  --ifm-color-primary-lightest: #8ffbff;
+
+  /* Secondary Accents */
+  --robotics-accent-purple: #bd00ff;
+  --robotics-accent-pink: #ff0055;
+  --robotics-dark-bg: #05060b;
+  --robotics-card-bg: #0e111a;
+  --robotics-border: rgba(0, 243, 255, 0.2);
+  
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, sans-serif;
+  --ifm-heading-font-family: 'Space Grotesk', sans-serif;
+  
+  /* Layout & Spacing */
+  --ifm-card-border-radius: 4px; /* Sharper corners for tech look */
+  --ifm-global-radius: 4px;
+  --ifm-navbar-height: 4rem;
+}
+
+/* --- Dark Mode Defaults (Enforced Aesthetics) --- */
+[data-theme='dark'] {
+  --ifm-background-color: var(--robotics-dark-bg);
+  --ifm-background-surface-color: var(--robotics-card-bg);
+  --ifm-navbar-background-color: rgba(5, 6, 11, 0.85); /* Semi-transparent */
+}
+
+/* Light Mode Overrides (Still Techy but readable) */
+[data-theme='light'] {
+  --ifm-color-primary: #005adb; /* Deeper blue for white bg */
+  --robotics-dark-bg: #f8f9fa;
+  --robotics-card-bg: #ffffff;
+  --robotics-border: rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   GLOBAL ANIMATIONS & BACKGROUNDS
+   ========================================================================== */
+
+body {
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+}
+
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  background: linear-gradient(120deg, var(--ifm-color-primary) 0%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+[data-theme='light'] h1 {
+  background: linear-gradient(120deg, #005adb 0%, #000 100%);
+  -webkit-background-clip: text;
+}
+
+/* ==========================================================================
+   Docusaurus Components Overrides
+   ========================================================================== */
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--robotics-border);
+}
+
+.navbar__brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Sidebar */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--robotics-border) !important;
+}
+
+.menu__link {
+  border-radius: 0 20px 20px 0; /* Techy shape */
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover, .menu__link--active {
+  background: linear-gradient(90deg, rgba(0,243,255,0.1), transparent);
+  border-left: 3px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   CUSTOM UI ELEMENTS (for Landing Page)
+   ========================================================================== */
+
+/* Holographic Cards */
+.tech-card {
+  position: relative;
+  background: rgba(14, 17, 26, 0.6);
+  border: 2px solid rgba(255, 237, 78, 0.3); /* Mustard border */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+}
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, #ffed4e, transparent); /* Mustard gradient */
+  opacity: 0.6;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 237, 78, 0.3); /* Mustard glow */
+  border-color: #ffed4e;
+}
+
+/* Individual card color variations */
+.tech-card:nth-child(1) {
+  border-color: rgba(255, 237, 78, 0.3); /* Mustard */
+}
+
+.tech-card:nth-child(1):hover {
+  border-color: #ffed4e;
+  box-shadow: 0 0 25px rgba(255, 237, 78, 0.3);
+}
+
+.tech-card:nth-child(2) {
+  border-color: rgba(0, 255, 255, 0.3); /* Cyan */
+}
+
+.tech-card:nth-child(2):hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.tech-card:nth-child(3) {
+  border-color: rgba(255, 234, 0, 0.3); /* Gold */
+}
+
+.tech-card:nth-child(3):hover {
+  border-color: #ffea00;
+  box-shadow: 0 0 25px rgba(255, 234, 0, 0.3);
+}
+
+.tech-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  filter: grayscale(0);
+}
+
+/* Card Title Highlighting */
+.tech-card h3 {
+  background: linear-gradient(90deg, rgba(255, 237, 78, 0.2), transparent);
+  padding: 0.5rem 1rem;
+  margin: 0 -1rem 1rem -1rem;
+  border-left: 3px solid #ffed4e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff; /* White text */
+}
+
+.tech-card:nth-child(1) h3 {
+  background: linear-gradient(90deg, rgba(255, 237, 78, 0.15), transparent);
+  border-left-color: #ffed4e;
+}
+
+.tech-card:nth-child(2) h3 {
+  background: linear-gradient(90deg, rgba(0, 255, 255, 0.15), transparent);
+  border-left-color: #00ffff;
+}
+
+.tech-card:nth-child(3) h3 {
+  background: linear-gradient(90deg, rgba(255, 234, 0, 0.15), transparent);
+  border-left-color: #ffea00;
+}
+
+/* Card Description Text */
+.tech-card p {
+  color: #ffffff; /* White description text */
+  line-height: 1.6;
+}
+
+/* Glowing Buttons */
+.button--primary {
+  background: transparent;
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.button--primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 0%; height: 100%;
+  background: var(--ifm-color-primary);
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.button--primary:hover {
+  color: #000;
+  box-shadow: 0 0 15px var(--ifm-color-primary);
+}
+
+.button--primary:hover::before {
+  width: 100%;
+}
+
+/* Gradient Text Helper */
+.text-gradient {
+  background: linear-gradient(to right, var(--ifm-color-primary), var(--robotics-accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Code Blocks */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 243, 255, 0.1);
+  box-shadow: inset 2px 0 0 0 var(--ifm-color-primary);
+}
+
+/* Footer */
+.footer {
+  background: #020204;
+  border-top: 1px solid var(--robotics-border);
+}

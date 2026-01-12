@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <title>URDF Tree Structure</title>
+  <desc>Diagram showing how URDF represents robots as a tree of links connected by joints, with base_link as the root. Color-blind safe palette used.</desc>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333">URDF Tree Structure</text>
+
+  <!-- Legend -->
+  <rect x="20" y="50" width="120" height="60" fill="#f8f9fa" stroke="#dee2e6" rx="5"/>
+  <rect x="30" y="60" width="20" height="15" fill="#2563eb" rx="3"/>
+  <text x="55" y="72" font-family="Arial, sans-serif" font-size="12" fill="#333333">Link (body)</text>
+  <line x1="30" y1="90" x2="50" y2="90" stroke="#dc2626" stroke-width="3"/>
+  <text x="55" y="95" font-family="Arial, sans-serif" font-size="12" fill="#333333">Joint (connection)</text>
+
+  <!-- base_link (root) -->
+  <rect x="250" y="80" width="100" height="40" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="300" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">base_link</text>
+  <text x="300" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666666">(root/pelvis)</text>
+
+  <!-- Joint to torso -->
+  <line x1="300" y1="120" x2="300" y2="160" stroke="#dc2626" stroke-width="3"/>
+  <circle cx="300" cy="160" r="8" fill="#dc2626"/>
+  <text x="330" y="165" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">fixed</text>
+
+  <!-- torso -->
+  <rect x="250" y="175" width="100" height="40" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="300" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">torso</text>
+
+  <!-- Branches from torso -->
+  <!-- Left branch (left_arm) -->
+  <line x1="250" y1="195" x2="120" y2="195" stroke="#dc2626" stroke-width="2"/>
+  <line x1="120" y1="195" x2="120" y2="250" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="120" cy="250" r="8" fill="#dc2626"/>
+  <text x="85" y="240" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">revolute</text>
+
+  <!-- Center branch (head) -->
+  <line x1="300" y1="215" x2="300" y2="250" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="300" cy="250" r="8" fill="#dc2626"/>
+  <text x="330" y="255" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">revolute</text>
+
+  <!-- Right branch (right_arm) -->
+  <line x1="350" y1="195" x2="480" y2="195" stroke="#dc2626" stroke-width="2"/>
+  <line x1="480" y1="195" x2="480" y2="250" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="480" cy="250" r="8" fill="#dc2626"/>
+  <text x="500" y="240" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">revolute</text>
+
+  <!-- left_upper_arm -->
+  <rect x="70" y="265" width="100" height="35" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="120" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">left_upper_arm</text>
+
+  <!-- head -->
+  <rect x="250" y="265" width="100" height="35" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="300" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">head</text>
+
+  <!-- right_upper_arm -->
+  <rect x="430" y="265" width="100" height="35" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="480" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">right_upper_arm</text>
+
+  <!-- left_forearm -->
+  <line x1="120" y1="300" x2="120" y2="340" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="120" cy="340" r="8" fill="#dc2626"/>
+  <text x="85" y="330" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">revolute</text>
+
+  <rect x="70" y="355" width="100" height="35" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="120" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">left_forearm</text>
+
+  <!-- right_forearm -->
+  <line x1="480" y1="300" x2="480" y2="340" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="480" cy="340" r="8" fill="#dc2626"/>
+  <text x="500" y="330" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">revolute</text>
+
+  <rect x="430" y="355" width="100" height="35" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="480" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">right_forearm</text>
+
+  <!-- Annotations -->
+  <text x="300" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666666">URDF is a tree: each link has exactly one parent joint (except base_link)</text>
+
+</svg>

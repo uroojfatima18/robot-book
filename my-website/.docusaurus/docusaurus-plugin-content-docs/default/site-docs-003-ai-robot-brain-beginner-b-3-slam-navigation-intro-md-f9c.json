@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/beginner/B3-slam-navigation-intro",
+  "title": "B3: SLAM and Navigation Concepts",
+  "description": "How Robots Map Their World and Find Their Way",
+  "source": "@site/docs/003-ai-robot-brain/beginner/B3-slam-navigation-intro.md",
+  "sourceDirName": "003-ai-robot-brain/beginner",
+  "slug": "/ai-robot-brain/beginner/B3-slam-navigation-intro",
+  "permalink": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/B3-slam-navigation-intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "B2: Understanding Sensor Types",
+    "permalink": "/docs/ai-robot-brain/beginner/B2-sensor-types"
+  },
+  "next": {
+    "title": "Color-Blind Safe Diagram Palette",
+    "permalink": "/docs/ai-robot-brain/beginner/diagrams/palette"
+  }
+}

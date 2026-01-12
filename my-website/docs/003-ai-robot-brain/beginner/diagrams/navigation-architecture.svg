@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Navigation Architecture</title>
+  <desc id="desc">Layered navigation architecture diagram showing three main components. At the top, Global Planning (blue) receives goal coordinates and map data to compute a path. In the middle, Local Planning (sky blue) receives sensor data and the global path to generate obstacle-free trajectories. At the bottom, Execution Layer (green) converts velocity commands to motor control. Arrows show data flow: sensors feed into local planning, local planning outputs to execution, and execution controls the motors.</desc>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { stroke: #000000; stroke-width: 2; }
+    .title { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .subtitle { font-family: sans-serif; font-size: 12px; fill: #000000; text-anchor: middle; }
+    .label { font-family: sans-serif; font-size: 11px; fill: #000000; }
+    .arrow { stroke: #000000; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .global { fill: #0072B2; }
+    .local { fill: #56B4E9; }
+    .execution { fill: #009E73; }
+    .input { fill: #E69F00; }
+    .output { fill: #CC79A7; }
+  </style>
+
+  <!-- Goal Input -->
+  <rect x="50" y="30" width="120" height="50" rx="5" class="box input"/>
+  <text x="110" y="60" class="title">Goal</text>
+
+  <!-- Map Input -->
+  <rect x="200" y="30" width="120" height="50" rx="5" class="box input"/>
+  <text x="260" y="60" class="title">Map</text>
+
+  <!-- Arrows to Global Planning -->
+  <line x1="110" y1="80" x2="300" y2="130" class="arrow"/>
+  <line x1="260" y1="80" x2="300" y2="130" class="arrow"/>
+
+  <!-- Global Planning -->
+  <rect x="200" y="130" width="400" height="80" rx="10" class="box global"/>
+  <text x="400" y="160" class="title" fill="#FFFFFF">Global Planning</text>
+  <text x="400" y="180" class="subtitle" fill="#FFFFFF">A*, NavFn, Smac Planner</text>
+  <text x="400" y="198" class="subtitle" fill="#FFFFFF">Output: Path (waypoints)</text>
+
+  <!-- Arrow from Global to Local -->
+  <line x1="400" y1="210" x2="400" y2="250" class="arrow"/>
+  <text x="420" y="235" class="label">Global Path</text>
+
+  <!-- Sensor Input -->
+  <rect x="50" y="270" width="120" height="50" rx="5" class="box input"/>
+  <text x="110" y="300" class="title">Sensors</text>
+
+  <!-- Arrow from Sensors to Local -->
+  <line x1="170" y1="295" x2="200" y2="295" class="arrow"/>
+
+  <!-- Local Planning -->
+  <rect x="200" y="250" width="400" height="90" rx="10" class="box local"/>
+  <text x="400" y="280" class="title">Local Planning</text>
+  <text x="400" y="300" class="subtitle">DWB, TEB, MPPI Controller</text>
+  <text x="400" y="320" class="subtitle">Output: Velocity commands (Twist)</text>
+
+  <!-- Arrow from Local to Execution -->
+  <line x1="400" y1="340" x2="400" y2="370" class="arrow"/>
+  <text x="420" y="360" class="label">cmd_vel</text>
+
+  <!-- Execution Layer -->
+  <rect x="200" y="370" width="400" height="70" rx="10" class="box execution"/>
+  <text x="400" y="400" class="title" fill="#FFFFFF">Execution Layer</text>
+  <text x="400" y="420" class="subtitle" fill="#FFFFFF">Motor control, odometry, safety limits</text>
+
+  <!-- Motor Output -->
+  <rect x="630" y="380" width="120" height="50" rx="5" class="box output"/>
+  <text x="690" y="410" class="title" fill="#FFFFFF">Motors</text>
+
+  <!-- Arrow to Motors -->
+  <line x1="600" y1="405" x2="630" y2="405" class="arrow"/>
+
+  <!-- Odometry Feedback -->
+  <path d="M 690 430 L 690 470 L 110 470 L 110 320" class="arrow" stroke-dasharray="5,5"/>
+  <text x="400" y="485" class="label">Odometry feedback</text>
+
+  <!-- Recovery Behaviors annotation -->
+  <rect x="620" y="250" width="150" height="70" rx="5" stroke="#D55E00" stroke-width="2" fill="#D55E00" fill-opacity="0.1"/>
+  <text x="695" y="275" class="label" text-anchor="middle">Recovery</text>
+  <text x="695" y="290" class="label" text-anchor="middle" font-size="10">• Clear costmaps</text>
+  <text x="695" y="305" class="label" text-anchor="middle" font-size="10">• Spin / Back up</text>
+
+  <!-- Arrow from Local to Recovery -->
+  <line x1="600" y1="295" x2="620" y2="295" stroke="#D55E00" stroke-width="2" stroke-dasharray="3,3"/>
+</svg>

@@ -1,0 +1,73 @@
+# Adaptive Robotics Configuration
+# Chapter 5: Making robots that respond to change
+
+behavior_switcher:
+  ros__parameters:
+    # Default behavior when no triggers are active
+    default_behavior: "explore"
+
+    # Hysteresis thresholds for obstacle detection
+    activate_threshold: 0.5      # meters - trigger avoid behavior
+    deactivate_threshold: 0.7    # meters - return to explore
+
+    # Decision timing
+    decision_rate: 10.0          # Hz - how often to evaluate triggers
+
+    # Standard behaviors
+    behaviors:
+      idle:
+        linear_x: 0.0
+        angular_z: 0.0
+        description: "Stopped, waiting for commands"
+      explore:
+        linear_x: 0.2
+        angular_z: 0.0
+        description: "Moving forward, exploring environment"
+      avoid:
+        linear_x: 0.0
+        angular_z: 0.5
+        description: "Turning away from obstacle"
+      backup:
+        linear_x: -0.1
+        angular_z: 0.0
+        description: "Reversing away from obstacle"
+
+decision_logger:
+  ros__parameters:
+    # Logging configuration
+    log_directory: "logs"
+    log_format: "json"           # json or csv
+    include_sensor_data: true
+    max_log_size_mb: 100
+    rotate_logs: true
+
+heuristic_selector:
+  ros__parameters:
+    # Behavior weights (higher = more likely to be selected)
+    weights:
+      explore: 1.0
+      avoid: 2.0
+      idle: 0.5
+      backup: 1.5
+
+    # Tie-breaking strategy
+    tie_break: "alphabetical"    # alphabetical or random
+
+adaptation_memory:
+  ros__parameters:
+    # Memory bounds
+    max_history_entries: 100
+    max_adjustment: 1.0
+    min_adjustment: -1.0
+
+    # Decay configuration
+    decay_rate: 0.9              # Applied each decision cycle
+    decay_interval: 10           # Apply decay every N decisions
+
+    # Learning rate
+    success_adjustment: 0.1
+    failure_adjustment: -0.1
+
+    # Threshold adjustment after failures
+    failure_count_for_adjustment: 3
+    threshold_adjustment_step: 0.05

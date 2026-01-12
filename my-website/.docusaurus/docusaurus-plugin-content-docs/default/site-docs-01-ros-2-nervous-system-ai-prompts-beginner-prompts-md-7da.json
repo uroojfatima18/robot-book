@@ -1,0 +1,29 @@
+{
+  "id": "ros2-nervous-system/ai-prompts/beginner_ai_prompts",
+  "title": "Beginner Tier AI Learning Prompts",
+  "description": "This document provides curated prompts for AI assistants (Claude, ChatGPT, etc.) to help reinforce learning from the Beginner tier lessons. These prompts are designed to deepen understanding through explanation, debugging help, and exploration.",
+  "source": "@site/docs/01-ros2-nervous-system/ai-prompts/beginner-prompts.md",
+  "sourceDirName": "01-ros2-nervous-system/ai-prompts",
+  "slug": "/ros2-nervous-system/ai-prompts/beginner_ai_prompts",
+  "permalink": "/docs/ros2-nervous-system/ai-prompts/beginner_ai_prompts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/ai-prompts/beginner-prompts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "beginner_ai_prompts",
+    "title": "Beginner Tier AI Learning Prompts",
+    "tier": "beginner",
+    "chapter": "chapter_1_ros2"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI-Assisted Learning Prompts: Advanced Tier",
+    "permalink": "/docs/ros2-nervous-system/ai-prompts/advanced-prompts"
+  },
+  "next": {
+    "title": "Intermediate Tier AI Learning Prompts",
+    "permalink": "/docs/ros2-nervous-system/ai-prompts/intermediate_ai_prompts"
+  }
+}

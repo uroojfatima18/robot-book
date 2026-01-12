@@ -1,0 +1,29 @@
+{
+  "id": "ros2-nervous-system/intermediate/exercises/intermediate_exercises",
+  "title": "Intermediate Tier Exercises",
+  "description": "This document consolidates all exercises from the Intermediate tier lessons for easy reference and self-assessment.",
+  "source": "@site/docs/01-ros2-nervous-system/intermediate/exercises/intermediate-exercises.md",
+  "sourceDirName": "01-ros2-nervous-system/intermediate/exercises",
+  "slug": "/ros2-nervous-system/intermediate/exercises/intermediate_exercises",
+  "permalink": "/docs/ros2-nervous-system/intermediate/exercises/intermediate_exercises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/intermediate/exercises/intermediate-exercises.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intermediate_exercises",
+    "title": "Intermediate Tier Exercises",
+    "tier": "intermediate",
+    "chapter": "chapter_1_ros2"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Python ROS Bridge (rclpy)",
+    "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson2_python_ros"
+  },
+  "next": {
+    "title": "Introduction: The Robotic Nervous System",
+    "permalink": "/docs/ros2-nervous-system/chapter_1_introduction"
+  }
+}

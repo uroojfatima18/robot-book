@@ -1,55 +1,165 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+==================
+Version change: 0.0.0 → 1.0.0 (MAJOR - Initial constitution creation)
+
+Added Principles:
+- I. Embodied Learning (new)
+- II. Simulation-First, Reality-Ready (new)
+- III. Agent-Human Partnership (new)
+- IV. Progressive Mastery (new)
+- V. AI-Native Content (new)
+- VI. ROS 2 + Python Conventions (new)
+- VII. Safety & Ethics First (new)
+
+Added Sections:
+- Book Structure (6 chapters defined)
+- AI-Native Rules
+- Coding & Implementation Principles
+- Governance & Extensibility
+- Scoring Philosophy
+
+Templates Status:
+- ✅ plan-template.md: Compatible (Constitution Check section exists)
+- ✅ spec-template.md: Compatible (user stories structure aligns)
+- ✅ tasks-template.md: Compatible (phase structure supports chapter development)
+
+Deferred Items: None
+-->
+
+# Physical AI & Humanoid Robotics Textbook Constitution
+
+> *Rulebook for creating, structuring, and implementing the ultimate AI-native textbook.*
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Embodied Learning
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+Concepts MUST translate to actions in simulation or real robots. Every lesson MUST demonstrate how theory applies to physical systems. Abstract knowledge without embodied application is incomplete.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+**Rationale**: Robotics is fundamentally about interaction with the physical world. Understanding emerges from doing, not just reading.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### II. Simulation-First, Reality-Ready
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+Code examples and exercises MUST start in Gazebo/Isaac Sim and be designed for transfer to edge devices. All simulated examples MUST include notes on real-world deployment considerations.
 
-### [PRINCIPLE_6_NAME]
+**Rationale**: Simulation provides safe, repeatable learning environments while preparing students for real hardware deployment.
 
+### III. Agent-Human Partnership
 
-[PRINCIPLE__DESCRIPTION]
+AI agents MUST assist learners at every step: code completion, explanations, troubleshooting. Each chapter MUST include AI Agent Assisted Prompts for RAG usage. The textbook is designed for collaborative learning between humans and AI.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+**Rationale**: Modern robotics development is AI-augmented. Students must learn to work effectively with AI tools.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### IV. Progressive Mastery
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+Each chapter MUST contain beginner → intermediate → advanced sub-lessons. No prerequisite knowledge is assumed at chapter start; all required concepts are built progressively.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+**Rationale**: Learners arrive with diverse backgrounds. Progressive structure ensures accessibility while enabling depth.
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+### V. AI-Native Content
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+All examples MUST be machine-readable and RAG-compatible. Text selections MUST be queryable via embedded chatbot. Each lesson MUST include 1-2 executable code blocks. Personalization hooks (learner background, hardware availability, learning pace) MUST be supported.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Rationale**: The textbook itself is an AI system. Content must be structured for both human and machine consumption.
+
+### VI. ROS 2 + Python Conventions
+
+All code MUST follow ROS 2 and Python conventions. Gazebo, Isaac, or Unity MUST be used for simulation. Code examples MUST include visual outputs where possible. Capstone projects MUST integrate all learned modules.
+
+**Rationale**: Standardization on industry-standard tools ensures transferable skills and reproducible examples.
+
+### VII. Safety & Ethics First
+
+No unsafe commands on real robots; all code MUST be validated in simulation first. Ethical considerations MUST be addressed in human-robot interaction lessons. Safety warnings MUST precede any code that could cause physical harm.
+
+**Rationale**: Robotics carries real-world consequences. Safety culture must be instilled from the beginning.
+
+## Book Structure
+
+The textbook has **6 core chapters**, each with sub-lessons:
+
+1. **Introduction to Physical AI**
+   - What is Physical AI & Embodied Intelligence
+   - Sensor systems: LIDAR, Cameras, IMU
+   - Human-Robot Interaction Principles
+
+2. **The Robotic Nervous System (ROS 2)**
+   - Nodes, Topics, Services, Actions
+   - Python-ROS Bridge (rclpy)
+   - URDF & Robot Description
+
+3. **The Digital Twin (Gazebo & Unity)**
+   - Physics Simulation, Gravity, Collisions
+   - Sensor Simulation: Depth, IMU, LiDAR
+   - Unity High-Fidelity Visualization
+
+4. **AI-Robot Brain (NVIDIA Isaac)**
+   - Perception, Navigation, SLAM
+   - Reinforcement Learning Basics
+   - Sim-to-Real Transfer Concepts
+
+5. **Vision-Language-Action (VLA)**
+   - Voice-to-Action with Whisper
+   - GPT-based Cognitive Planning
+   - Multi-modal Interaction Examples
+
+6. **Capstone: Autonomous Humanoid**
+   - Voice Command → Planning → Navigation → Object Manipulation
+   - Integration of all modules
+   - Full Example Code & Simulation
+
+**Chapter Requirements** (each chapter MUST include):
+- Code blocks for immediate experimentation
+- Diagrams/Visuals for clarity
+- Mini-projects & Exercises
+- AI Agent Assisted Prompts for RAG usage
+- Beginner → Advanced Sub-Lessons
+
+## AI-Native Rules
+
+- All examples MUST be machine-readable and RAG-compatible
+- Text selections MUST be queryable via embedded chatbot
+- Each lesson MUST include 1-2 executable code blocks
+- Hardware notes MUST distinguish simulation vs. edge deployment
+- Personalization hooks MUST support: learner background, hardware availability, learning pace
+
+## Coding & Implementation Principles
+
+1. Follow ROS 2 + Python conventions for all robotics code
+2. Use Gazebo / Isaac / Unity for simulation-first development
+3. Code examples MUST include visual outputs where possible
+4. Capstone projects MUST integrate all learned modules
+5. Document assumptions and limitations in every code snippet
+6. Include hardware notes for simulation vs. physical deployment
+
+## Governance & Extensibility
+
+### Modularity
+- Book is modular and extensible; new chapters or sub-lessons can be added
+- Each chapter can be consumed independently after completing prerequisites
+- AI agent submodules (Claude Code subagents) can be attached per chapter
+
+### Translation
+- Content MUST be translation-ready (Urdu/other languages) with minimal formatting loss
+- Code comments and variable names remain in English for universal compatibility
+
+### Amendment Process
+- Constitution amendments require documentation of rationale
+- Changes MUST be reviewed for impact on existing chapters
+- Version control MUST track all modifications
+
+### Compliance
+- All content MUST be verified against this constitution before publishing
+- Ethical and safety rules are non-negotiable
+
+## Scoring Philosophy (Hackathon Focus)
+
+- **Base Functionality**: Chapters + RAG + Code = 100 pts
+- **Bonus Hooks**: Subagents, Personalization, Translation = up to 50 pts each
+- **Design Quality**: Clear rules, structure, examples, and visuals impress judges
+
+> This constitution is the **single source of truth** for the textbook.
+> Every author, developer, or AI agent MUST follow it for content creation, code integration, and simulation exercises.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-20 | **Last Amended**: 2025-12-20

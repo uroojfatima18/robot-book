@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <title>URDF Joint Types</title>
+  <desc>Diagram showing the four common joint types in URDF: fixed, revolute, continuous, and prismatic. Color-blind safe palette with patterns for accessibility.</desc>
+
+  <!-- Background -->
+  <rect width="700" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333">URDF Joint Types</text>
+
+  <!-- ==================== -->
+  <!-- FIXED JOINT          -->
+  <!-- ==================== -->
+  <g transform="translate(40, 60)">
+    <rect width="140" height="150" fill="#f0f9ff" stroke="#0369a1" stroke-width="2" rx="8"/>
+    <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0369a1">Fixed</text>
+
+    <!-- Visual: Two blocks welded -->
+    <rect x="30" y="45" width="40" height="30" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="3"/>
+    <rect x="70" y="45" width="40" height="30" fill="#059669" stroke="#047857" stroke-width="2" rx="3"/>
+    <text x="70" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">X</text>
+
+    <!-- No motion indicator -->
+    <text x="70" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666666">No motion</text>
+
+    <!-- Use case -->
+    <text x="70" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">Use: Rigid</text>
+    <text x="70" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">connections</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- REVOLUTE JOINT       -->
+  <!-- ==================== -->
+  <g transform="translate(200, 60)">
+    <rect width="140" height="150" fill="#fef3c7" stroke="#d97706" stroke-width="2" rx="8"/>
+    <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d97706">Revolute</text>
+
+    <!-- Visual: Hinge with arc -->
+    <rect x="25" y="50" width="35" height="25" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="3"/>
+    <circle cx="70" cy="62" r="10" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+    <circle cx="70" cy="62" r="3" fill="#333333"/>
+    <rect x="80" y="50" width="35" height="25" fill="#059669" stroke="#047857" stroke-width="2" rx="3"/>
+
+    <!-- Arc showing limited rotation -->
+    <path d="M 70 45 A 17 17 0 0 1 87 62" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="3,2"/>
+    <polygon points="87,59 90,65 84,65" fill="#d97706"/>
+
+    <text x="70" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666666">Limited rotation</text>
+    <text x="70" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">Use: Elbows,</text>
+    <text x="70" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">knees, fingers</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- CONTINUOUS JOINT     -->
+  <!-- ==================== -->
+  <g transform="translate(360, 60)">
+    <rect width="140" height="150" fill="#ecfdf5" stroke="#059669" stroke-width="2" rx="8"/>
+    <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#059669">Continuous</text>
+
+    <!-- Visual: Wheel/axle -->
+    <rect x="25" y="52" width="30" height="20" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="3"/>
+    <circle cx="85" cy="62" r="18" fill="#059669" stroke="#047857" stroke-width="2"/>
+    <circle cx="85" cy="62" r="5" fill="#333333"/>
+
+    <!-- Circular arrow showing unlimited rotation -->
+    <path d="M 85 40 A 22 22 0 1 1 63 62" fill="none" stroke="#059669" stroke-width="2"/>
+    <polygon points="63,59 60,65 66,65" fill="#059669"/>
+
+    <text x="70" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666666">Unlimited</text>
+    <text x="70" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">Use: Wheels,</text>
+    <text x="70" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">rotary joints</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- PRISMATIC JOINT      -->
+  <!-- ==================== -->
+  <g transform="translate(520, 60)">
+    <rect width="140" height="150" fill="#fdf4ff" stroke="#a855f7" stroke-width="2" rx="8"/>
+    <text x="70" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#a855f7">Prismatic</text>
+
+    <!-- Visual: Sliding mechanism -->
+    <rect x="25" y="50" width="30" height="25" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="3"/>
+
+    <!-- Rail -->
+    <rect x="55" y="57" width="60" height="10" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+    <line x1="60" y1="62" x2="110" y2="62" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4,2"/>
+
+    <!-- Sliding block -->
+    <rect x="70" y="48" width="25" height="28" fill="#059669" stroke="#047857" stroke-width="2" rx="2"/>
+
+    <!-- Arrow showing linear motion -->
+    <line x1="60" y1="85" x2="110" y2="85" stroke="#a855f7" stroke-width="2"/>
+    <polygon points="108,82 115,85 108,88" fill="#a855f7"/>
+    <polygon points="62,82 55,85 62,88" fill="#a855f7"/>
+
+    <text x="70" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666666">Linear slide</text>
+    <text x="70" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">Use: Grippers,</text>
+    <text x="70" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">lifts</text>
+  </g>
+
+  <!-- ==================== -->
+  <!-- Comparison Table     -->
+  <!-- ==================== -->
+  <g transform="translate(40, 230)">
+    <text x="310" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333">Joint Properties Comparison</text>
+
+    <!-- Table header -->
+    <rect x="0" y="15" width="620" height="30" fill="#f3f4f6"/>
+    <text x="80" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">Type</text>
+    <text x="200" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">Motion</text>
+    <text x="340" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">Limits</text>
+    <text x="510" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">Example</text>
+
+    <!-- Table rows -->
+    <line x1="0" y1="45" x2="620" y2="45" stroke="#e5e7eb"/>
+    <text x="80" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0369a1">fixed</text>
+    <text x="200" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">None</text>
+    <text x="340" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">N/A</text>
+    <text x="510" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">sensor_mount_to_base</text>
+
+    <line x1="0" y1="75" x2="620" y2="75" stroke="#e5e7eb"/>
+    <text x="80" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#d97706">revolute</text>
+    <text x="200" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">Rotation (1 axis)</text>
+    <text x="340" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">lower/upper (radians)</text>
+    <text x="510" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">elbow: 0 to 2.5 rad</text>
+
+    <line x1="0" y1="105" x2="620" y2="105" stroke="#e5e7eb"/>
+    <text x="80" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#059669">continuous</text>
+    <text x="200" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">Rotation (1 axis)</text>
+    <text x="340" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">None (infinite)</text>
+    <text x="510" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">wheel: full rotation</text>
+
+    <line x1="0" y1="135" x2="620" y2="135" stroke="#e5e7eb"/>
+    <text x="80" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a855f7">prismatic</text>
+    <text x="200" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">Linear (1 axis)</text>
+    <text x="340" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">lower/upper (meters)</text>
+    <text x="510" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">gripper: 0 to 0.05 m</text>
+
+    <rect x="0" y="15" width="620" height="145" fill="none" stroke="#d1d5db"/>
+  </g>
+
+</svg>

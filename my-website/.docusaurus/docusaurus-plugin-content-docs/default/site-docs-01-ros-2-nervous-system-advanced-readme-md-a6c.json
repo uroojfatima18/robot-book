@@ -1,0 +1,30 @@
+{
+  "id": "ros2-nervous-system/advanced/chapter_1_advanced_tier",
+  "title": "Advanced Tier: Complex ROS 2 Architectures",
+  "description": "Welcome to the Advanced Tier",
+  "source": "@site/docs/01-ros2-nervous-system/advanced/README.md",
+  "sourceDirName": "01-ros2-nervous-system/advanced",
+  "slug": "/ros2-nervous-system/advanced/",
+  "permalink": "/docs/ros2-nervous-system/advanced/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/advanced/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "chapter_1_advanced_tier",
+    "title": "Advanced Tier: Complex ROS 2 Architectures",
+    "tier": "advanced",
+    "chapter": "chapter_1_ros2",
+    "estimated_time": "2-4 hours"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CHAPTER 1: The Robotic Nervous System (ROS 2)",
+    "permalink": "/docs/ros2-nervous-system/"
+  },
+  "next": {
+    "title": "URDF & Humanoid Robot Description",
+    "permalink": "/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid"
+  }
+}

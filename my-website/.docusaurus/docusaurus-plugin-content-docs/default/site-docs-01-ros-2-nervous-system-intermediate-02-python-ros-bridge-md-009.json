@@ -1,0 +1,34 @@
+{
+  "id": "ros2-nervous-system/intermediate/i_lesson2_python_ros",
+  "title": "Python ROS Bridge (rclpy)",
+  "description": "Learning Objectives",
+  "source": "@site/docs/01-ros2-nervous-system/intermediate/02-python-ros-bridge.md",
+  "sourceDirName": "01-ros2-nervous-system/intermediate",
+  "slug": "/ros2-nervous-system/intermediate/i_lesson2_python_ros",
+  "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson2_python_ros",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/intermediate/02-python-ros-bridge.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "i_lesson2_python_ros",
+    "title": "Python ROS Bridge (rclpy)",
+    "tier": "intermediate",
+    "chapter": "chapter_1_ros2",
+    "estimated_time": "2-3 hours",
+    "prerequisites": [
+      "i_lesson1_nodes_topics"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Nodes, Topics, Services, and Actions",
+    "permalink": "/docs/ros2-nervous-system/intermediate/i_lesson1_nodes_topics"
+  },
+  "next": {
+    "title": "Intermediate Tier Exercises",
+    "permalink": "/docs/ros2-nervous-system/intermediate/exercises/intermediate_exercises"
+  }
+}

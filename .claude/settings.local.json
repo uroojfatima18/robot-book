@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(ls:*)",
+      "Bash(bash:*)",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)",
+      "WebSearch",
+      "WebFetch(domain:arnebaeyens.com)",
+      "WebFetch(domain:docs.ros.org)",
+      "Bash(printf:*)",
+      "Bash(python3:*)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(taskkill:*)",
+      "Bash(cp \"main page.PNG\" my-website/static/img/)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(curl -s http://localhost:3001/api/health)",
+      "Bash(npm run build)",
+      "Bash(timeout 5 ping 127.0.0.1 -n 6)",
+      "Bash(npm run dev)",
+      "Bash(npm run db:push)"
+    ]
+  }
+}

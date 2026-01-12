@@ -1,0 +1,24 @@
+{
+  "id": "ai-robot-brain/advanced/pretrained/README",
+  "title": "Pre-trained Policies",
+  "description": "This directory contains pre-trained ONNX policy files for sim-to-real deployment.",
+  "source": "@site/docs/003-ai-robot-brain/advanced/pretrained/README.md",
+  "sourceDirName": "003-ai-robot-brain/advanced/pretrained",
+  "slug": "/ai-robot-brain/advanced/pretrained/",
+  "permalink": "/docs/ai-robot-brain/advanced/pretrained/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/pretrained/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "A4: Sim-to-Real Transfer",
+    "permalink": "/docs/ai-robot-brain/advanced/A4-sim-to-real"
+  },
+  "next": {
+    "title": "B1: Introduction to Robotic Perception",
+    "permalink": "/docs/ai-robot-brain/beginner/B1-introduction-perception"
+  }
+}

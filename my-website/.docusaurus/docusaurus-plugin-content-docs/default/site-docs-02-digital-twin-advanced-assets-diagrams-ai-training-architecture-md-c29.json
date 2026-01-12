@@ -1,0 +1,24 @@
+{
+  "id": "digital-twin/advanced/assets/diagrams/ai-training-architecture",
+  "title": "AI Training Architecture Diagram",
+  "description": "This document provides the architectural diagram for integrating digital twin simulation with AI/ML training pipelines.",
+  "source": "@site/docs/02-digital-twin/advanced/assets/diagrams/ai-training-architecture.md",
+  "sourceDirName": "02-digital-twin/advanced/assets/diagrams",
+  "slug": "/digital-twin/advanced/assets/diagrams/ai-training-architecture",
+  "permalink": "/docs/digital-twin/advanced/assets/diagrams/ai-training-architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/advanced/assets/diagrams/ai-training-architecture.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "A2: Building the Bridge Node",
+    "permalink": "/docs/digital-twin/advanced/A2-building-bridge"
+  },
+  "next": {
+    "title": "B1: What is a Digital Twin?",
+    "permalink": "/docs/digital-twin/beginner/B1-digital-twin-concepts"
+  }
+}

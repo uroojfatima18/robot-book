@@ -1,0 +1,24 @@
+{
+  "id": "digital-twin/beginner/B2-first-simulation",
+  "title": "B2: Running Your First Simulation",
+  "description": "Launch Gazebo and interact with a pre-built humanoid world.",
+  "source": "@site/docs/02-digital-twin/beginner/B2-first-simulation.md",
+  "sourceDirName": "02-digital-twin/beginner",
+  "slug": "/digital-twin/beginner/B2-first-simulation",
+  "permalink": "/docs/digital-twin/beginner/B2-first-simulation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/beginner/B2-first-simulation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "B1: What is a Digital Twin?",
+    "permalink": "/docs/digital-twin/beginner/B1-digital-twin-concepts"
+  },
+  "next": {
+    "title": "Exercise 01: Launch World",
+    "permalink": "/docs/digital-twin/exercises/exercise-01-launch-world"
+  }
+}

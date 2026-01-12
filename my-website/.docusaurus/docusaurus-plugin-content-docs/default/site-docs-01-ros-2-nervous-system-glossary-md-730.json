@@ -1,0 +1,28 @@
+{
+  "id": "ros2-nervous-system/chapter_1_glossary",
+  "title": "ROS 2 Glossary",
+  "description": "A consolidated reference of key terms used throughout Chapter 1. Refer back to this glossary whenever you encounter unfamiliar terminology.",
+  "source": "@site/docs/01-ros2-nervous-system/glossary.md",
+  "sourceDirName": "01-ros2-nervous-system",
+  "slug": "/ros2-nervous-system/chapter_1_glossary",
+  "permalink": "/docs/ros2-nervous-system/chapter_1_glossary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/glossary.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "chapter_1_glossary",
+    "title": "ROS 2 Glossary",
+    "chapter": "chapter_1_ros2"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Beginner Tier Exercises",
+    "permalink": "/docs/ros2-nervous-system/beginner/exercises/beginner_exercises"
+  },
+  "next": {
+    "title": "Intermediate Tier: Hands-On ROS 2 Programming",
+    "permalink": "/docs/ros2-nervous-system/intermediate/"
+  }
+}

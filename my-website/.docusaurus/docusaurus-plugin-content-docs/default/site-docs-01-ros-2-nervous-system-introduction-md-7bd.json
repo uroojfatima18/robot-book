@@ -1,0 +1,29 @@
+{
+  "id": "ros2-nervous-system/chapter_1_introduction",
+  "title": "Introduction: The Robotic Nervous System",
+  "description": "The Nervous System Metaphor",
+  "source": "@site/docs/01-ros2-nervous-system/introduction.md",
+  "sourceDirName": "01-ros2-nervous-system",
+  "slug": "/ros2-nervous-system/chapter_1_introduction",
+  "permalink": "/docs/ros2-nervous-system/chapter_1_introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/introduction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "chapter_1_introduction",
+    "title": "Introduction: The Robotic Nervous System",
+    "chapter": "chapter_1_ros2",
+    "estimated_time": "15 minutes"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Intermediate Tier Exercises",
+    "permalink": "/docs/ros2-nervous-system/intermediate/exercises/intermediate_exercises"
+  },
+  "next": {
+    "title": "Chapter Summary & Reflection",
+    "permalink": "/docs/ros2-nervous-system/chapter_1_summary"
+  }
+}
