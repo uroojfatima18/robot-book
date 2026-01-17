@@ -1,24 +1,31 @@
 {
-  "id": "digital-twin/exercises/exercise-03-build-bridge",
+  "id": "digital-twin/exercises/chapter_2_exercise_3",
   "title": "Exercise 03: Build Bridge",
   "description": "Implement and test a digital twin bridge node.",
   "source": "@site/docs/02-digital-twin/exercises/exercise-03-build-bridge.md",
   "sourceDirName": "02-digital-twin/exercises",
-  "slug": "/digital-twin/exercises/exercise-03-build-bridge",
-  "permalink": "/docs/digital-twin/exercises/exercise-03-build-bridge",
+  "slug": "/digital-twin/exercises/chapter_2_exercise_3",
+  "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_3",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/exercises/exercise-03-build-bridge.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 22,
+  "frontMatter": {
+    "id": "chapter_2_exercise_3",
+    "title": "Exercise 03: Build Bridge",
+    "sidebar_position": 22,
+    "chapter": "chapter_2_digital_twin",
+    "section": "exercises"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Exercise 02: Create World",
-    "permalink": "/docs/digital-twin/exercises/exercise-02-create-world"
+    "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_2"
   },
   "next": {
-    "title": "Chapter 2 Glossary: Digital Twin & Simulation",
-    "permalink": "/docs/digital-twin/glossary"
+    "title": "I1: Building Simulation Worlds",
+    "permalink": "/docs/digital-twin/intermediate/chapter_2_lesson_i1"
   }
 }

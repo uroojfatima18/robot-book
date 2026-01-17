@@ -1,24 +1,31 @@
 {
-  "id": "digital-twin/intermediate/I2-spawning-models",
+  "id": "digital-twin/intermediate/chapter_2_lesson_i2",
   "title": "I2: Spawning and Controlling Models",
   "description": "Spawn URDF humanoid models and control joints programmatically.",
   "source": "@site/docs/02-digital-twin/intermediate/I2-spawning-models.md",
   "sourceDirName": "02-digital-twin/intermediate",
-  "slug": "/digital-twin/intermediate/I2-spawning-models",
-  "permalink": "/docs/digital-twin/intermediate/I2-spawning-models",
+  "slug": "/digital-twin/intermediate/chapter_2_lesson_i2",
+  "permalink": "/docs/digital-twin/intermediate/chapter_2_lesson_i2",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/intermediate/I2-spawning-models.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "id": "chapter_2_lesson_i2",
+    "title": "I2: Spawning and Controlling Models",
+    "sidebar_position": 17,
+    "chapter": "chapter_2_digital_twin",
+    "tier": "intermediate"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "I1: Building Simulation Worlds",
-    "permalink": "/docs/digital-twin/intermediate/I1-building-worlds"
+    "permalink": "/docs/digital-twin/intermediate/chapter_2_lesson_i1"
   },
   "next": {
-    "title": "Chapter 2: Digital Twin & Simulation - Introduction",
-    "permalink": "/docs/digital-twin/introduction"
+    "title": "Chapter 3: AI Robot Brain",
+    "permalink": "/docs/ai-robot-brain/"
   }
 }

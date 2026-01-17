@@ -1,6 +1,7 @@
 ---
 id: chapter_1_summary
 title: "Chapter Summary & Reflection"
+sidebar_position: 7
 chapter: chapter_1_ros2
 ---
 

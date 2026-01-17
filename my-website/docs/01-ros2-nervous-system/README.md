@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # CHAPTER 1: The Robotic Nervous System (ROS 2)
 
 ```

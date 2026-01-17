@@ -1,21 +1,28 @@
 {
-  "id": "digital-twin/advanced/A2-building-bridge",
+  "id": "digital-twin/advanced/chapter_2_lesson_a2",
   "title": "A2: Building the Bridge Node",
   "description": "Implement a bidirectional synchronization bridge between physical and simulated robots.",
   "source": "@site/docs/02-digital-twin/advanced/A2-building-bridge.md",
   "sourceDirName": "02-digital-twin/advanced",
-  "slug": "/digital-twin/advanced/A2-building-bridge",
-  "permalink": "/docs/digital-twin/advanced/A2-building-bridge",
+  "slug": "/digital-twin/advanced/chapter_2_lesson_a2",
+  "permalink": "/docs/digital-twin/advanced/chapter_2_lesson_a2",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/advanced/A2-building-bridge.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 19,
+  "frontMatter": {
+    "id": "chapter_2_lesson_a2",
+    "title": "A2: Building the Bridge Node",
+    "sidebar_position": 19,
+    "chapter": "chapter_2_digital_twin",
+    "tier": "advanced"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "A1: Digital Twin Architecture",
-    "permalink": "/docs/digital-twin/advanced/A1-data-synchronization"
+    "permalink": "/docs/digital-twin/advanced/chapter_2_lesson_a1"
   },
   "next": {
     "title": "AI Training Architecture Diagram",

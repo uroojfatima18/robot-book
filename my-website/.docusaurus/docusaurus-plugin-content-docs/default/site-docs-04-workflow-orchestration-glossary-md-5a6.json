@@ -1,24 +1,30 @@
 {
-  "id": "workflow-orchestration/glossary",
-  "title": "Chapter 4: Workflow Orchestration - Glossary",
+  "id": "workflow-orchestration/chapter_4_glossary",
+  "title": "Workflow Orchestration Glossary",
   "description": "A",
   "source": "@site/docs/04-workflow-orchestration/glossary.md",
   "sourceDirName": "04-workflow-orchestration",
-  "slug": "/workflow-orchestration/glossary",
-  "permalink": "/docs/workflow-orchestration/glossary",
+  "slug": "/workflow-orchestration/chapter_4_glossary",
+  "permalink": "/docs/workflow-orchestration/chapter_4_glossary",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/04-workflow-orchestration/glossary.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 49,
+  "frontMatter": {
+    "id": "chapter_4_glossary",
+    "title": "Workflow Orchestration Glossary",
+    "sidebar_position": 49,
+    "chapter": "chapter_4_workflow"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "State Machines (Conceptual Introduction)",
-    "permalink": "/docs/workflow-orchestration/beginner/b2_state_machines_concepts"
+    "title": "Introduction: Workflow Orchestration",
+    "permalink": "/docs/workflow-orchestration/chapter_4_introduction"
   },
   "next": {
-    "title": "Chapter 4: Workflow Orchestration - Introduction",
-    "permalink": "/docs/workflow-orchestration/introduction"
+    "title": "Beginner Tier: Workflow Fundamentals",
+    "permalink": "/docs/workflow-orchestration/beginner/"
   }
 }

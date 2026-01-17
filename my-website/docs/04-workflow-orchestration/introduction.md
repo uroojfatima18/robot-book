@@ -1,3 +1,10 @@
+---
+id: chapter_4_introduction
+title: "Introduction: Workflow Orchestration"
+sidebar_position: 48
+chapter: chapter_4_workflow
+---
+
 # Chapter 4: Workflow Orchestration - Introduction
 
 This chapter introduces the concept of multi-component robotic workflows with state machines, pipeline orchestration, and recovery mechanisms in ROS 2. Students will learn how robots can combine multiple processes into one continuous workflow, handle complex tasks, monitor ongoing processes, detect issues, and make adjustments in real-time without human micromanagement.

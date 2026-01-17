@@ -1,3 +1,13 @@
+---
+id: a_lesson4_sim_to_real
+title: "Sim-to-Real Transfer"
+sidebar_position: 39
+tier: advanced
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["a_lesson3_rl"]
+---
+
 # A4: Sim-to-Real Transfer
 
 **Deploying Learned Policies on Real Robots**

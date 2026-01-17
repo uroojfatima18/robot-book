@@ -1,6 +1,7 @@
 ---
 id: chapter_1_beginner_tier
 title: "Beginner Tier: ROS 2 Fundamentals"
+sidebar_position: 4
 tier: beginner
 chapter: chapter_1_ros2
 estimated_time: "2-4 hours"

@@ -11,23 +11,28 @@
           "mainDocId": "ros2-nervous-system/README",
           "docs": [
             {
-              "id": "ai-robot-brain/advanced/A1-costmap-configuration",
-              "path": "/docs/ai-robot-brain/advanced/A1-costmap-configuration",
+              "id": "ai-robot-brain/advanced/a_lesson1_costmap",
+              "path": "/docs/ai-robot-brain/advanced/a_lesson1_costmap",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/advanced/A2-planners-behavior-trees",
-              "path": "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees",
+              "id": "ai-robot-brain/advanced/a_lesson2_planners",
+              "path": "/docs/ai-robot-brain/advanced/a_lesson2_planners",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/advanced/A3-reinforcement-learning",
-              "path": "/docs/ai-robot-brain/advanced/A3-reinforcement-learning",
+              "id": "ai-robot-brain/advanced/a_lesson3_rl",
+              "path": "/docs/ai-robot-brain/advanced/a_lesson3_rl",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/advanced/A4-sim-to-real",
-              "path": "/docs/ai-robot-brain/advanced/A4-sim-to-real",
+              "id": "ai-robot-brain/advanced/a_lesson4_sim_to_real",
+              "path": "/docs/ai-robot-brain/advanced/a_lesson4_sim_to_real",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/advanced/chapter_3_advanced_tier",
+              "path": "/docs/ai-robot-brain/advanced/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -36,18 +41,38 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/beginner/B1-introduction-perception",
-              "path": "/docs/ai-robot-brain/beginner/B1-introduction-perception",
+              "id": "ai-robot-brain/ai-prompts/chapter_3_advanced_prompts",
+              "path": "/docs/ai-robot-brain/ai-prompts/chapter_3_advanced_prompts",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/beginner/B2-sensor-types",
-              "path": "/docs/ai-robot-brain/beginner/B2-sensor-types",
+              "id": "ai-robot-brain/ai-prompts/chapter_3_beginner_prompts",
+              "path": "/docs/ai-robot-brain/ai-prompts/chapter_3_beginner_prompts",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/beginner/B3-slam-navigation-intro",
-              "path": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro",
+              "id": "ai-robot-brain/ai-prompts/chapter_3_intermediate_prompts",
+              "path": "/docs/ai-robot-brain/ai-prompts/chapter_3_intermediate_prompts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/b_lesson1_perception",
+              "path": "/docs/ai-robot-brain/beginner/b_lesson1_perception",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/b_lesson2_sensors",
+              "path": "/docs/ai-robot-brain/beginner/b_lesson2_sensors",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/b_lesson3_slam_nav",
+              "path": "/docs/ai-robot-brain/beginner/b_lesson3_slam_nav",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/beginner/chapter_3_beginner_tier",
+              "path": "/docs/ai-robot-brain/beginner/",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -66,53 +91,63 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/exercises/advanced-exercises",
-              "path": "/docs/ai-robot-brain/exercises/advanced-exercises",
+              "id": "ai-robot-brain/chapter_3_glossary",
+              "path": "/docs/ai-robot-brain/chapter_3_glossary",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/exercises/beginner-exercises",
-              "path": "/docs/ai-robot-brain/exercises/beginner-exercises",
+              "id": "ai-robot-brain/chapter_3_introduction",
+              "path": "/docs/ai-robot-brain/chapter_3_introduction",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ai-robot-brain/exercises/intermediate-exercises",
-              "path": "/docs/ai-robot-brain/exercises/intermediate-exercises",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "ai-robot-brain/intermediate/I1-camera-depth-processing",
-              "path": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
-              "path": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "ai-robot-brain/intermediate/I3-slam-toolbox",
-              "path": "/docs/ai-robot-brain/intermediate/I3-slam-toolbox",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "ai-robot-brain/intermediate/I4-nav2-basics",
-              "path": "/docs/ai-robot-brain/intermediate/I4-nav2-basics",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "ai-robot-brain/README",
+              "id": "ai-robot-brain/chapter_3_overview",
               "path": "/docs/ai-robot-brain/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/advanced/A1-data-synchronization",
-              "path": "/docs/digital-twin/advanced/A1-data-synchronization",
+              "id": "ai-robot-brain/chapter_3_summary",
+              "path": "/docs/ai-robot-brain/chapter_3_summary",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/advanced/A2-building-bridge",
-              "path": "/docs/digital-twin/advanced/A2-building-bridge",
+              "id": "ai-robot-brain/exercises/chapter_3_advanced_exercises",
+              "path": "/docs/ai-robot-brain/exercises/chapter_3_advanced_exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/exercises/chapter_3_beginner_exercises",
+              "path": "/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/exercises/chapter_3_intermediate_exercises",
+              "path": "/docs/ai-robot-brain/exercises/chapter_3_intermediate_exercises",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/chapter_3_intermediate_tier",
+              "path": "/docs/ai-robot-brain/intermediate/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/i_lesson1_camera_depth",
+              "path": "/docs/ai-robot-brain/intermediate/i_lesson1_camera_depth",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/i_lesson2_tf2",
+              "path": "/docs/ai-robot-brain/intermediate/i_lesson2_tf2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/i_lesson3_slam_toolbox",
+              "path": "/docs/ai-robot-brain/intermediate/i_lesson3_slam_toolbox",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ai-robot-brain/intermediate/i_lesson4_nav2",
+              "path": "/docs/ai-robot-brain/intermediate/i_lesson4_nav2",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -121,53 +156,63 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/beginner/B1-digital-twin-concepts",
-              "path": "/docs/digital-twin/beginner/B1-digital-twin-concepts",
+              "id": "digital-twin/advanced/chapter_2_lesson_a1",
+              "path": "/docs/digital-twin/advanced/chapter_2_lesson_a1",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/beginner/B2-first-simulation",
-              "path": "/docs/digital-twin/beginner/B2-first-simulation",
+              "id": "digital-twin/advanced/chapter_2_lesson_a2",
+              "path": "/docs/digital-twin/advanced/chapter_2_lesson_a2",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/exercises/exercise-01-launch-world",
-              "path": "/docs/digital-twin/exercises/exercise-01-launch-world",
+              "id": "digital-twin/beginner/chapter_2_lesson_b1",
+              "path": "/docs/digital-twin/beginner/chapter_2_lesson_b1",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/exercises/exercise-02-create-world",
-              "path": "/docs/digital-twin/exercises/exercise-02-create-world",
+              "id": "digital-twin/beginner/chapter_2_lesson_b2",
+              "path": "/docs/digital-twin/beginner/chapter_2_lesson_b2",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/exercises/exercise-03-build-bridge",
-              "path": "/docs/digital-twin/exercises/exercise-03-build-bridge",
+              "id": "digital-twin/chapter_2_glossary",
+              "path": "/docs/digital-twin/chapter_2_glossary",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/glossary",
-              "path": "/docs/digital-twin/glossary",
+              "id": "digital-twin/chapter_2_introduction",
+              "path": "/docs/digital-twin/chapter_2_introduction",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "digital-twin/intermediate/I1-building-worlds",
-              "path": "/docs/digital-twin/intermediate/I1-building-worlds",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "digital-twin/intermediate/I2-spawning-models",
-              "path": "/docs/digital-twin/intermediate/I2-spawning-models",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "digital-twin/introduction",
-              "path": "/docs/digital-twin/introduction",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "digital-twin/README",
+              "id": "digital-twin/chapter_2_overview",
               "path": "/docs/digital-twin/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/exercises/chapter_2_exercise_1",
+              "path": "/docs/digital-twin/exercises/chapter_2_exercise_1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/exercises/chapter_2_exercise_2",
+              "path": "/docs/digital-twin/exercises/chapter_2_exercise_2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/exercises/chapter_2_exercise_3",
+              "path": "/docs/digital-twin/exercises/chapter_2_exercise_3",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/intermediate/chapter_2_lesson_i1",
+              "path": "/docs/digital-twin/intermediate/chapter_2_lesson_i1",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/intermediate/chapter_2_lesson_i2",
+              "path": "/docs/digital-twin/intermediate/chapter_2_lesson_i2",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -186,13 +231,13 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ros2-nervous-system/advanced/exercises/advanced-exercises",
-              "path": "/docs/ros2-nervous-system/advanced/exercises/advanced-exercises",
+              "id": "ros2-nervous-system/advanced/exercises/advanced_exercises",
+              "path": "/docs/ros2-nervous-system/advanced/exercises/advanced_exercises",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ros2-nervous-system/ai-prompts/advanced-prompts",
-              "path": "/docs/ros2-nervous-system/ai-prompts/advanced-prompts",
+              "id": "ros2-nervous-system/ai-prompts/advanced_ai_prompts",
+              "path": "/docs/ros2-nervous-system/ai-prompts/advanced_ai_prompts",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -266,6 +311,46 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "workflow-orchestration/advanced/a1_watchdogs_health_monitoring",
+              "path": "/docs/workflow-orchestration/advanced/a1_watchdogs_health_monitoring",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/advanced/a2_supervisor_recovery",
+              "path": "/docs/workflow-orchestration/advanced/a2_supervisor_recovery",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/advanced/a3_continuous_operation",
+              "path": "/docs/workflow-orchestration/advanced/a3_continuous_operation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/advanced/chapter_4_advanced_tier",
+              "path": "/docs/workflow-orchestration/advanced/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/advanced/exercises/advanced_exercises_workflow",
+              "path": "/docs/workflow-orchestration/advanced/exercises/advanced_exercises_workflow",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/ai-prompts/advanced_prompts_workflow",
+              "path": "/docs/workflow-orchestration/ai-prompts/advanced_prompts_workflow",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/ai-prompts/beginner_prompts_workflow",
+              "path": "/docs/workflow-orchestration/ai-prompts/beginner_prompts_workflow",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/ai-prompts/intermediate_prompts_workflow",
+              "path": "/docs/workflow-orchestration/ai-prompts/intermediate_prompts_workflow",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "workflow-orchestration/beginner/b1_pipelines_flows_triggers",
               "path": "/docs/workflow-orchestration/beginner/b1_pipelines_flows_triggers",
               "sidebar": "tutorialSidebar"
@@ -276,18 +361,58 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "workflow-orchestration/glossary",
-              "path": "/docs/workflow-orchestration/glossary",
+              "id": "workflow-orchestration/beginner/chapter_4_beginner_tier",
+              "path": "/docs/workflow-orchestration/beginner/",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "workflow-orchestration/introduction",
-              "path": "/docs/workflow-orchestration/introduction",
+              "id": "workflow-orchestration/beginner/exercises/beginner_exercises_workflow",
+              "path": "/docs/workflow-orchestration/beginner/exercises/beginner_exercises_workflow",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "workflow-orchestration/README",
+              "id": "workflow-orchestration/chapter_4_glossary",
+              "path": "/docs/workflow-orchestration/chapter_4_glossary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/chapter_4_introduction",
+              "path": "/docs/workflow-orchestration/chapter_4_introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/chapter_4_overview",
               "path": "/docs/workflow-orchestration/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/chapter_4_summary",
+              "path": "/docs/workflow-orchestration/chapter_4_summary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/intermediate/chapter_4_intermediate_tier",
+              "path": "/docs/workflow-orchestration/intermediate/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/intermediate/exercises/intermediate_exercises_workflow",
+              "path": "/docs/workflow-orchestration/intermediate/exercises/intermediate_exercises_workflow",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/intermediate/i1_state_machines_ros2",
+              "path": "/docs/workflow-orchestration/intermediate/i1_state_machines_ros2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/intermediate/i2_multi_node_pipelines",
+              "path": "/docs/workflow-orchestration/intermediate/i2_multi_node_pipelines",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workflow-orchestration/intermediate/i3_inter_node_communication",
+              "path": "/docs/workflow-orchestration/intermediate/i3_inter_node_communication",
               "sidebar": "tutorialSidebar"
             }
           ],

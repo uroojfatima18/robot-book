@@ -1,6 +1,7 @@
 ---
 id: a_lesson1_urdf_humanoid
 title: "URDF & Humanoid Robot Description"
+sidebar_position: 2
 tier: advanced
 chapter: chapter_1_ros2
 estimated_time: "2-3 hours"

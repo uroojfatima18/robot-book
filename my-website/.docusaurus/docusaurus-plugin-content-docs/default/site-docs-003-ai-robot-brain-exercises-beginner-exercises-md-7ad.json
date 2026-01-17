@@ -1,24 +1,31 @@
 {
-  "id": "ai-robot-brain/exercises/beginner-exercises",
+  "id": "ai-robot-brain/exercises/chapter_3_beginner_exercises",
   "title": "Beginner Tier Exercises",
   "description": "Test Your Understanding of Perception, Sensors, and Navigation Concepts",
   "source": "@site/docs/003-ai-robot-brain/exercises/beginner-exercises.md",
   "sourceDirName": "003-ai-robot-brain/exercises",
-  "slug": "/ai-robot-brain/exercises/beginner-exercises",
-  "permalink": "/docs/ai-robot-brain/exercises/beginner-exercises",
+  "slug": "/ai-robot-brain/exercises/chapter_3_beginner_exercises",
+  "permalink": "/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/exercises/beginner-exercises.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 40,
+  "frontMatter": {
+    "id": "chapter_3_beginner_exercises",
+    "title": "Beginner Tier Exercises",
+    "sidebar_position": 40,
+    "chapter": "chapter_3_ai_brain",
+    "section": "exercises"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Advanced Tier Exercises",
-    "permalink": "/docs/ai-robot-brain/exercises/advanced-exercises"
+    "title": "Advanced AI Prompts",
+    "permalink": "/docs/ai-robot-brain/ai-prompts/chapter_3_advanced_prompts"
   },
   "next": {
     "title": "Intermediate Tier Exercises",
-    "permalink": "/docs/ai-robot-brain/exercises/intermediate-exercises"
+    "permalink": "/docs/ai-robot-brain/exercises/chapter_3_intermediate_exercises"
   }
 }

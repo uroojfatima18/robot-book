@@ -1,3 +1,13 @@
+---
+id: a_lesson2_planners
+title: "Planners and Behavior Trees"
+sidebar_position: 37
+tier: advanced
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["a_lesson1_costmap"]
+---
+
 # A2: Planners and Behavior Trees
 
 **Customizing Path Planning and Navigation Behaviors**

@@ -1,6 +1,7 @@
 ---
 id: beginner_ai_prompts
 title: "Beginner Tier AI Learning Prompts"
+sidebar_position: 8
 tier: beginner
 chapter: chapter_1_ros2
 ---

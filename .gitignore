@@ -50,9 +50,16 @@ Thumbs.db
 *.temp
 *.log
 
+# Claude Code temporary files
+tmpclaude-*-cwd
+
 # Node (if using for documentation tooling)
 node_modules/
 
 # Build outputs
 _build/
 site/
+
+# Docusaurus build/cache
+my-website/.docusaurus/
+build/

@@ -1,3 +1,11 @@
+---
+id: chapter_2_lesson_i2
+title: "I2: Spawning and Controlling Models"
+sidebar_position: 17
+chapter: chapter_2_digital_twin
+tier: intermediate
+---
+
 # I2: Spawning and Controlling Models
 
 > Spawn URDF humanoid models and control joints programmatically.

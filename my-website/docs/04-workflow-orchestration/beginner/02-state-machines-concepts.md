@@ -1,9 +1,10 @@
 ---
 id: b2_state_machines_concepts
-title: State Machines (Conceptual Introduction)
+title: "B2: State Machines (Conceptual Introduction)"
+sidebar_position: 52
 tier: beginner
 chapter: chapter_4_workflow
-estimated_time: 1 hour
+estimated_time: "1 hour"
 prerequisites: ["b1_pipelines_flows_triggers"]
 ---
 
@@ -250,4 +251,4 @@ State machines may not be the best choice when:
 
 ## Next Steps
 
-Continue to [B3: Data Handoff Between Components](./B3-data-handoff.md)
+Continue to [Beginner Exercises](./exercises/beginner-exercises.md) or proceed to [Intermediate Tier](../intermediate/README.md)

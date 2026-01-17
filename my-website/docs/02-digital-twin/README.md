@@ -1,3 +1,10 @@
+---
+id: chapter_2_overview
+title: "Chapter 2: Digital Twin & Simulation"
+sidebar_position: 11
+chapter: chapter_2_digital_twin
+---
+
 # Chapter 2: Digital Twin & Simulation
 
 > Create a virtual robot replica that mirrors and controls your physical humanoid.

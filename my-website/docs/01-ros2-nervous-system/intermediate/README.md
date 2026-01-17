@@ -1,6 +1,7 @@
 ---
 id: chapter_1_intermediate_tier
 title: "Intermediate Tier: Hands-On ROS 2 Programming"
+sidebar_position: 5
 tier: intermediate
 chapter: chapter_1_ros2
 estimated_time: "2-4 hours"

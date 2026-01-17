@@ -1,6 +1,7 @@
 ---
 id: intermediate_ai_prompts
 title: "Intermediate Tier AI Learning Prompts"
+sidebar_position: 9
 tier: intermediate
 chapter: chapter_1_ros2
 ---

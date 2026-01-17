@@ -1,6 +1,7 @@
 ---
 id: chapter_1_introduction
 title: "Introduction: The Robotic Nervous System"
+sidebar_position: 1
 chapter: chapter_1_ros2
 estimated_time: "15 minutes"
 ---

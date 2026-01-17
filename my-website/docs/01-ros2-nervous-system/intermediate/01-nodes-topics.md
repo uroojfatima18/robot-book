@@ -1,6 +1,7 @@
 ---
 id: i_lesson1_nodes_topics
 title: "Nodes, Topics, Services, and Actions"
+sidebar_position: 2
 tier: intermediate
 chapter: chapter_1_ros2
 estimated_time: "2-3 hours"

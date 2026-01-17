@@ -1,24 +1,31 @@
 {
-  "id": "digital-twin/exercises/exercise-01-launch-world",
+  "id": "digital-twin/exercises/chapter_2_exercise_1",
   "title": "Exercise 01: Launch World",
   "description": "Practice launching Gazebo and exploring a simulation world.",
   "source": "@site/docs/02-digital-twin/exercises/exercise-01-launch-world.md",
   "sourceDirName": "02-digital-twin/exercises",
-  "slug": "/digital-twin/exercises/exercise-01-launch-world",
-  "permalink": "/docs/digital-twin/exercises/exercise-01-launch-world",
+  "slug": "/digital-twin/exercises/chapter_2_exercise_1",
+  "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_1",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/exercises/exercise-01-launch-world.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "id": "chapter_2_exercise_1",
+    "title": "Exercise 01: Launch World",
+    "sidebar_position": 20,
+    "chapter": "chapter_2_digital_twin",
+    "section": "exercises"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "B2: Running Your First Simulation",
-    "permalink": "/docs/digital-twin/beginner/B2-first-simulation"
+    "permalink": "/docs/digital-twin/beginner/chapter_2_lesson_b2"
   },
   "next": {
     "title": "Exercise 02: Create World",
-    "permalink": "/docs/digital-twin/exercises/exercise-02-create-world"
+    "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_2"
   }
 }

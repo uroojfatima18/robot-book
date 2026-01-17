@@ -11,16 +11,18 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/ai-prompts/beginner-prompts.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 8,
   "frontMatter": {
     "id": "beginner_ai_prompts",
     "title": "Beginner Tier AI Learning Prompts",
+    "sidebar_position": 8,
     "tier": "beginner",
     "chapter": "chapter_1_ros2"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "AI-Assisted Learning Prompts: Advanced Tier",
-    "permalink": "/docs/ros2-nervous-system/ai-prompts/advanced-prompts"
+    "title": "Chapter Summary & Reflection",
+    "permalink": "/docs/ros2-nervous-system/chapter_1_summary"
   },
   "next": {
     "title": "Intermediate Tier AI Learning Prompts",

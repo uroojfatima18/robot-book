@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "B3: SLAM and Navigation Concepts",
-    "permalink": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro"
+    "title": "SLAM and Navigation Introduction",
+    "permalink": "/docs/ai-robot-brain/beginner/b_lesson3_slam_nav"
   },
   "next": {
     "title": "Gazebo & Digital Twin Refresher (Chapter 2 Reference)",

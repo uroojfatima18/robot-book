@@ -1,6 +1,7 @@
 ---
 id: b_lesson2_sensors
 title: "Basic Sensors Overview"
+sidebar_position: 3
 tier: beginner
 chapter: chapter_1_ros2
 estimated_time: "1 hour"

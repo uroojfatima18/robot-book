@@ -1,3 +1,10 @@
+---
+id: chapter_2_introduction
+title: "Introduction: Digital Twin & Simulation"
+sidebar_position: 12
+chapter: chapter_2_digital_twin
+---
+
 # Chapter 2: Digital Twin & Simulation - Introduction
 
 > From ROS 2 commands to virtual robots: Building the simulation layer for safe, rapid, and scalable robot development.

@@ -1,3 +1,11 @@
+---
+id: advanced_exercises
+title: "Advanced Tier Exercises"
+sidebar_position: 4
+tier: advanced
+chapter: chapter_1_ros2
+---
+
 # Advanced Tier Exercises
 
 **Chapter**: Chapter 1 - The Robotic Nervous System (ROS 2)

@@ -1,24 +1,35 @@
 {
-  "id": "ai-robot-brain/intermediate/I1-camera-depth-processing",
-  "title": "I1: Camera and Depth Data Processing",
+  "id": "ai-robot-brain/intermediate/i_lesson1_camera_depth",
+  "title": "Camera and Depth Data Processing",
   "description": "Building Your First Perception Pipeline in ROS 2",
   "source": "@site/docs/003-ai-robot-brain/intermediate/I1-camera-depth-processing.md",
   "sourceDirName": "003-ai-robot-brain/intermediate",
-  "slug": "/ai-robot-brain/intermediate/I1-camera-depth-processing",
-  "permalink": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing",
+  "slug": "/ai-robot-brain/intermediate/i_lesson1_camera_depth",
+  "permalink": "/docs/ai-robot-brain/intermediate/i_lesson1_camera_depth",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/intermediate/I1-camera-depth-processing.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 31,
+  "frontMatter": {
+    "id": "i_lesson1_camera_depth",
+    "title": "Camera and Depth Data Processing",
+    "sidebar_position": 31,
+    "tier": "intermediate",
+    "chapter": "chapter_3_ai_brain",
+    "estimated_time": "60-90 minutes",
+    "prerequisites": [
+      "b_lesson3_slam_nav"
+    ]
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Intermediate Tier Exercises",
-    "permalink": "/docs/ai-robot-brain/exercises/intermediate-exercises"
+    "title": "Intermediate Tier: Hands-On Perception & Navigation",
+    "permalink": "/docs/ai-robot-brain/intermediate/"
   },
   "next": {
-    "title": "I2: TF2 Coordinate Frames",
-    "permalink": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames"
+    "title": "TF2 Coordinate Frame Management",
+    "permalink": "/docs/ai-robot-brain/intermediate/i_lesson2_tf2"
   }
 }

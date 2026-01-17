@@ -1,3 +1,13 @@
+---
+id: i_lesson1_camera_depth
+title: "Camera and Depth Data Processing"
+sidebar_position: 31
+tier: intermediate
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["b_lesson3_slam_nav"]
+---
+
 # I1: Camera and Depth Data Processing
 
 **Building Your First Perception Pipeline in ROS 2**

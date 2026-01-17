@@ -1,123 +1,143 @@
 {
-  "/__docusaurus/debug-2ca": {
+  "/__docusaurus/debug-5fa": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-51-f-22f"
+      "plugin": "plugin---docusaurus-debug-7-ec-0d7"
     }
   },
-  "/__docusaurus/debug/config-08e": {
+  "/__docusaurus/debug/config-11f": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-51-f-22f"
+      "plugin": "plugin---docusaurus-debug-7-ec-0d7"
     }
   },
-  "/__docusaurus/debug/content-744": {
+  "/__docusaurus/debug/content-5d7": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-51-f-22f"
+      "plugin": "plugin---docusaurus-debug-7-ec-0d7"
     },
     "allContent": "allContent---docusaurus-debug-content-246-9aa"
   },
-  "/__docusaurus/debug/globalData-40e": {
+  "/__docusaurus/debug/globalData-591": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-51-f-22f"
+      "plugin": "plugin---docusaurus-debug-7-ec-0d7"
     }
   },
-  "/__docusaurus/debug/metadata-943": {
+  "/__docusaurus/debug/metadata-78b": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-51-f-22f"
+      "plugin": "plugin---docusaurus-debug-7-ec-0d7"
     }
   },
-  "/__docusaurus/debug/registry-921": {
+  "/__docusaurus/debug/registry-2d7": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-51-f-22f"
+      "plugin": "plugin---docusaurus-debug-7-ec-0d7"
     }
   },
-  "/__docusaurus/debug/routes-a3c": {
+  "/__docusaurus/debug/routes-c1c": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-51-f-22f"
+      "plugin": "plugin---docusaurus-debug-7-ec-0d7"
     }
   },
-  "/auth-128": {
+  "/auth-13a": {
     "__comp": "__comp---site-src-pages-auth-js-755-117",
     "__context": {
-      "plugin": "plugin---auth-580-976"
+      "plugin": "plugin---auth-41-f-409"
     },
     "config": "config---auth-5-e-9-ea4"
   },
-  "/login-ad5": {
+  "/login-6eb": {
     "__comp": "__comp---site-src-pages-login-js-380-710",
     "__context": {
-      "plugin": "plugin---auth-580-976"
+      "plugin": "plugin---auth-41-f-409"
     },
     "config": "config---auth-5-e-9-ea4"
   },
-  "/signup-293": {
+  "/signup-1ab": {
     "__comp": "__comp---site-src-pages-signup-js-83-a-147",
     "__context": {
-      "plugin": "plugin---auth-580-976"
+      "plugin": "plugin---auth-41-f-409"
     },
     "config": "config---auth-5-e-9-ea4"
   },
-  "/what-you-learn-1b5": {
+  "/what-you-learn-20a": {
     "__comp": "__comp---site-src-pages-what-you-learn-js-011-4d6",
     "__context": {
-      "plugin": "plugin---auth-580-976"
+      "plugin": "plugin---auth-41-f-409"
     },
     "config": "config---auth-5-e-9-ea4"
   },
-  "/docs-8f7": {
+  "/docs-041": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---docs-7-cd-53f"
+      "plugin": "plugin---docsda-1-9ce"
     }
   },
-  "/docs-8d8": {
+  "/docs-373": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---docs-935-398"
   },
-  "/docs-004": {
+  "/docs-f9e": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/ai-robot-brain/-3ee": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-ai-robot-brain-0-fd-1b9"
   },
-  "/docs/ai-robot-brain/advanced/A1-costmap-configuration-624": {
+  "/docs/ai-robot-brain/advanced/-441": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-advanced-a-1-costmap-configuration-2-d-5-db9"
+    "content": "content---docs-ai-robot-brain-advanced-7-e-7-045"
   },
-  "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees-e82": {
+  "/docs/ai-robot-brain/advanced/a_lesson1_costmap-d36": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-advanced-a-2-planners-behavior-trees-4-cd-4fa"
+    "content": "content---docs-ai-robot-brain-advanced-a-lesson-1-costmap-2-d-5-255"
   },
-  "/docs/ai-robot-brain/advanced/A3-reinforcement-learning-aaf": {
+  "/docs/ai-robot-brain/advanced/a_lesson2_planners-ab7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-advanced-a-3-reinforcement-learninge-23-57e"
+    "content": "content---docs-ai-robot-brain-advanced-a-lesson-2-planners-4-cd-373"
   },
-  "/docs/ai-robot-brain/advanced/A4-sim-to-real-312": {
+  "/docs/ai-robot-brain/advanced/a_lesson3_rl-191": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-advanced-a-4-sim-to-real-49-b-9dc"
+    "content": "content---docs-ai-robot-brain-advanced-a-lesson-3-rle-23-9b3"
+  },
+  "/docs/ai-robot-brain/advanced/a_lesson4_sim_to_real-aa3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-advanced-a-lesson-4-sim-to-real-49-b-d04"
   },
   "/docs/ai-robot-brain/advanced/pretrained/-5bd": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-ai-robot-brain-advanced-pretrained-616-91b"
   },
-  "/docs/ai-robot-brain/beginner/B1-introduction-perception-4d2": {
+  "/docs/ai-robot-brain/ai-prompts/chapter_3_advanced_prompts-d53": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-beginner-b-1-introduction-perception-6-d-5-482"
+    "content": "content---docs-ai-robot-brain-ai-prompts-chapter-3-advanced-prompts-07-c-40d"
   },
-  "/docs/ai-robot-brain/beginner/B2-sensor-types-f37": {
+  "/docs/ai-robot-brain/ai-prompts/chapter_3_beginner_prompts-aaf": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-beginner-b-2-sensor-types-509-3ed"
+    "content": "content---docs-ai-robot-brain-ai-prompts-chapter-3-beginner-prompts-03-a-8d9"
   },
-  "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro-067": {
+  "/docs/ai-robot-brain/ai-prompts/chapter_3_intermediate_prompts-a88": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-beginner-b-3-slam-navigation-introf-9-c-28d"
+    "content": "content---docs-ai-robot-brain-ai-prompts-chapter-3-intermediate-prompts-53-d-bb4"
+  },
+  "/docs/ai-robot-brain/beginner/-615": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-beginner-d-57-552"
+  },
+  "/docs/ai-robot-brain/beginner/b_lesson1_perception-d3e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-beginner-b-lesson-1-perception-6-d-5-656"
+  },
+  "/docs/ai-robot-brain/beginner/b_lesson2_sensors-05a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-beginner-b-lesson-2-sensors-509-163"
+  },
+  "/docs/ai-robot-brain/beginner/b_lesson3_slam_nav-e2b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-beginner-b-lesson-3-slam-navf-9-c-1cd"
   },
   "/docs/ai-robot-brain/beginner/diagrams/palette-70d": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -131,85 +151,101 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-ai-robot-brain-beginner-refresher-ros-2-f-4-a-581"
   },
-  "/docs/ai-robot-brain/exercises/advanced-exercises-313": {
+  "/docs/ai-robot-brain/chapter_3_glossary-252": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-exercises-advanced-exercises-94-a-a84"
+    "content": "content---docs-ai-robot-brain-chapter-3-glossary-92-a-326"
   },
-  "/docs/ai-robot-brain/exercises/beginner-exercises-c77": {
+  "/docs/ai-robot-brain/chapter_3_introduction-6c8": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-exercises-beginner-exercises-7-ad-55d"
+    "content": "content---docs-ai-robot-brain-chapter-3-introduction-615-bd9"
   },
-  "/docs/ai-robot-brain/exercises/intermediate-exercises-979": {
+  "/docs/ai-robot-brain/chapter_3_summary-020": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-exercises-intermediate-exercisescd-3-58a"
+    "content": "content---docs-ai-robot-brain-chapter-3-summaryc-35-f68"
   },
-  "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing-13e": {
+  "/docs/ai-robot-brain/exercises/chapter_3_advanced_exercises-98f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-intermediate-i-1-camera-depth-processing-99-a-728"
+    "content": "content---docs-ai-robot-brain-exercises-chapter-3-advanced-exercises-94-a-7f0"
   },
-  "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames-916": {
+  "/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises-052": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-intermediate-i-2-tf-2-coordinate-framesa-58-bde"
+    "content": "content---docs-ai-robot-brain-exercises-chapter-3-beginner-exercises-7-ad-09b"
   },
-  "/docs/ai-robot-brain/intermediate/I3-slam-toolbox-690": {
+  "/docs/ai-robot-brain/exercises/chapter_3_intermediate_exercises-112": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-intermediate-i-3-slam-toolboxfaf-1b9"
+    "content": "content---docs-ai-robot-brain-exercises-chapter-3-intermediate-exercisescd-3-edc"
   },
-  "/docs/ai-robot-brain/intermediate/I4-nav2-basics-bcb": {
+  "/docs/ai-robot-brain/intermediate/-314": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ai-robot-brain-intermediate-i-4-nav-2-basics-393-4b8"
+    "content": "content---docs-ai-robot-brain-intermediate-b-8-f-074"
+  },
+  "/docs/ai-robot-brain/intermediate/i_lesson1_camera_depth-470": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-intermediate-i-lesson-1-camera-depth-99-a-c21"
+  },
+  "/docs/ai-robot-brain/intermediate/i_lesson2_tf2-1ff": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-intermediate-i-lesson-2-tf-2-a-58-fe6"
+  },
+  "/docs/ai-robot-brain/intermediate/i_lesson3_slam_toolbox-847": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-intermediate-i-lesson-3-slam-toolboxfaf-c99"
+  },
+  "/docs/ai-robot-brain/intermediate/i_lesson4_nav2-d65": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-robot-brain-intermediate-i-lesson-4-nav-2393-d58"
   },
   "/docs/digital-twin/-b69": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-digital-twin-064-d00"
   },
-  "/docs/digital-twin/advanced/A1-data-synchronization-ac9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-advanced-a-1-data-synchronization-2-ed-5f4"
-  },
-  "/docs/digital-twin/advanced/A2-building-bridge-f6c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-advanced-a-2-building-bridged-08-1ce"
-  },
   "/docs/digital-twin/advanced/assets/diagrams/ai-training-architecture-686": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-digital-twin-advanced-assets-diagrams-ai-training-architecturec-29-f8f"
   },
-  "/docs/digital-twin/beginner/B1-digital-twin-concepts-99c": {
+  "/docs/digital-twin/advanced/chapter_2_lesson_a1-4f6": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-beginner-b-1-digital-twin-concepts-447-6db"
+    "content": "content---docs-digital-twin-advanced-chapter-2-lesson-a-12-ed-884"
   },
-  "/docs/digital-twin/beginner/B2-first-simulation-260": {
+  "/docs/digital-twin/advanced/chapter_2_lesson_a2-b79": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-beginner-b-2-first-simulationb-71-73d"
+    "content": "content---docs-digital-twin-advanced-chapter-2-lesson-a-2-d-08-9c2"
   },
-  "/docs/digital-twin/exercises/exercise-01-launch-world-419": {
+  "/docs/digital-twin/beginner/chapter_2_lesson_b1-c16": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-exercises-exercise-01-launch-world-6-cc-134"
+    "content": "content---docs-digital-twin-beginner-chapter-2-lesson-b-1447-7cc"
   },
-  "/docs/digital-twin/exercises/exercise-02-create-world-748": {
+  "/docs/digital-twin/beginner/chapter_2_lesson_b2-c49": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-exercises-exercise-02-create-world-050-930"
+    "content": "content---docs-digital-twin-beginner-chapter-2-lesson-b-2-b-71-7bb"
   },
-  "/docs/digital-twin/exercises/exercise-03-build-bridge-6d3": {
+  "/docs/digital-twin/chapter_2_glossary-429": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-exercises-exercise-03-build-bridgec-65-b2b"
+    "content": "content---docs-digital-twin-chapter-2-glossary-151-6a3"
   },
-  "/docs/digital-twin/glossary-3a5": {
+  "/docs/digital-twin/chapter_2_introduction-bc9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-glossary-151-446"
+    "content": "content---docs-digital-twin-chapter-2-introduction-306-a40"
   },
-  "/docs/digital-twin/intermediate/I1-building-worlds-7b2": {
+  "/docs/digital-twin/exercises/chapter_2_exercise_1-e3a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-intermediate-i-1-building-worlds-28-e-8c3"
+    "content": "content---docs-digital-twin-exercises-chapter-2-exercise-16-cc-d6a"
   },
-  "/docs/digital-twin/intermediate/I2-spawning-models-8d5": {
+  "/docs/digital-twin/exercises/chapter_2_exercise_2-4ed": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-intermediate-i-2-spawning-modelscab-c37"
+    "content": "content---docs-digital-twin-exercises-chapter-2-exercise-2050-932"
   },
-  "/docs/digital-twin/introduction-08e": {
+  "/docs/digital-twin/exercises/chapter_2_exercise_3-955": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-digital-twin-introduction-306-d85"
+    "content": "content---docs-digital-twin-exercises-chapter-2-exercise-3-c-65-ef7"
+  },
+  "/docs/digital-twin/intermediate/chapter_2_lesson_i1-cb9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-digital-twin-intermediate-chapter-2-lesson-i-128-e-c09"
+  },
+  "/docs/digital-twin/intermediate/chapter_2_lesson_i2-78c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-digital-twin-intermediate-chapter-2-lesson-i-2-cab-d87"
   },
   "/docs/ros2-nervous-system/-b83": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -227,13 +263,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-ros-2-nervous-system-advanced-a-lesson-2-advanced-patterns-775-912"
   },
-  "/docs/ros2-nervous-system/advanced/exercises/advanced-exercises-61c": {
+  "/docs/ros2-nervous-system/advanced/exercises/advanced_exercises-337": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-nervous-system-advanced-exercises-advanced-exercises-44-f-bff"
+    "content": "content---docs-ros-2-nervous-system-advanced-exercises-advanced-exercises-44-f-dd4"
   },
-  "/docs/ros2-nervous-system/ai-prompts/advanced-prompts-0aa": {
+  "/docs/ros2-nervous-system/ai-prompts/advanced_ai_prompts-86f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-ros-2-nervous-system-ai-prompts-advanced-prompts-918-d53"
+    "content": "content---docs-ros-2-nervous-system-ai-prompts-advanced-ai-prompts-918-850"
   },
   "/docs/ros2-nervous-system/ai-prompts/beginner_ai_prompts-3c6": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -291,26 +327,90 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-workflow-orchestration-47-b-d79"
   },
-  "/docs/workflow-orchestration/beginner/b1_pipelines_flows_triggers-405": {
+  "/docs/workflow-orchestration/advanced/-343": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-workflow-orchestration-beginner-b-1-pipelines-flows-triggers-394-dde"
+    "content": "content---docs-workflow-orchestration-advanced-5-ad-4de"
   },
-  "/docs/workflow-orchestration/beginner/b2_state_machines_concepts-865": {
+  "/docs/workflow-orchestration/advanced/a1_watchdogs_health_monitoring-df8": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-workflow-orchestration-beginner-b-2-state-machines-concepts-04-c-b5d"
+    "content": "content---docs-workflow-orchestration-advanced-a-1-watchdogs-health-monitoring-4-f-9-3cf"
   },
-  "/docs/workflow-orchestration/glossary-738": {
+  "/docs/workflow-orchestration/advanced/a2_supervisor_recovery-539": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-workflow-orchestration-glossary-5-a-6-53a"
+    "content": "content---docs-workflow-orchestration-advanced-a-2-supervisor-recoveryb-51-830"
   },
-  "/docs/workflow-orchestration/introduction-7df": {
+  "/docs/workflow-orchestration/advanced/a3_continuous_operation-f6a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-workflow-orchestration-introduction-2-a-5-842"
+    "content": "content---docs-workflow-orchestration-advanced-a-3-continuous-operationb-14-1ee"
   },
-  "/-738": {
+  "/docs/workflow-orchestration/advanced/exercises/advanced_exercises_workflow-c22": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-advanced-exercises-advanced-exercises-workflow-698-3e0"
+  },
+  "/docs/workflow-orchestration/ai-prompts/advanced_prompts_workflow-ff2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-ai-prompts-advanced-prompts-workflowdd-5-075"
+  },
+  "/docs/workflow-orchestration/ai-prompts/beginner_prompts_workflow-e51": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-ai-prompts-beginner-prompts-workflowdd-2-4b7"
+  },
+  "/docs/workflow-orchestration/ai-prompts/intermediate_prompts_workflow-7c1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-ai-prompts-intermediate-prompts-workflow-740-838"
+  },
+  "/docs/workflow-orchestration/beginner/-f68": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-beginner-79-c-d12"
+  },
+  "/docs/workflow-orchestration/beginner/b1_pipelines_flows_triggers-412": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-beginner-b-1-pipelines-flows-triggersc-1-b-36e"
+  },
+  "/docs/workflow-orchestration/beginner/b2_state_machines_concepts-fd7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-beginner-b-2-state-machines-conceptsa-44-b07"
+  },
+  "/docs/workflow-orchestration/beginner/exercises/beginner_exercises_workflow-9f7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-beginner-exercises-beginner-exercises-workflow-3-f-1-075"
+  },
+  "/docs/workflow-orchestration/chapter_4_glossary-f64": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-chapter-4-glossary-5-a-6-646"
+  },
+  "/docs/workflow-orchestration/chapter_4_introduction-778": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-chapter-4-introduction-2-a-5-0cf"
+  },
+  "/docs/workflow-orchestration/chapter_4_summary-123": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-chapter-4-summary-278-bdb"
+  },
+  "/docs/workflow-orchestration/intermediate/-69f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-intermediate-bab-10f"
+  },
+  "/docs/workflow-orchestration/intermediate/exercises/intermediate_exercises_workflow-458": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-intermediate-exercises-intermediate-exercises-workflow-456-02b"
+  },
+  "/docs/workflow-orchestration/intermediate/i1_state_machines_ros2-b29": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-intermediate-i-1-state-machines-ros-2-d-63-eff"
+  },
+  "/docs/workflow-orchestration/intermediate/i2_multi_node_pipelines-34e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-intermediate-i-2-multi-node-pipelinesfbb-df3"
+  },
+  "/docs/workflow-orchestration/intermediate/i3_inter_node_communication-ce1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-workflow-orchestration-intermediate-i-3-inter-node-communication-896-b04"
+  },
+  "/-2b7": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
-      "plugin": "plugin---auth-580-976"
+      "plugin": "plugin---auth-41-f-409"
     },
     "config": "config---auth-5-e-9-ea4"
   }

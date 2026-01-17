@@ -1,24 +1,31 @@
 {
-  "id": "digital-twin/advanced/A1-data-synchronization",
+  "id": "digital-twin/advanced/chapter_2_lesson_a1",
   "title": "A1: Digital Twin Architecture",
   "description": "Design data synchronization patterns for bidirectional robot-simulation communication.",
   "source": "@site/docs/02-digital-twin/advanced/A1-data-synchronization.md",
   "sourceDirName": "02-digital-twin/advanced",
-  "slug": "/digital-twin/advanced/A1-data-synchronization",
-  "permalink": "/docs/digital-twin/advanced/A1-data-synchronization",
+  "slug": "/digital-twin/advanced/chapter_2_lesson_a1",
+  "permalink": "/docs/digital-twin/advanced/chapter_2_lesson_a1",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/advanced/A1-data-synchronization.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "id": "chapter_2_lesson_a1",
+    "title": "A1: Digital Twin Architecture",
+    "sidebar_position": 18,
+    "chapter": "chapter_2_digital_twin",
+    "tier": "advanced"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Chapter 2: Digital Twin & Simulation",
-    "permalink": "/docs/digital-twin/"
+    "title": "Digital Twin Glossary",
+    "permalink": "/docs/digital-twin/chapter_2_glossary"
   },
   "next": {
     "title": "A2: Building the Bridge Node",
-    "permalink": "/docs/digital-twin/advanced/A2-building-bridge"
+    "permalink": "/docs/digital-twin/advanced/chapter_2_lesson_a2"
   }
 }

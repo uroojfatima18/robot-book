@@ -1,24 +1,31 @@
 {
-  "id": "digital-twin/exercises/exercise-02-create-world",
+  "id": "digital-twin/exercises/chapter_2_exercise_2",
   "title": "Exercise 02: Create World",
   "description": "Build a custom simulation world from scratch.",
   "source": "@site/docs/02-digital-twin/exercises/exercise-02-create-world.md",
   "sourceDirName": "02-digital-twin/exercises",
-  "slug": "/digital-twin/exercises/exercise-02-create-world",
-  "permalink": "/docs/digital-twin/exercises/exercise-02-create-world",
+  "slug": "/digital-twin/exercises/chapter_2_exercise_2",
+  "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_2",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/exercises/exercise-02-create-world.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 21,
+  "frontMatter": {
+    "id": "chapter_2_exercise_2",
+    "title": "Exercise 02: Create World",
+    "sidebar_position": 21,
+    "chapter": "chapter_2_digital_twin",
+    "section": "exercises"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Exercise 01: Launch World",
-    "permalink": "/docs/digital-twin/exercises/exercise-01-launch-world"
+    "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_1"
   },
   "next": {
     "title": "Exercise 03: Build Bridge",
-    "permalink": "/docs/digital-twin/exercises/exercise-03-build-bridge"
+    "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_3"
   }
 }

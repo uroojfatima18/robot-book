@@ -18,7 +18,7 @@
     "permalink": "/docs/ai-robot-brain/beginner/refresher-gazebo"
   },
   "next": {
-    "title": "Advanced Tier Exercises",
-    "permalink": "/docs/ai-robot-brain/exercises/advanced-exercises"
+    "title": "Intermediate Tier: Hands-On Perception & Navigation",
+    "permalink": "/docs/ai-robot-brain/intermediate/"
   }
 }

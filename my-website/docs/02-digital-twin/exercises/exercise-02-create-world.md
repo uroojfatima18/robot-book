@@ -1,3 +1,11 @@
+---
+id: chapter_2_exercise_2
+title: "Exercise 02: Create World"
+sidebar_position: 21
+chapter: chapter_2_digital_twin
+section: exercises
+---
+
 # Exercise 02: Create World
 
 > Build a custom simulation world from scratch.

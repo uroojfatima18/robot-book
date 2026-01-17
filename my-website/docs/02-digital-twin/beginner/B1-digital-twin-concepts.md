@@ -1,3 +1,11 @@
+---
+id: chapter_2_lesson_b1
+title: "B1: What is a Digital Twin?"
+sidebar_position: 14
+chapter: chapter_2_digital_twin
+tier: beginner
+---
+
 # B1: What is a Digital Twin?
 
 > Understanding the virtual-physical synchronization paradigm for humanoid robotics.

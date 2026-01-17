@@ -11,10 +11,11 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/intermediate/02-python-ros-bridge.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 2,
+  "sidebarPosition": 3,
   "frontMatter": {
     "id": "i_lesson2_python_ros",
     "title": "Python ROS Bridge (rclpy)",
+    "sidebar_position": 3,
     "tier": "intermediate",
     "chapter": "chapter_1_ros2",
     "estimated_time": "2-3 hours",

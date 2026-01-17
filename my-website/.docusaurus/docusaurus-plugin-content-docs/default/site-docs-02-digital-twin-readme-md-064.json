@@ -1,5 +1,5 @@
 {
-  "id": "digital-twin/README",
+  "id": "digital-twin/chapter_2_overview",
   "title": "Chapter 2: Digital Twin & Simulation",
   "description": "Create a virtual robot replica that mirrors and controls your physical humanoid.",
   "source": "@site/docs/02-digital-twin/README.md",
@@ -11,14 +11,20 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/README.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "id": "chapter_2_overview",
+    "title": "Chapter 2: Digital Twin & Simulation",
+    "sidebar_position": 11,
+    "chapter": "chapter_2_digital_twin"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Chapter Summary & Reflection",
-    "permalink": "/docs/ros2-nervous-system/chapter_1_summary"
+    "title": "Advanced Tier AI Learning Prompts",
+    "permalink": "/docs/ros2-nervous-system/ai-prompts/advanced_ai_prompts"
   },
   "next": {
-    "title": "A1: Digital Twin Architecture",
-    "permalink": "/docs/digital-twin/advanced/A1-data-synchronization"
+    "title": "Introduction: Digital Twin & Simulation",
+    "permalink": "/docs/digital-twin/chapter_2_introduction"
   }
 }

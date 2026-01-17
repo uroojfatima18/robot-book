@@ -1,3 +1,13 @@
+---
+id: a_lesson3_rl
+title: "Reinforcement Learning Fundamentals"
+sidebar_position: 38
+tier: advanced
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["a_lesson2_planners"]
+---
+
 # A3: Reinforcement Learning Fundamentals
 
 **Teaching Robots to Learn from Experience**

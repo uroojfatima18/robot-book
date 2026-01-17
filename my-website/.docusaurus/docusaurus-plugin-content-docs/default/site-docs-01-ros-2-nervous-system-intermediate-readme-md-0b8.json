@@ -11,17 +11,19 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/intermediate/README.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 5,
   "frontMatter": {
     "id": "chapter_1_intermediate_tier",
     "title": "Intermediate Tier: Hands-On ROS 2 Programming",
+    "sidebar_position": 5,
     "tier": "intermediate",
     "chapter": "chapter_1_ros2",
     "estimated_time": "2-4 hours"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "ROS 2 Glossary",
-    "permalink": "/docs/ros2-nervous-system/chapter_1_glossary"
+    "title": "Beginner Tier Exercises",
+    "permalink": "/docs/ros2-nervous-system/beginner/exercises/beginner_exercises"
   },
   "next": {
     "title": "Nodes, Topics, Services, and Actions",

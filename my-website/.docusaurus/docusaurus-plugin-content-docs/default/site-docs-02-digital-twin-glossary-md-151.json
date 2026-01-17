@@ -1,24 +1,30 @@
 {
-  "id": "digital-twin/glossary",
-  "title": "Chapter 2 Glossary: Digital Twin & Simulation",
+  "id": "digital-twin/chapter_2_glossary",
+  "title": "Digital Twin Glossary",
   "description": "Quick reference for key terms used throughout the Digital Twin chapter.",
   "source": "@site/docs/02-digital-twin/glossary.md",
   "sourceDirName": "02-digital-twin",
-  "slug": "/digital-twin/glossary",
-  "permalink": "/docs/digital-twin/glossary",
+  "slug": "/digital-twin/chapter_2_glossary",
+  "permalink": "/docs/digital-twin/chapter_2_glossary",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/glossary.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "id": "chapter_2_glossary",
+    "title": "Digital Twin Glossary",
+    "sidebar_position": 13,
+    "chapter": "chapter_2_digital_twin"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Exercise 03: Build Bridge",
-    "permalink": "/docs/digital-twin/exercises/exercise-03-build-bridge"
+    "title": "Introduction: Digital Twin & Simulation",
+    "permalink": "/docs/digital-twin/chapter_2_introduction"
   },
   "next": {
-    "title": "I1: Building Simulation Worlds",
-    "permalink": "/docs/digital-twin/intermediate/I1-building-worlds"
+    "title": "A1: Digital Twin Architecture",
+    "permalink": "/docs/digital-twin/advanced/chapter_2_lesson_a1"
   }
 }
