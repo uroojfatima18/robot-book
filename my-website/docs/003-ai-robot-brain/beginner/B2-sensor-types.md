@@ -1,3 +1,13 @@
+---
+id: b_lesson2_sensors
+title: "Understanding Sensor Types"
+sidebar_position: 28
+tier: beginner
+chapter: chapter_3_ai_brain
+estimated_time: "45-60 minutes"
+prerequisites: ["b_lesson1_perception"]
+---
+
 # B2: Understanding Sensor Types
 
 **The Eyes and Ears of Your Robot**

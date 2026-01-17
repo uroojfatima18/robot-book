@@ -1,24 +1,35 @@
 {
-  "id": "ai-robot-brain/beginner/B2-sensor-types",
-  "title": "B2: Understanding Sensor Types",
+  "id": "ai-robot-brain/beginner/b_lesson2_sensors",
+  "title": "Understanding Sensor Types",
   "description": "The Eyes and Ears of Your Robot",
   "source": "@site/docs/003-ai-robot-brain/beginner/B2-sensor-types.md",
   "sourceDirName": "003-ai-robot-brain/beginner",
-  "slug": "/ai-robot-brain/beginner/B2-sensor-types",
-  "permalink": "/docs/ai-robot-brain/beginner/B2-sensor-types",
+  "slug": "/ai-robot-brain/beginner/b_lesson2_sensors",
+  "permalink": "/docs/ai-robot-brain/beginner/b_lesson2_sensors",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/beginner/B2-sensor-types.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 28,
+  "frontMatter": {
+    "id": "b_lesson2_sensors",
+    "title": "Understanding Sensor Types",
+    "sidebar_position": 28,
+    "tier": "beginner",
+    "chapter": "chapter_3_ai_brain",
+    "estimated_time": "45-60 minutes",
+    "prerequisites": [
+      "b_lesson1_perception"
+    ]
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "B1: Introduction to Robotic Perception",
-    "permalink": "/docs/ai-robot-brain/beginner/B1-introduction-perception"
+    "title": "Introduction to Robotic Perception",
+    "permalink": "/docs/ai-robot-brain/beginner/b_lesson1_perception"
   },
   "next": {
-    "title": "B3: SLAM and Navigation Concepts",
-    "permalink": "/docs/ai-robot-brain/beginner/B3-slam-navigation-intro"
+    "title": "SLAM and Navigation Introduction",
+    "permalink": "/docs/ai-robot-brain/beginner/b_lesson3_slam_nav"
   }
 }

@@ -1,6 +1,7 @@
 ---
 id: i_lesson2_python_ros
 title: "Python ROS Bridge (rclpy)"
+sidebar_position: 3
 tier: intermediate
 chapter: chapter_1_ros2
 estimated_time: "2-3 hours"

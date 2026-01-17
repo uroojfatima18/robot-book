@@ -14,11 +14,11 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "A4: Sim-to-Real Transfer",
-    "permalink": "/docs/ai-robot-brain/advanced/A4-sim-to-real"
+    "title": "Sim-to-Real Transfer",
+    "permalink": "/docs/ai-robot-brain/advanced/a_lesson4_sim_to_real"
   },
   "next": {
-    "title": "B1: Introduction to Robotic Perception",
-    "permalink": "/docs/ai-robot-brain/beginner/B1-introduction-perception"
+    "title": "Chapter Summary & Reflection",
+    "permalink": "/docs/ai-robot-brain/chapter_3_summary"
   }
 }

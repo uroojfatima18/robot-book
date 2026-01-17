@@ -1,3 +1,11 @@
+---
+id: chapter_2_lesson_a2
+title: "A2: Building the Bridge Node"
+sidebar_position: 19
+chapter: chapter_2_digital_twin
+tier: advanced
+---
+
 # A2: Building the Bridge Node
 
 > Implement a bidirectional synchronization bridge between physical and simulated robots.

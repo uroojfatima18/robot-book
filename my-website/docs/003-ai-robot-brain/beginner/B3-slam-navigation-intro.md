@@ -1,3 +1,13 @@
+---
+id: b_lesson3_slam_nav
+title: "SLAM and Navigation Introduction"
+sidebar_position: 29
+tier: beginner
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["b_lesson2_sensors"]
+---
+
 # B3: SLAM and Navigation Concepts
 
 **How Robots Map Their World and Find Their Way**

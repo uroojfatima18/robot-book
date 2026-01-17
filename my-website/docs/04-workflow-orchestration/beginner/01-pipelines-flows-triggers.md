@@ -1,9 +1,10 @@
 ---
 id: b1_pipelines_flows_triggers
-title: Pipelines, Flows, and Triggers
+title: "B1: Pipelines, Flows, and Triggers"
+sidebar_position: 51
 tier: beginner
 chapter: chapter_4_workflow
-estimated_time: 1-2 hours
+estimated_time: "1-2 hours"
 prerequisites: []
 ---
 
@@ -231,4 +232,4 @@ Triggered action: AVOID_OBSTACLE
 
 ## Next Steps
 
-Continue to [B2: State Machines (Conceptual Introduction)](./B2-state-machines-concepts.md)
+Continue to [02: State Machines (Conceptual Introduction)](./02-state-machines-concepts.md)

@@ -1,6 +1,7 @@
 ---
 id: beginner_exercises
 title: "Beginner Tier Exercises"
+sidebar_position: 4
 tier: beginner
 chapter: chapter_1_ros2
 ---

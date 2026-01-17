@@ -1,24 +1,35 @@
 {
-  "id": "ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
-  "title": "I2: TF2 Coordinate Frames",
+  "id": "ai-robot-brain/intermediate/i_lesson2_tf2",
+  "title": "TF2 Coordinate Frame Management",
   "description": "Managing Coordinate Transforms for Multi-Sensor Robots",
   "source": "@site/docs/003-ai-robot-brain/intermediate/I2-tf2-coordinate-frames.md",
   "sourceDirName": "003-ai-robot-brain/intermediate",
-  "slug": "/ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
-  "permalink": "/docs/ai-robot-brain/intermediate/I2-tf2-coordinate-frames",
+  "slug": "/ai-robot-brain/intermediate/i_lesson2_tf2",
+  "permalink": "/docs/ai-robot-brain/intermediate/i_lesson2_tf2",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/intermediate/I2-tf2-coordinate-frames.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 32,
+  "frontMatter": {
+    "id": "i_lesson2_tf2",
+    "title": "TF2 Coordinate Frame Management",
+    "sidebar_position": 32,
+    "tier": "intermediate",
+    "chapter": "chapter_3_ai_brain",
+    "estimated_time": "60-90 minutes",
+    "prerequisites": [
+      "i_lesson1_camera_depth"
+    ]
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "I1: Camera and Depth Data Processing",
-    "permalink": "/docs/ai-robot-brain/intermediate/I1-camera-depth-processing"
+    "title": "Camera and Depth Data Processing",
+    "permalink": "/docs/ai-robot-brain/intermediate/i_lesson1_camera_depth"
   },
   "next": {
-    "title": "I3: SLAM Toolbox Configuration",
-    "permalink": "/docs/ai-robot-brain/intermediate/I3-slam-toolbox"
+    "title": "SLAM Toolbox Configuration",
+    "permalink": "/docs/ai-robot-brain/intermediate/i_lesson3_slam_toolbox"
   }
 }

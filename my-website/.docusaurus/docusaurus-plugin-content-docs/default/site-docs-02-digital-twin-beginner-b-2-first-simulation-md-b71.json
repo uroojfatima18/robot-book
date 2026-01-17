@@ -1,24 +1,31 @@
 {
-  "id": "digital-twin/beginner/B2-first-simulation",
+  "id": "digital-twin/beginner/chapter_2_lesson_b2",
   "title": "B2: Running Your First Simulation",
   "description": "Launch Gazebo and interact with a pre-built humanoid world.",
   "source": "@site/docs/02-digital-twin/beginner/B2-first-simulation.md",
   "sourceDirName": "02-digital-twin/beginner",
-  "slug": "/digital-twin/beginner/B2-first-simulation",
-  "permalink": "/docs/digital-twin/beginner/B2-first-simulation",
+  "slug": "/digital-twin/beginner/chapter_2_lesson_b2",
+  "permalink": "/docs/digital-twin/beginner/chapter_2_lesson_b2",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/beginner/B2-first-simulation.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "id": "chapter_2_lesson_b2",
+    "title": "B2: Running Your First Simulation",
+    "sidebar_position": 15,
+    "chapter": "chapter_2_digital_twin",
+    "tier": "beginner"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "B1: What is a Digital Twin?",
-    "permalink": "/docs/digital-twin/beginner/B1-digital-twin-concepts"
+    "permalink": "/docs/digital-twin/beginner/chapter_2_lesson_b1"
   },
   "next": {
     "title": "Exercise 01: Launch World",
-    "permalink": "/docs/digital-twin/exercises/exercise-01-launch-world"
+    "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_1"
   }
 }

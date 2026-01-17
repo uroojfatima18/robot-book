@@ -1,6 +1,7 @@
 ---
 id: a_lesson2_advanced_patterns
 title: "Advanced ROS 2 Patterns & AI Integration"
+sidebar_position: 3
 tier: advanced
 chapter: chapter_1_ros2
 estimated_time: "2-3 hours"

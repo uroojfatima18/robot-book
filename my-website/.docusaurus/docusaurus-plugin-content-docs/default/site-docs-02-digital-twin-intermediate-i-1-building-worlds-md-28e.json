@@ -1,24 +1,31 @@
 {
-  "id": "digital-twin/intermediate/I1-building-worlds",
+  "id": "digital-twin/intermediate/chapter_2_lesson_i1",
   "title": "I1: Building Simulation Worlds",
   "description": "Create custom Gazebo world files with physics, lighting, and terrain.",
   "source": "@site/docs/02-digital-twin/intermediate/I1-building-worlds.md",
   "sourceDirName": "02-digital-twin/intermediate",
-  "slug": "/digital-twin/intermediate/I1-building-worlds",
-  "permalink": "/docs/digital-twin/intermediate/I1-building-worlds",
+  "slug": "/digital-twin/intermediate/chapter_2_lesson_i1",
+  "permalink": "/docs/digital-twin/intermediate/chapter_2_lesson_i1",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-digital-twin/intermediate/I1-building-worlds.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "id": "chapter_2_lesson_i1",
+    "title": "I1: Building Simulation Worlds",
+    "sidebar_position": 16,
+    "chapter": "chapter_2_digital_twin",
+    "tier": "intermediate"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Chapter 2 Glossary: Digital Twin & Simulation",
-    "permalink": "/docs/digital-twin/glossary"
+    "title": "Exercise 03: Build Bridge",
+    "permalink": "/docs/digital-twin/exercises/chapter_2_exercise_3"
   },
   "next": {
     "title": "I2: Spawning and Controlling Models",
-    "permalink": "/docs/digital-twin/intermediate/I2-spawning-models"
+    "permalink": "/docs/digital-twin/intermediate/chapter_2_lesson_i2"
   }
 }

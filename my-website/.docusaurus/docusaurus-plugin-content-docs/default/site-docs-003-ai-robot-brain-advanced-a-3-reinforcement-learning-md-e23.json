@@ -1,24 +1,35 @@
 {
-  "id": "ai-robot-brain/advanced/A3-reinforcement-learning",
-  "title": "A3: Reinforcement Learning Fundamentals",
+  "id": "ai-robot-brain/advanced/a_lesson3_rl",
+  "title": "Reinforcement Learning Fundamentals",
   "description": "Teaching Robots to Learn from Experience",
   "source": "@site/docs/003-ai-robot-brain/advanced/A3-reinforcement-learning.md",
   "sourceDirName": "003-ai-robot-brain/advanced",
-  "slug": "/ai-robot-brain/advanced/A3-reinforcement-learning",
-  "permalink": "/docs/ai-robot-brain/advanced/A3-reinforcement-learning",
+  "slug": "/ai-robot-brain/advanced/a_lesson3_rl",
+  "permalink": "/docs/ai-robot-brain/advanced/a_lesson3_rl",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/A3-reinforcement-learning.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 38,
+  "frontMatter": {
+    "id": "a_lesson3_rl",
+    "title": "Reinforcement Learning Fundamentals",
+    "sidebar_position": 38,
+    "tier": "advanced",
+    "chapter": "chapter_3_ai_brain",
+    "estimated_time": "60-90 minutes",
+    "prerequisites": [
+      "a_lesson2_planners"
+    ]
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "A2: Planners and Behavior Trees",
-    "permalink": "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees"
+    "title": "Planners and Behavior Trees",
+    "permalink": "/docs/ai-robot-brain/advanced/a_lesson2_planners"
   },
   "next": {
-    "title": "A4: Sim-to-Real Transfer",
-    "permalink": "/docs/ai-robot-brain/advanced/A4-sim-to-real"
+    "title": "Sim-to-Real Transfer",
+    "permalink": "/docs/ai-robot-brain/advanced/a_lesson4_sim_to_real"
   }
 }

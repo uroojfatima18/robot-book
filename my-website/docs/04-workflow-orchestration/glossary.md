@@ -1,3 +1,10 @@
+---
+id: chapter_4_glossary
+title: "Workflow Orchestration Glossary"
+sidebar_position: 49
+chapter: chapter_4_workflow
+---
+
 # Chapter 4: Workflow Orchestration - Glossary
 
 ## A

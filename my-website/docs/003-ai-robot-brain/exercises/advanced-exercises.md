@@ -1,3 +1,11 @@
+---
+id: chapter_3_advanced_exercises
+title: "Advanced Tier Exercises"
+sidebar_position: 42
+chapter: chapter_3_ai_brain
+section: exercises
+---
+
 # Advanced Tier Exercises
 
 **Test Your Skills in Costmaps, Planners, RL, and Sim-to-Real**

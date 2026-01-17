@@ -1,3 +1,13 @@
+---
+id: i_lesson3_slam_toolbox
+title: "SLAM Toolbox Configuration"
+sidebar_position: 33
+tier: intermediate
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["i_lesson2_tf2"]
+---
+
 # I3: SLAM Toolbox Configuration
 
 **Building Maps with SLAM in ROS 2**

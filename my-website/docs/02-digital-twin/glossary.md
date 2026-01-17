@@ -1,3 +1,10 @@
+---
+id: chapter_2_glossary
+title: "Digital Twin Glossary"
+sidebar_position: 13
+chapter: chapter_2_digital_twin
+---
+
 # Chapter 2 Glossary: Digital Twin & Simulation
 
 > Quick reference for key terms used throughout the Digital Twin chapter.
@@ -474,9 +481,9 @@ When a metric exceeds a safety threshold. In this chapter:
 | Gazebo | B2-A2 | Physics simulation platform |
 | SDF/World File | I1, I2 | XML description of simulation environment |
 | URDF | B1, I2, A2 | Robot description format (shared with Chapter 1) |
-| RTF | B1, B2, I1 | Simulation speed indicator (target >= 0.8) |
+| RTF | B1, B2, I1 | Simulation speed indicator (target &gt;= 0.8) |
 | Bridge Node | A1, A2 | Component synchronizing physical and virtual |
-| Latency | A1, A2 | Communication delay (target <= 50ms) |
+| Latency | A1, A2 | Communication delay (target &lt;= 50ms) |
 | ros2_control | I2, A2 | Standardized control framework |
 | QoS | A1, A2 | Message delivery configuration |
 | Watchdog | A2 | Connection monitoring mechanism |

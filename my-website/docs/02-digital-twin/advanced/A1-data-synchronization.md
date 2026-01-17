@@ -1,3 +1,11 @@
+---
+id: chapter_2_lesson_a1
+title: "A1: Digital Twin Architecture"
+sidebar_position: 18
+chapter: chapter_2_digital_twin
+tier: advanced
+---
+
 # A1: Digital Twin Architecture
 
 > Design data synchronization patterns for bidirectional robot-simulation communication.

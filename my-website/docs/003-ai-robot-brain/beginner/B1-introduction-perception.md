@@ -1,3 +1,13 @@
+---
+id: b_lesson1_perception
+title: "Introduction to Robotic Perception"
+sidebar_position: 27
+tier: beginner
+chapter: chapter_3_ai_brain
+estimated_time: "45-60 minutes"
+prerequisites: []
+---
+
 # B1: Introduction to Robotic Perception
 
 **How Robots See and Understand Their World**

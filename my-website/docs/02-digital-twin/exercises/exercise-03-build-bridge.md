@@ -1,3 +1,11 @@
+---
+id: chapter_2_exercise_3
+title: "Exercise 03: Build Bridge"
+sidebar_position: 22
+chapter: chapter_2_digital_twin
+section: exercises
+---
+
 # Exercise 03: Build Bridge
 
 > Implement and test a digital twin bridge node.

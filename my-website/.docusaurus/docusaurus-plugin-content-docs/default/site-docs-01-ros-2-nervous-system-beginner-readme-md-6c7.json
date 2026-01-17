@@ -11,17 +11,19 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/beginner/README.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 4,
   "frontMatter": {
     "id": "chapter_1_beginner_tier",
     "title": "Beginner Tier: ROS 2 Fundamentals",
+    "sidebar_position": 4,
     "tier": "beginner",
     "chapter": "chapter_1_ros2",
     "estimated_time": "2-4 hours"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Intermediate Tier AI Learning Prompts",
-    "permalink": "/docs/ros2-nervous-system/ai-prompts/intermediate_ai_prompts"
+    "title": "ROS 2 Glossary",
+    "permalink": "/docs/ros2-nervous-system/chapter_1_glossary"
   },
   "next": {
     "title": "Introduction to ROS 2",

@@ -1,7 +1,7 @@
 {
-  "id": "ai-robot-brain/README",
-  "title": "Chapter 4: AI-Robot Brain (NVIDIA Isaac)",
-  "description": "Teaching Robots to See, Navigate, and Learn",
+  "id": "ai-robot-brain/chapter_3_overview",
+  "title": "Chapter 3: AI Robot Brain",
+  "description": "---",
   "source": "@site/docs/003-ai-robot-brain/README.md",
   "sourceDirName": "003-ai-robot-brain",
   "slug": "/ai-robot-brain/",
@@ -11,14 +11,20 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/README.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 23,
+  "frontMatter": {
+    "id": "chapter_3_overview",
+    "title": "Chapter 3: AI Robot Brain",
+    "sidebar_position": 23,
+    "chapter": "chapter_3_ai_brain"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Chapter 2: Digital Twin & Simulation - Introduction",
-    "permalink": "/docs/digital-twin/introduction"
+    "title": "I2: Spawning and Controlling Models",
+    "permalink": "/docs/digital-twin/intermediate/chapter_2_lesson_i2"
   },
   "next": {
-    "title": "A1: Costmap Configuration",
-    "permalink": "/docs/ai-robot-brain/advanced/A1-costmap-configuration"
+    "title": "Introduction: The AI Robot Brain",
+    "permalink": "/docs/ai-robot-brain/chapter_3_introduction"
   }
 }

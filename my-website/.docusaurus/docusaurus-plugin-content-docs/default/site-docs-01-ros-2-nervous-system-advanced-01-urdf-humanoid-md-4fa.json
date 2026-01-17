@@ -11,10 +11,11 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/advanced/01-urdf-humanoid.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 1,
+  "sidebarPosition": 2,
   "frontMatter": {
     "id": "a_lesson1_urdf_humanoid",
     "title": "URDF & Humanoid Robot Description",
+    "sidebar_position": 2,
     "tier": "advanced",
     "chapter": "chapter_1_ros2",
     "estimated_time": "2-3 hours",

@@ -1,6 +1,7 @@
 ---
 id: b_lesson1_intro
 title: "Introduction to ROS 2"
+sidebar_position: 2
 tier: beginner
 chapter: chapter_1_ros2
 estimated_time: "1-2 hours"

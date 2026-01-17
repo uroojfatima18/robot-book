@@ -11,18 +11,20 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/summary.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 7,
   "frontMatter": {
     "id": "chapter_1_summary",
     "title": "Chapter Summary & Reflection",
+    "sidebar_position": 7,
     "chapter": "chapter_1_ros2"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Introduction: The Robotic Nervous System",
-    "permalink": "/docs/ros2-nervous-system/chapter_1_introduction"
+    "title": "Advanced Tier Exercises",
+    "permalink": "/docs/ros2-nervous-system/advanced/exercises/advanced_exercises"
   },
   "next": {
-    "title": "Chapter 2: Digital Twin & Simulation",
-    "permalink": "/docs/digital-twin/"
+    "title": "Beginner Tier AI Learning Prompts",
+    "permalink": "/docs/ros2-nervous-system/ai-prompts/beginner_ai_prompts"
   }
 }

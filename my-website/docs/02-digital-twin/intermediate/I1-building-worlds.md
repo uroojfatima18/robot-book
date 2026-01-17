@@ -1,3 +1,11 @@
+---
+id: chapter_2_lesson_i1
+title: "I1: Building Simulation Worlds"
+sidebar_position: 16
+chapter: chapter_2_digital_twin
+tier: intermediate
+---
+
 # I1: Building Simulation Worlds
 
 > Create custom Gazebo world files with physics, lighting, and terrain.

@@ -1,3 +1,11 @@
+---
+id: chapter_3_intermediate_exercises
+title: "Intermediate Tier Exercises"
+sidebar_position: 41
+chapter: chapter_3_ai_brain
+section: exercises
+---
+
 # Intermediate Tier Exercises
 
 **Test Your Skills in Perception, TF2, SLAM, and Navigation**

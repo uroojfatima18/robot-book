@@ -1,6 +1,7 @@
 ---
 id: chapter_1_advanced_tier
 title: "Advanced Tier: Complex ROS 2 Architectures"
+sidebar_position: 6
 tier: advanced
 chapter: chapter_1_ros2
 estimated_time: "2-4 hours"

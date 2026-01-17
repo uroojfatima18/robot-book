@@ -1,3 +1,13 @@
+---
+id: i_lesson2_tf2
+title: "TF2 Coordinate Frame Management"
+sidebar_position: 32
+tier: intermediate
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["i_lesson1_camera_depth"]
+---
+
 # I2: TF2 Coordinate Frames
 
 **Managing Coordinate Transforms for Multi-Sensor Robots**

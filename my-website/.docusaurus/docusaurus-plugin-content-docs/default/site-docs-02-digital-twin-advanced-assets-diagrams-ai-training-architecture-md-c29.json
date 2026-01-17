@@ -15,10 +15,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "A2: Building the Bridge Node",
-    "permalink": "/docs/digital-twin/advanced/A2-building-bridge"
+    "permalink": "/docs/digital-twin/advanced/chapter_2_lesson_a2"
   },
   "next": {
     "title": "B1: What is a Digital Twin?",
-    "permalink": "/docs/digital-twin/beginner/B1-digital-twin-concepts"
+    "permalink": "/docs/digital-twin/beginner/chapter_2_lesson_b1"
   }
 }

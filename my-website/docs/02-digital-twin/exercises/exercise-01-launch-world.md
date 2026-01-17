@@ -1,3 +1,11 @@
+---
+id: chapter_2_exercise_1
+title: "Exercise 01: Launch World"
+sidebar_position: 20
+chapter: chapter_2_digital_twin
+section: exercises
+---
+
 # Exercise 01: Launch World
 
 > Practice launching Gazebo and exploring a simulation world.

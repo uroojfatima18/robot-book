@@ -11,9 +11,11 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/beginner/exercises/beginner-exercises.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 4,
   "frontMatter": {
     "id": "beginner_exercises",
     "title": "Beginner Tier Exercises",
+    "sidebar_position": 4,
     "tier": "beginner",
     "chapter": "chapter_1_ros2"
   },
@@ -23,7 +25,7 @@
     "permalink": "/docs/ros2-nervous-system/beginner/b_lesson2_sensors"
   },
   "next": {
-    "title": "ROS 2 Glossary",
-    "permalink": "/docs/ros2-nervous-system/chapter_1_glossary"
+    "title": "Intermediate Tier: Hands-On ROS 2 Programming",
+    "permalink": "/docs/ros2-nervous-system/intermediate/"
   }
 }

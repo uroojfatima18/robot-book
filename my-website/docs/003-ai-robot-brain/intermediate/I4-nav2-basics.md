@@ -1,3 +1,13 @@
+---
+id: i_lesson4_nav2
+title: "Nav2 Basics"
+sidebar_position: 34
+tier: intermediate
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["i_lesson3_slam_toolbox"]
+---
+
 # I4: Nav2 Basics
 
 **Autonomous Navigation with the ROS 2 Navigation Stack**

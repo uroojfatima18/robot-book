@@ -1,24 +1,35 @@
 {
-  "id": "ai-robot-brain/advanced/A2-planners-behavior-trees",
-  "title": "A2: Planners and Behavior Trees",
+  "id": "ai-robot-brain/advanced/a_lesson2_planners",
+  "title": "Planners and Behavior Trees",
   "description": "Customizing Path Planning and Navigation Behaviors",
   "source": "@site/docs/003-ai-robot-brain/advanced/A2-planners-behavior-trees.md",
   "sourceDirName": "003-ai-robot-brain/advanced",
-  "slug": "/ai-robot-brain/advanced/A2-planners-behavior-trees",
-  "permalink": "/docs/ai-robot-brain/advanced/A2-planners-behavior-trees",
+  "slug": "/ai-robot-brain/advanced/a_lesson2_planners",
+  "permalink": "/docs/ai-robot-brain/advanced/a_lesson2_planners",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/003-ai-robot-brain/advanced/A2-planners-behavior-trees.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 37,
+  "frontMatter": {
+    "id": "a_lesson2_planners",
+    "title": "Planners and Behavior Trees",
+    "sidebar_position": 37,
+    "tier": "advanced",
+    "chapter": "chapter_3_ai_brain",
+    "estimated_time": "60-90 minutes",
+    "prerequisites": [
+      "a_lesson1_costmap"
+    ]
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "A1: Costmap Configuration",
-    "permalink": "/docs/ai-robot-brain/advanced/A1-costmap-configuration"
+    "title": "Costmap Configuration",
+    "permalink": "/docs/ai-robot-brain/advanced/a_lesson1_costmap"
   },
   "next": {
-    "title": "A3: Reinforcement Learning Fundamentals",
-    "permalink": "/docs/ai-robot-brain/advanced/A3-reinforcement-learning"
+    "title": "Reinforcement Learning Fundamentals",
+    "permalink": "/docs/ai-robot-brain/advanced/a_lesson3_rl"
   }
 }

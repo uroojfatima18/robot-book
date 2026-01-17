@@ -1,6 +1,7 @@
 ---
 id: intermediate_exercises
 title: "Intermediate Tier Exercises"
+sidebar_position: 4
 tier: intermediate
 chapter: chapter_1_ros2
 ---

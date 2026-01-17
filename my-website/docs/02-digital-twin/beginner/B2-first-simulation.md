@@ -1,3 +1,11 @@
+---
+id: chapter_2_lesson_b2
+title: "B2: Running Your First Simulation"
+sidebar_position: 15
+chapter: chapter_2_digital_twin
+tier: beginner
+---
+
 # B2: Running Your First Simulation
 
 > Launch Gazebo and interact with a pre-built humanoid world.

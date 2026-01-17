@@ -1,6 +1,7 @@
 ---
 id: chapter_1_glossary
 title: "ROS 2 Glossary"
+sidebar_position: 3
 chapter: chapter_1_ros2
 ---
 

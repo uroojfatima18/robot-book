@@ -1,3 +1,11 @@
+---
+id: chapter_3_beginner_exercises
+title: "Beginner Tier Exercises"
+sidebar_position: 40
+chapter: chapter_3_ai_brain
+section: exercises
+---
+
 # Beginner Tier Exercises
 
 **Test Your Understanding of Perception, Sensors, and Navigation Concepts**

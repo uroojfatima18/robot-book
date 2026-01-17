@@ -1,3 +1,11 @@
+---
+id: advanced_ai_prompts
+title: "Advanced Tier AI Learning Prompts"
+sidebar_position: 10
+tier: advanced
+chapter: chapter_1_ros2
+---
+
 # AI-Assisted Learning Prompts: Advanced Tier
 
 **Chapter**: Chapter 1 - The Robotic Nervous System (ROS 2)

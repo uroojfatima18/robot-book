@@ -1,3 +1,13 @@
+---
+id: a_lesson1_costmap
+title: "Costmap Configuration"
+sidebar_position: 36
+tier: advanced
+chapter: chapter_3_ai_brain
+estimated_time: "60-90 minutes"
+prerequisites: ["i_lesson4_nav2"]
+---
+
 # A1: Costmap Configuration
 
 **Customizing Navigation Cost Maps for Your Robot**
