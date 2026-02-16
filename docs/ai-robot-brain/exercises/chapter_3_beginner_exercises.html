@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ai-robot-brain/exercises/chapter_3_beginner_exercises" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.0">
+<title data-rh="true">Beginner Tier Exercises | Robotics Learning Platform</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://uroojfatima18.github.io/robot-book/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://uroojfatima18.github.io/robot-book/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://uroojfatima18.github.io/robot-book/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Beginner Tier Exercises | Robotics Learning Platform"><meta data-rh="true" name="description" content="Test Your Understanding of Perception, Sensors, and Navigation Concepts"><meta data-rh="true" property="og:description" content="Test Your Understanding of Perception, Sensors, and Navigation Concepts"><link data-rh="true" rel="icon" href="/robot-book/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://uroojfatima18.github.io/robot-book/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises"><link data-rh="true" rel="alternate" href="https://uroojfatima18.github.io/robot-book/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises" hreflang="en"><link data-rh="true" rel="alternate" href="https://uroojfatima18.github.io/robot-book/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises" hreflang="x-default"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"><link rel="stylesheet" href="/robot-book/assets/css/styles.60761a4d.css">
+<script src="/robot-book/assets/js/runtime~main.2e70d8dc.js" defer="defer"></script>
+<script src="/robot-book/assets/js/main.706562b6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/robot-book/"><div class="navbar__logo"><img src="/robot-book/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/robot-book/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Robotics Book</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/robot-book/docs">Read the Book</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/robot-book/docs">Physical AI &amp; Humanoid Robotics</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/robot-book/docs/ros2-nervous-system">CHAPTER 1: The Robotic Nervous System (ROS 2)</a><button aria-label="Expand sidebar category &#x27;CHAPTER 1: The Robotic Nervous System (ROS 2)&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/robot-book/docs/digital-twin">Chapter 2: Digital Twin &amp; Simulation</a><button aria-label="Expand sidebar category &#x27;Chapter 2: Digital Twin &amp; Simulation&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/robot-book/docs/ai-robot-brain">Chapter 3: AI Robot Brain</a><button aria-label="Collapse sidebar category &#x27;Chapter 3: AI Robot Brain&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ai-robot-brain/chapter_3_introduction">Introduction: The AI Robot Brain</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ai-robot-brain/chapter_3_glossary">AI Robot Brain Glossary</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/robot-book/docs/ai-robot-brain/beginner">Beginner Tier: AI Robot Brain Fundamentals</a><button aria-label="Expand sidebar category &#x27;Beginner Tier: AI Robot Brain Fundamentals&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/robot-book/docs/ai-robot-brain/intermediate">Intermediate Tier: Hands-On Perception &amp; Navigation</a><button aria-label="Expand sidebar category &#x27;Intermediate Tier: Hands-On Perception &amp; Navigation&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/robot-book/docs/ai-robot-brain/advanced">Advanced Tier: Optimization &amp; Learning</a><button aria-label="Expand sidebar category &#x27;Advanced Tier: Optimization &amp; Learning&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ai-robot-brain/chapter_3_summary">Chapter Summary &amp; Reflection</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/robot-book/docs/ai-robot-brain/ai-prompts">AI-Assisted Learning Prompts</a><button aria-label="Expand sidebar category &#x27;AI-Assisted Learning Prompts&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" tabindex="0" href="/robot-book/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises">exercises</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/robot-book/docs/ai-robot-brain/exercises/chapter_3_beginner_exercises">Beginner Tier Exercises</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ai-robot-brain/exercises/chapter_3_intermediate_exercises">Intermediate Tier Exercises</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ai-robot-brain/exercises/chapter_3_advanced_exercises">Advanced Tier Exercises</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/robot-book/docs/workflow-orchestration">Chapter 4: Workflow Orchestration</a><button aria-label="Expand sidebar category &#x27;Chapter 4: Workflow Orchestration&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/robot-book/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/robot-book/docs/ai-robot-brain"><span itemprop="name">Chapter 3: AI Robot Brain</span></a><meta itemprop="position" content="1"></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">exercises</span><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Beginner Tier Exercises</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Beginner Tier Exercises</h1>
+<p><strong>Test Your Understanding of Perception, Sensors, and Navigation Concepts</strong></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>These exercises test your understanding of the concepts from the Beginner tier:</p>
+<ul>
+<li>B1: Introduction to Robotic Perception</li>
+<li>B2: Understanding Sensor Types</li>
+<li>B3: SLAM and Navigation Concepts</li>
+</ul>
+<p>Complete these exercises before moving to the Intermediate tier.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise-1-perception-pipeline-ordering">Exercise 1: Perception Pipeline Ordering<a href="#exercise-1-perception-pipeline-ordering" class="hash-link" aria-label="Direct link to Exercise 1: Perception Pipeline Ordering" title="Direct link to Exercise 1: Perception Pipeline Ordering">​</a></h2>
+<p><strong>Task</strong>: Put these perception pipeline stages in the correct order (1-4):</p>
+<table><thead><tr><th>Stage</th><th>Order (1-4)</th></tr></thead><tbody><tr><td>Feature Extraction</td><td>___</td></tr><tr><td>Interpretation</td><td>___</td></tr><tr><td>Sensing</td><td>___</td></tr><tr><td>Preprocessing</td><td>___</td></tr></tbody></table>
+<p><strong>Bonus</strong>: For each stage, give one example of what happens there.</p>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Click for answer</summary><div><div class="collapsibleContent_i85q"><ol>
+<li><strong>Sensing</strong> - Camera captures pixels, LIDAR measures distances</li>
+<li><strong>Preprocessing</strong> - Noise filtering, calibration, synchronization</li>
+<li><strong>Feature Extraction</strong> - Edge detection, object detection, clustering</li>
+<li><strong>Interpretation</strong> - &quot;This is a person,&quot; &quot;This area is navigable&quot;</li>
+</ol></div></div></details>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise-2-sensor-selection-challenge">Exercise 2: Sensor Selection Challenge<a href="#exercise-2-sensor-selection-challenge" class="hash-link" aria-label="Direct link to Exercise 2: Sensor Selection Challenge" title="Direct link to Exercise 2: Sensor Selection Challenge">​</a></h2>
+<p><strong>Scenario</strong>: You&#x27;re building a robot for each situation below. Choose the most appropriate sensor(s) and justify your choice.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scenario-a-delivery-robot-in-office-building">Scenario A: Delivery Robot in Office Building<a href="#scenario-a-delivery-robot-in-office-building" class="hash-link" aria-label="Direct link to Scenario A: Delivery Robot in Office Building" title="Direct link to Scenario A: Delivery Robot in Office Building">​</a></h3>
+<ul>
+<li>Environment: Indoor, well-lit hallways</li>
+<li>Tasks: Navigate to rooms, avoid people and furniture</li>
+<li>Budget: Medium</li>
+</ul>
+<p><strong>Your answer</strong>:</p>
+<ul>
+<li>Primary sensor: _______________</li>
+<li>Secondary sensor: _______________</li>
+<li>Justification: _______________</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scenario-b-agricultural-drone-for-crop-monitoring">Scenario B: Agricultural Drone for Crop Monitoring<a href="#scenario-b-agricultural-drone-for-crop-monitoring" class="hash-link" aria-label="Direct link to Scenario B: Agricultural Drone for Crop Monitoring" title="Direct link to Scenario B: Agricultural Drone for Crop Monitoring">​</a></h3>
+<ul>
+<li>Environment: Outdoor, variable lighting</li>
+<li>Tasks: Fly over fields, detect plant health by color</li>
+<li>Budget: Low-Medium</li>
+</ul>
+<p><strong>Your answer</strong>:</p>
+<ul>
+<li>Primary sensor: _______________</li>
+<li>Justification: _______________</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scenario-c-robot-arm-for-bin-picking">Scenario C: Robot Arm for Bin Picking<a href="#scenario-c-robot-arm-for-bin-picking" class="hash-link" aria-label="Direct link to Scenario C: Robot Arm for Bin Picking" title="Direct link to Scenario C: Robot Arm for Bin Picking">​</a></h3>
+<ul>
+<li>Environment: Indoor factory</li>
+<li>Tasks: Identify and grasp objects of different colors/sizes</li>
+<li>Budget: Medium-High</li>
+</ul>
+<p><strong>Your answer</strong>:</p>
+<ul>
+<li>Primary sensor: _______________</li>
+<li>Secondary sensor: _______________</li>
+<li>Justification: _______________</li>
+</ul>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Click for suggested answers</summary><div><div class="collapsibleContent_i85q"><p><strong>A: Delivery Robot</strong></p><ul>
+<li>Primary: 2D LIDAR - reliable obstacle detection, good for SLAM</li>
+<li>Secondary: RGB camera - for recognizing room signs/numbers</li>
+<li>Why: Indoor environment suits LIDAR well; camera adds recognition capability</li>
+</ul><p><strong>B: Agricultural Drone</strong></p><ul>
+<li>Primary: RGB camera with multispectral option</li>
+<li>Why: Need color for plant health analysis; must work outdoors where depth cameras struggle; lightweight for flight</li>
+</ul><p><strong>C: Bin Picking Robot</strong></p><ul>
+<li>Primary: RGBD camera (e.g., RealSense)</li>
+<li>Secondary: Force/torque sensor at gripper</li>
+<li>Why: Need both color (object identification) and depth (grasping location)</li>
+</ul></div></div></details>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise-3-slam-concept-questions">Exercise 3: SLAM Concept Questions<a href="#exercise-3-slam-concept-questions" class="hash-link" aria-label="Direct link to Exercise 3: SLAM Concept Questions" title="Direct link to Exercise 3: SLAM Concept Questions">​</a></h2>
+<p>Answer these conceptual questions about SLAM:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="question-31">Question 3.1<a href="#question-31" class="hash-link" aria-label="Direct link to Question 3.1" title="Direct link to Question 3.1">​</a></h3>
+<p><strong>Why is SLAM called &quot;the chicken-and-egg problem&quot;?</strong></p>
+<p>Your answer: _______________</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="question-32">Question 3.2<a href="#question-32" class="hash-link" aria-label="Direct link to Question 3.2" title="Direct link to Question 3.2">​</a></h3>
+<p><strong>A robot drives in a square and returns to start. Its odometry shows it&#x27;s 0.5m away from where it started. What happened and how does SLAM handle this?</strong></p>
+<p>Your answer: _______________</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="question-33">Question 3.3<a href="#question-33" class="hash-link" aria-label="Direct link to Question 3.3" title="Direct link to Question 3.3">​</a></h3>
+<p><strong>What does each color mean in a standard ROS 2 occupancy grid map?</strong></p>
+<ul>
+<li>White: _______________</li>
+<li>Black: _______________</li>
+<li>Gray: _______________</li>
+</ul>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Click for answers</summary><div><div class="collapsibleContent_i85q"><p><strong>3.1</strong>: SLAM is chicken-and-egg because:</p><ul>
+<li>To build a map, you need to know where you are (to place observations correctly)</li>
+<li>To know where you are, you need a map (to match observations against)</li>
+<li>Neither can be solved first - they must be solved simultaneously</li>
+</ul><p><strong>3.2</strong>: The 0.5m error is <strong>odometry drift</strong> from accumulated wheel slip and measurement errors. SLAM handles this through <strong>loop closure</strong> - when the robot recognizes it&#x27;s back at the start, it adjusts the entire trajectory to eliminate the error.</p><p><strong>3.3</strong>:</p><ul>
+<li>White = Free space (robot can pass)</li>
+<li>Black = Occupied (wall/obstacle)</li>
+<li>Gray = Unknown (not yet observed)</li>
+</ul></div></div></details>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise-4-navigation-components-identification">Exercise 4: Navigation Components Identification<a href="#exercise-4-navigation-components-identification" class="hash-link" aria-label="Direct link to Exercise 4: Navigation Components Identification" title="Direct link to Exercise 4: Navigation Components Identification">​</a></h2>
+<p><strong>Task</strong>: Match each Nav2 component to its correct description.</p>
+<table><thead><tr><th>Component</th><th>Description</th></tr></thead><tbody><tr><td>1. Map Server</td><td>A. Generates velocity commands to follow path</td></tr><tr><td>2. AMCL</td><td>B. Computes global path from start to goal</td></tr><tr><td>3. Planner Server</td><td>C. Handles stuck situations (spin, backup)</td></tr><tr><td>4. Controller Server</td><td>D. Loads and publishes the map</td></tr><tr><td>5. Behavior Server</td><td>E. Estimates robot&#x27;s pose on the map</td></tr></tbody></table>
+<p><strong>Answers</strong>: 1=<em><strong>, 2=</strong></em>, 3=<em><strong>, 4=</strong></em>, 5=___</p>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Click for answers</summary><div><div class="collapsibleContent_i85q"><p>1=D, 2=E, 3=B, 4=A, 5=C</p></div></div></details>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise-5-true-or-false">Exercise 5: True or False<a href="#exercise-5-true-or-false" class="hash-link" aria-label="Direct link to Exercise 5: True or False" title="Direct link to Exercise 5: True or False">​</a></h2>
+<p>Mark each statement as True (T) or False (F):</p>
+<table><thead><tr><th>#</th><th>Statement</th><th>T/F</th></tr></thead><tbody><tr><td>1</td><td>RGB cameras provide depth information directly</td><td>___</td></tr><tr><td>2</td><td>LIDAR works well in complete darkness</td><td>___</td></tr><tr><td>3</td><td>Time-of-Flight cameras are best for outdoor use</td><td>___</td></tr><tr><td>4</td><td>Global planning happens once, local planning happens continuously</td><td>___</td></tr><tr><td>5</td><td>SLAM can only work with LIDAR sensors</td><td>___</td></tr><tr><td>6</td><td>Occupancy grids store the probability of each cell being occupied</td><td>___</td></tr><tr><td>7</td><td>The perception pipeline always ends with sensor data</td><td>___</td></tr></tbody></table>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Click for answers</summary><div><div class="collapsibleContent_i85q"><ol>
+<li><strong>False</strong> - RGB cameras only capture light intensity (color), not depth</li>
+<li><strong>True</strong> - LIDAR uses its own laser light source</li>
+<li><strong>False</strong> - ToF cameras struggle outdoors due to infrared interference from sunlight</li>
+<li><strong>True</strong> - Global planner finds the path once (or when replanning), local planner runs continuously to follow it</li>
+<li><strong>False</strong> - Visual SLAM uses cameras, RGB-D SLAM uses depth cameras</li>
+<li><strong>True</strong> - Each cell stores 0 (free) to 1 (occupied), with 0.5 meaning unknown</li>
+<li><strong>False</strong> - Pipeline ends with interpretation/understanding, not raw sensor data</li>
+</ol></div></div></details>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise-6-diagram-interpretation">Exercise 6: Diagram Interpretation<a href="#exercise-6-diagram-interpretation" class="hash-link" aria-label="Direct link to Exercise 6: Diagram Interpretation" title="Direct link to Exercise 6: Diagram Interpretation">​</a></h2>
+<p>Look at the perception pipeline diagram from B1 and answer:</p>
+<ol>
+<li>What enters the pipeline at the &quot;Sensing&quot; stage?</li>
+<li>What exits the pipeline at the &quot;Interpretation&quot; stage?</li>
+<li>If a camera image has sensor noise, which stage removes it?</li>
+<li>If the robot needs to classify &quot;is this a person?&quot;, which stage does that?</li>
+</ol>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Click for answers</summary><div><div class="collapsibleContent_i85q"><ol>
+<li>Raw sensor signals from the physical world (photons, laser pulses, forces)</li>
+<li>Semantic understanding for decision-making (e.g., &quot;obstacle at 2m&quot;, &quot;person detected&quot;)</li>
+<li><strong>Preprocessing</strong> - noise filtering happens here</li>
+<li><strong>Interpretation</strong> - semantic classification happens here</li>
+</ol></div></div></details>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exercise-7-practical-scenario-analysis">Exercise 7: Practical Scenario Analysis<a href="#exercise-7-practical-scenario-analysis" class="hash-link" aria-label="Direct link to Exercise 7: Practical Scenario Analysis" title="Direct link to Exercise 7: Practical Scenario Analysis">​</a></h2>
+<p><strong>Scenario</strong>: A mobile robot is navigating through a crowded hallway. It has a 2D LIDAR and an RGB camera.</p>
+<p>Answer these questions:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="71-perception">7.1 Perception<a href="#71-perception" class="hash-link" aria-label="Direct link to 7.1 Perception" title="Direct link to 7.1 Perception">​</a></h3>
+<p>What can each sensor contribute to understanding the scene?</p>
+<ul>
+<li>LIDAR: _______________</li>
+<li>Camera: _______________</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="72-navigation-challenge">7.2 Navigation Challenge<a href="#72-navigation-challenge" class="hash-link" aria-label="Direct link to 7.2 Navigation Challenge" title="Direct link to 7.2 Navigation Challenge">​</a></h3>
+<p>A person suddenly walks in front of the robot&#x27;s planned path. Trace what happens:</p>
+<ol>
+<li>Which sensor detects the person first?</li>
+<li>Which navigation component reacts?</li>
+<li>What does the robot do?</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="73-failure-mode">7.3 Failure Mode<a href="#73-failure-mode" class="hash-link" aria-label="Direct link to 7.3 Failure Mode" title="Direct link to 7.3 Failure Mode">​</a></h3>
+<p>The hallway has a glass door. What problems might occur and why?</p>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Click for answers</summary><div><div class="collapsibleContent_i85q"><p><strong>7.1</strong>:</p><ul>
+<li>LIDAR: Distance to obstacles, wall positions, navigable space</li>
+<li>Camera: Person recognition, door signs, color-based identification</li>
+</ul><p><strong>7.2</strong>:</p><ol>
+<li>LIDAR detects the person as a new obstacle (faster update rate)</li>
+<li>Local planner (Controller Server) detects obstacle in trajectory</li>
+<li>Robot either: stops, slows down, or finds a local detour around the person</li>
+</ol><p><strong>7.3</strong>:
+Glass is problematic because:</p><ul>
+<li>LIDAR may pass through or give erratic readings (glass is semi-transparent to lasers)</li>
+<li>Robot might plan a path through the door if it appears as free space</li>
+<li>Solution: Use camera to detect visual features of the door, or add ultrasonic sensors</li>
+</ul></div></div></details>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="self-assessment-checklist">Self-Assessment Checklist<a href="#self-assessment-checklist" class="hash-link" aria-label="Direct link to Self-Assessment Checklist" title="Direct link to Self-Assessment Checklist">​</a></h2>
+<p>Before moving to the Intermediate tier, confirm you can:</p>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Explain the four stages of the perception pipeline</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Compare RGB cameras, depth cameras, and LIDAR</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Describe what SLAM does and why it&#x27;s challenging</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Explain the difference between global and local planning</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Identify the main components of Nav2</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Understand occupancy grid maps</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<p><strong>Congratulations on completing the Beginner tier exercises!</strong></p>
+<p>If you scored well on these exercises, you&#x27;re ready for:</p>
+<ul>
+<li><a href="/robot-book/docs/ai-robot-brain/intermediate/i_lesson1_camera_depth">I1: Camera and Depth Data Processing</a></li>
+</ul>
+<p>If you struggled with any topics, review the corresponding lesson before continuing.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/03-ai-robot-brain/exercises/beginner-exercises.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/robot-book/docs/ai-robot-brain/ai-prompts/chapter_3_advanced_prompts"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Advanced AI Prompts</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/robot-book/docs/ai-robot-brain/exercises/chapter_3_intermediate_exercises"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Intermediate Tier Exercises</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#exercise-1-perception-pipeline-ordering" class="table-of-contents__link toc-highlight">Exercise 1: Perception Pipeline Ordering</a></li><li><a href="#exercise-2-sensor-selection-challenge" class="table-of-contents__link toc-highlight">Exercise 2: Sensor Selection Challenge</a><ul><li><a href="#scenario-a-delivery-robot-in-office-building" class="table-of-contents__link toc-highlight">Scenario A: Delivery Robot in Office Building</a></li><li><a href="#scenario-b-agricultural-drone-for-crop-monitoring" class="table-of-contents__link toc-highlight">Scenario B: Agricultural Drone for Crop Monitoring</a></li><li><a href="#scenario-c-robot-arm-for-bin-picking" class="table-of-contents__link toc-highlight">Scenario C: Robot Arm for Bin Picking</a></li></ul></li><li><a href="#exercise-3-slam-concept-questions" class="table-of-contents__link toc-highlight">Exercise 3: SLAM Concept Questions</a><ul><li><a href="#question-31" class="table-of-contents__link toc-highlight">Question 3.1</a></li><li><a href="#question-32" class="table-of-contents__link toc-highlight">Question 3.2</a></li><li><a href="#question-33" class="table-of-contents__link toc-highlight">Question 3.3</a></li></ul></li><li><a href="#exercise-4-navigation-components-identification" class="table-of-contents__link toc-highlight">Exercise 4: Navigation Components Identification</a></li><li><a href="#exercise-5-true-or-false" class="table-of-contents__link toc-highlight">Exercise 5: True or False</a></li><li><a href="#exercise-6-diagram-interpretation" class="table-of-contents__link toc-highlight">Exercise 6: Diagram Interpretation</a></li><li><a href="#exercise-7-practical-scenario-analysis" class="table-of-contents__link toc-highlight">Exercise 7: Practical Scenario Analysis</a><ul><li><a href="#71-perception" class="table-of-contents__link toc-highlight">7.1 Perception</a></li><li><a href="#72-navigation-challenge" class="table-of-contents__link toc-highlight">7.2 Navigation Challenge</a></li><li><a href="#73-failure-mode" class="table-of-contents__link toc-highlight">7.3 Failure Mode</a></li></ul></li><li><a href="#self-assessment-checklist" class="table-of-contents__link toc-highlight">Self-Assessment Checklist</a></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Content</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/robot-book/docs/ros2-nervous-system/chapter_1_introduction">Start Reading</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Robotics Learning Platform. Built with Docusaurus.</div></div></div></footer><div class="chatbotWidget_mbmf"><button class="toggleButton_q8cV"><img src="/img/robot-avatar.png" alt="Chat" class="buttonIcon_V0Ql"><div class="statusDot_w4wX"></div></button></div></div>
+</body>
+</html>

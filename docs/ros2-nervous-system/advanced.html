@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ros2-nervous-system/advanced/chapter_1_advanced_tier" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.0">
+<title data-rh="true">Advanced Tier: Complex ROS 2 Architectures | Robotics Learning Platform</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://uroojfatima18.github.io/robot-book/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://uroojfatima18.github.io/robot-book/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://uroojfatima18.github.io/robot-book/docs/ros2-nervous-system/advanced"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Advanced Tier: Complex ROS 2 Architectures | Robotics Learning Platform"><meta data-rh="true" name="description" content="Welcome to the Advanced Tier"><meta data-rh="true" property="og:description" content="Welcome to the Advanced Tier"><link data-rh="true" rel="icon" href="/robot-book/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://uroojfatima18.github.io/robot-book/docs/ros2-nervous-system/advanced"><link data-rh="true" rel="alternate" href="https://uroojfatima18.github.io/robot-book/docs/ros2-nervous-system/advanced" hreflang="en"><link data-rh="true" rel="alternate" href="https://uroojfatima18.github.io/robot-book/docs/ros2-nervous-system/advanced" hreflang="x-default"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"><link rel="stylesheet" href="/robot-book/assets/css/styles.60761a4d.css">
+<script src="/robot-book/assets/js/runtime~main.2e70d8dc.js" defer="defer"></script>
+<script src="/robot-book/assets/js/main.706562b6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/robot-book/"><div class="navbar__logo"><img src="/robot-book/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/robot-book/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Robotics Book</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/robot-book/docs">Read the Book</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/robot-book/docs">Physical AI &amp; Humanoid Robotics</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/robot-book/docs/ros2-nervous-system">CHAPTER 1: The Robotic Nervous System (ROS 2)</a><button aria-label="Collapse sidebar category &#x27;CHAPTER 1: The Robotic Nervous System (ROS 2)&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ros2-nervous-system/chapter_1_introduction">Introduction: The Robotic Nervous System</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ros2-nervous-system/chapter_1_glossary">ROS 2 Glossary</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/robot-book/docs/ros2-nervous-system/beginner">Beginner Tier: ROS 2 Fundamentals</a><button aria-label="Expand sidebar category &#x27;Beginner Tier: ROS 2 Fundamentals&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/robot-book/docs/ros2-nervous-system/intermediate">Intermediate Tier: Hands-On ROS 2 Programming</a><button aria-label="Expand sidebar category &#x27;Intermediate Tier: Hands-On ROS 2 Programming&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible menu__list-item-collapsible--active"><a class="menu__link menu__link--sublist menu__link--active" aria-current="page" aria-expanded="true" tabindex="0" href="/robot-book/docs/ros2-nervous-system/advanced">Advanced Tier: Complex ROS 2 Architectures</a><button aria-label="Collapse sidebar category &#x27;Advanced Tier: Complex ROS 2 Architectures&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid">URDF &amp; Humanoid Robot Description</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ros2-nervous-system/advanced/a_lesson2_advanced_patterns">Advanced ROS 2 Patterns &amp; AI Integration</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" tabindex="0" href="/robot-book/docs/ros2-nervous-system/advanced/exercises/advanced_exercises">exercises</a></div></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/robot-book/docs/ros2-nervous-system/chapter_1_summary">Chapter Summary &amp; Reflection</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/robot-book/docs/ros2-nervous-system/ai-prompts">AI-Assisted Learning Prompts</a><button aria-label="Expand sidebar category &#x27;AI-Assisted Learning Prompts&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/robot-book/docs/digital-twin">Chapter 2: Digital Twin &amp; Simulation</a><button aria-label="Expand sidebar category &#x27;Chapter 2: Digital Twin &amp; Simulation&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/robot-book/docs/ai-robot-brain">Chapter 3: AI Robot Brain</a><button aria-label="Expand sidebar category &#x27;Chapter 3: AI Robot Brain&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/robot-book/docs/workflow-orchestration">Chapter 4: Workflow Orchestration</a><button aria-label="Expand sidebar category &#x27;Chapter 4: Workflow Orchestration&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/robot-book/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/robot-book/docs/ros2-nervous-system"><span itemprop="name">CHAPTER 1: The Robotic Nervous System (ROS 2)</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Advanced Tier: Complex ROS 2 Architectures</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Advanced Tier: Complex ROS 2 Architectures</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="welcome-to-the-advanced-tier">Welcome to the Advanced Tier<a href="#welcome-to-the-advanced-tier" class="hash-link" aria-label="Direct link to Welcome to the Advanced Tier" title="Direct link to Welcome to the Advanced Tier">​</a></h2>
+<p>You&#x27;ve built basic nodes and pub/sub systems. Now learn the sophisticated patterns that power production robots: URDF models, action servers with feedback, advanced node orchestration, and AI integration concepts.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tier-overview">Tier Overview<a href="#tier-overview" class="hash-link" aria-label="Direct link to Tier Overview" title="Direct link to Tier Overview">​</a></h2>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">🔴 ADVANCED TIER - Depth, Internals &amp; Production Patterns</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">═════════════════════════════════════════════════════════════</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">What You&#x27;ll Learn:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• URDF (Unified Robot Description Format)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Robot model visualization in RViz2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Transform systems (TF2) and coordinate frames</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Action servers with feedback and cancellation</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Advanced callback patterns and execution models</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Multi-robot ROS 2 systems</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• AI integration hooks for future chapters</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Simulation best practices</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">What You&#x27;ll Build:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• A complete URDF model of a humanoid robot</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• An action server that tracks progress</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• A visualization in RViz2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Understanding of production ROS 2 architecture</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives">​</a></h2>
+<p>By the end of the Advanced tier, you will be able to:</p>
+<ol>
+<li><strong>Design</strong> and <strong>write</strong> URDF files for multi-body robots</li>
+<li><strong>Understand</strong> links, joints, and collision geometry</li>
+<li><strong>Visualize</strong> robot models in RViz2 with TF2 data</li>
+<li><strong>Implement</strong> action servers with feedback, cancellation, and results</li>
+<li><strong>Build</strong> action clients that send goals and monitor progress</li>
+<li><strong>Apply</strong> advanced callback patterns (callback groups, executors)</li>
+<li><strong>Debug</strong> complex ROS 2 systems using introspection tools</li>
+<li><strong>Design</strong> modular architectures for humanoid robots</li>
+<li><strong>Integrate</strong> AI concepts (vision, planning, learning) with ROS 2</li>
+<li><strong>Prepare</strong> code for real-robot deployment (safety, logging, testing)</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites">​</a></h2>
+<p>Before starting this tier, you must have completed:</p>
+<ul>
+<li>
+<p><strong>The Intermediate Tier</strong> ✅</p>
+<ul>
+<li>You can write ROS 2 Python nodes</li>
+<li>You understand publishers, subscribers, and services</li>
+<li>You&#x27;ve built working multi-node systems</li>
+</ul>
+</li>
+<li>
+<p><strong>Comfortable with ROS 2 Python Development</strong>:</p>
+<ul>
+<li>Can read and modify rclpy code</li>
+<li>Understand callbacks and executors</li>
+<li>Familiar with launch files</li>
+</ul>
+</li>
+<li>
+<p><strong>Basic Understanding of Robot Structure</strong>:</p>
+<ul>
+<li>What are links, joints, and actuators</li>
+<li>Why do robots need geometric models</li>
+<li>Basic 3D geometry (coordinates, rotations)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Critical</strong>: If you cannot write a working ROS 2 Python node, go back to Intermediate. This tier assumes fluency in that skill.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="lessons-in-this-tier">Lessons in This Tier<a href="#lessons-in-this-tier" class="hash-link" aria-label="Direct link to Lessons in This Tier" title="Direct link to Lessons in This Tier">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lesson-a1-urdf--humanoid-robot-description">Lesson A1: URDF &amp; Humanoid Robot Description<a href="#lesson-a1-urdf--humanoid-robot-description" class="hash-link" aria-label="Direct link to Lesson A1: URDF &amp; Humanoid Robot Description" title="Direct link to Lesson A1: URDF &amp; Humanoid Robot Description">​</a></h3>
+<p><strong>Duration</strong>: 1-2 hours</p>
+<p>Master the URDF language: how to describe links, joints, inertia, collision, and visuals. Build a complete model of a humanoid robot and visualize it in RViz2.</p>
+<p><strong>Key Topics</strong>:</p>
+<ul>
+<li>URDF structure and syntax</li>
+<li>Links: masses, geometries, inertias</li>
+<li>Joints: types, limits, dynamics</li>
+<li>Visual and collision geometry</li>
+<li>Texture and material properties</li>
+<li>XACRO: macros for reducing repetition</li>
+<li>Loading and displaying URDF in RViz2</li>
+<li>TF2: Transform trees and coordinate frames</li>
+<li>Joint state publishers for testing</li>
+</ul>
+<p><strong>Hands-On Activities</strong>:</p>
+<ul>
+<li>Write a simple URDF (2-3 link robot)</li>
+<li>Build a humanoid URDF with arms, legs, torso</li>
+<li>Visualize in RViz2 with joint controls</li>
+<li>Load URDF into Gazebo simulator</li>
+<li>Publish joint states to animate the model</li>
+</ul>
+<p><strong>Deep Dives</strong>:</p>
+<ul>
+<li>URDF limitations and why SDF exists for simulation</li>
+<li>Inertia matrix calculations</li>
+<li>Collision geometry optimization</li>
+<li>XACRO macros for DRY robot models</li>
+<li>Transform chains and frame dependencies</li>
+</ul>
+<p><strong>Outcomes</strong>:</p>
+<ul>
+<li>✅ Production-quality URDF file</li>
+<li>✅ Humanoid model in simulation</li>
+<li>✅ Visualization and debugging skills</li>
+</ul>
+<p><strong>File</strong>: <a href="/robot-book/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid">A1: URDF &amp; Humanoid Robot Description</a></p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lesson-a2-advanced-ros-2-patterns--ai-integration">Lesson A2: Advanced ROS 2 Patterns &amp; AI Integration<a href="#lesson-a2-advanced-ros-2-patterns--ai-integration" class="hash-link" aria-label="Direct link to Lesson A2: Advanced ROS 2 Patterns &amp; AI Integration" title="Direct link to Lesson A2: Advanced ROS 2 Patterns &amp; AI Integration">​</a></h3>
+<p><strong>Duration</strong>: 1-2 hours</p>
+<p>Go beyond basic pub/sub: action servers with feedback, multi-threaded nodes, callback groups, introspection, and patterns for integrating AI systems.</p>
+<p><strong>Key Topics</strong>:</p>
+<ul>
+<li>Action servers and clients (deep dive)</li>
+<li>Feedback during long-running tasks</li>
+<li>Cancellation and timeout handling</li>
+<li>Multi-threaded execution models</li>
+<li>Callback groups: exclusive vs. reentrant</li>
+<li>Executors: SingleThreadedExecutor, MultiThreadedExecutor</li>
+<li>Introspection and monitoring</li>
+<li>Logging and diagnostics</li>
+<li>Integration hooks for AI systems (perception, planning, learning)</li>
+<li>Safety and resource management</li>
+<li>Testing ROS 2 systems</li>
+</ul>
+<p><strong>Hands-On Activities</strong>:</p>
+<ul>
+<li>Implement an action server (e.g., robot navigation with progress)</li>
+<li>Build an action client that sends goals and monitors feedback</li>
+<li>Create a multi-threaded node with concurrent callbacks</li>
+<li>Use callback groups to control execution</li>
+<li>Implement proper error handling and timeouts</li>
+<li>Design a system ready for vision/AI integration</li>
+</ul>
+<p><strong>Deep Dives</strong>:</p>
+<ul>
+<li>When to use actions vs. services vs. topics</li>
+<li>Executor behavior and callback ordering</li>
+<li>Thread safety in ROS 2</li>
+<li>Memory management and resource cleanup</li>
+<li>Pattern: pub/sub for sensors, actions for commands</li>
+<li>Integrating with ML models (vision, planning)</li>
+<li>Sim-to-real transfer considerations</li>
+</ul>
+<p><strong>Outcomes</strong>:</p>
+<ul>
+<li>✅ Production-grade action servers</li>
+<li>✅ Understanding of ROS 2 internals</li>
+<li>✅ Architecture ready for AI integration</li>
+</ul>
+<p><strong>File</strong>: <a href="/robot-book/docs/ros2-nervous-system/advanced/a_lesson2_advanced_patterns">A2: Advanced ROS 2 Patterns &amp; AI Integration</a></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="progression--scaffolding">Progression &amp; Scaffolding<a href="#progression--scaffolding" class="hash-link" aria-label="Direct link to Progression &amp; Scaffolding" title="Direct link to Progression &amp; Scaffolding">​</a></h2>
+<p>The Advanced tier elevates you from functional code to architecture and theory:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Intermediate (Functional)        Advanced (Architectural)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└ ─ Single nodes work             └─ Systems of nodes scale</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─ Pub/sub is clear              └─ Complex patterns justified</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─ Services handle basics        └─ Action servers handle complexity</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                                 └─ URDF describes robots</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                                 └─ AI integration planned</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                                 └─ Production patterns applied</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="estimated-timeline">Estimated Timeline<a href="#estimated-timeline" class="hash-link" aria-label="Direct link to Estimated Timeline" title="Direct link to Estimated Timeline">​</a></h2>
+<table><thead><tr><th>Lesson</th><th>Duration</th><th>Cumulative</th><th>Notes</th></tr></thead><tbody><tr><td>A1: URDF &amp; Humanoid Robot Description</td><td>1-2 hours</td><td>1-2 hours</td><td>Theory + visualization</td></tr><tr><td>A2: Advanced ROS 2 Patterns &amp; AI Integration</td><td>1-2 hours</td><td>2-4 hours</td><td>Architecture + code patterns</td></tr><tr><td><strong>Advanced Total</strong></td><td><strong>2-4 hours</strong></td><td><strong>6-12 hours (cumulative with Beginner &amp; Intermediate)</strong></td><td>Complete mastery</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="code-examples-in-this-tier">Code Examples in This Tier<a href="#code-examples-in-this-tier" class="hash-link" aria-label="Direct link to Code Examples in This Tier" title="Direct link to Code Examples in This Tier">​</a></h2>
+<p>All working code examples are in the <code>code/advanced/</code> directory:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">code/advanced/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── fibonacci_action_server.py     # Action server with feedback</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── fibonacci_action_client.py     # Action client monitoring progress</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── urdf/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── simple_robot.urdf          # Basic 2-link robot</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── humanoid_basic.urdf        # Humanoid structure</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── humanoid_with_sensors.urdf # Humanoid + sensor frames</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── macros.xacro               # Reusable XACRO components</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── ros2_to_gazebo.py              # Spawn URDF in Gazebo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── joint_state_publisher.py       # Animate robot in RViz2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── advanced_patterns.py           # Multi-threaded node example</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── ai_integration_hooks.py         # Patterns for vision/planning</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── README.md                       # Setup and usage instructions</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>All code includes advanced error handling and documentation.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hands-on-exercises">Hands-On Exercises<a href="#hands-on-exercises" class="hash-link" aria-label="Direct link to Hands-On Exercises" title="Direct link to Hands-On Exercises">​</a></h2>
+<p>At the end of this tier, you&#x27;ll complete:</p>
+<ul>
+<li><strong>Exercise A1</strong>: Write a URDF for a 4-DOF arm</li>
+<li><strong>Exercise A2</strong>: Visualize your URDF in RViz2 with interactive controls</li>
+<li><strong>Exercise A3</strong>: Implement an action server for robot motion</li>
+<li><strong>Exercise A4</strong>: Build an action client with progress monitoring</li>
+<li><strong>Exercise A5</strong>: Design a multi-node system with callback groups</li>
+<li><strong>Exercise A6</strong>: Integrate a simple vision processing node</li>
+<li><strong>Capstone Project</strong>: Build a complete humanoid system (URDF + vision node + motion action server)</li>
+</ul>
+<p>All exercises are in <a href="/robot-book/docs/ros2-nervous-system/advanced/exercises/advanced_exercises">Advanced Exercises</a>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ai-assisted-learning">AI-Assisted Learning<a href="#ai-assisted-learning" class="hash-link" aria-label="Direct link to AI-Assisted Learning" title="Direct link to AI-Assisted Learning">​</a></h2>
+<p>Advanced topics demand sophisticated help. Use these prompts:</p>
+<ul>
+<li><strong>URDF Design</strong>: &quot;Design a URDF for a humanoid with 6-DOF arms and 2-DOF legs&quot;</li>
+<li><strong>Action Servers</strong>: &quot;Implement an action server that tracks robot motion progress&quot;</li>
+<li><strong>Debugging</strong>: &quot;My URDF loads but joints don&#x27;t move in RViz2. What&#x27;s wrong?&quot;</li>
+<li><strong>Architecture</strong>: &quot;How should I structure a ROS 2 system for vision-based navigation?&quot;</li>
+<li><strong>Optimization</strong>: &quot;How do I reduce latency in my multi-node ROS 2 system?&quot;</li>
+<li><strong>AI Integration</strong>: &quot;What&#x27;s the pattern for integrating a vision model into ROS 2?&quot;</li>
+</ul>
+<p>See <a href="/robot-book/docs/ros2-nervous-system/ai-prompts/advanced_ai_prompts">Advanced AI Prompts</a> for a comprehensive library.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-concepts-covered">Advanced Concepts Covered<a href="#advanced-concepts-covered" class="hash-link" aria-label="Direct link to Advanced Concepts Covered" title="Direct link to Advanced Concepts Covered">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="urdf-in-depth">URDF in Depth<a href="#urdf-in-depth" class="hash-link" aria-label="Direct link to URDF in Depth" title="Direct link to URDF in Depth">​</a></h3>
+<ul>
+<li>Link inertia calculations</li>
+<li>Joint friction and damping</li>
+<li>Sensor frame attachment</li>
+<li>Transmission elements (for gripper control)</li>
+<li>Mimic joints (for hands)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="action-patterns">Action Patterns<a href="#action-patterns" class="hash-link" aria-label="Direct link to Action Patterns" title="Direct link to Action Patterns">​</a></h3>
+<ul>
+<li>State machines with actions</li>
+<li>Feedback streaming</li>
+<li>Cancellation handling</li>
+<li>Timeout and error recovery</li>
+<li>Goal validation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="multi-robot-systems">Multi-Robot Systems<a href="#multi-robot-systems" class="hash-link" aria-label="Direct link to Multi-Robot Systems" title="Direct link to Multi-Robot Systems">​</a></h3>
+<ul>
+<li>Namespace management</li>
+<li>Distributed TF2 trees</li>
+<li>Coordination patterns</li>
+<li>Synchronization challenges</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ai-integration">AI Integration<a href="#ai-integration" class="hash-link" aria-label="Direct link to AI Integration" title="Direct link to AI Integration">​</a></h3>
+<ul>
+<li>Vision pipeline architecture</li>
+<li>Planning and navigation with ROS 2</li>
+<li>Reinforcement learning feedback loops</li>
+<li>Large language model (LLM) integration hooks</li>
+<li>Sim-to-real transfer strategies</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="production-concerns">Production Concerns<a href="#production-concerns" class="hash-link" aria-label="Direct link to Production Concerns" title="Direct link to Production Concerns">​</a></h3>
+<ul>
+<li>Logging and diagnostics</li>
+<li>Parameter validation</li>
+<li>Resource limits and cleanup</li>
+<li>Testing and validation</li>
+<li>Safety and emergency stops</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-you-will-do-in-this-tier">What You WILL Do in This Tier<a href="#what-you-will-do-in-this-tier" class="hash-link" aria-label="Direct link to What You WILL Do in This Tier" title="Direct link to What You WILL Do in This Tier">​</a></h2>
+<ul>
+<li>✅ Write complex URDF files</li>
+<li>✅ Build action servers and clients</li>
+<li>✅ Implement multi-threaded ROS 2 systems</li>
+<li>✅ Use advanced debugging techniques</li>
+<li>✅ Design production-grade architecture</li>
+<li>✅ Understand ROS 2 internals deeply</li>
+<li>✅ Plan AI system integration</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-you-wont-do">What You Won&#x27;t Do<a href="#what-you-wont-do" class="hash-link" aria-label="Direct link to What You Won&#x27;t Do" title="Direct link to What You Won&#x27;t Do">​</a></h2>
+<ul>
+<li>Deploy to real hardware (covered in Chapter 2+)</li>
+<li>Implement full ML pipelines (covered in Chapter 4+)</li>
+<li>Build a complete humanoid (that&#x27;s Chapter 6 capstone)</li>
+<li>Optimize for embedded systems (advanced topic)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="theory-deep-dives">Theory Deep-Dives<a href="#theory-deep-dives" class="hash-link" aria-label="Direct link to Theory Deep-Dives" title="Direct link to Theory Deep-Dives">​</a></h2>
+<p>This tier includes deep explorations of:</p>
+<ol>
+<li>
+<p><strong>Why URDF for Description?</strong></p>
+<ul>
+<li>XML schema design</li>
+<li>Limitations of URDF (why SDF exists)</li>
+<li>Loading and parsing strategies</li>
+</ul>
+</li>
+<li>
+<p><strong>Why Actions for Complex Tasks?</strong></p>
+<ul>
+<li>Differences from topics and services (with examples)</li>
+<li>When each pattern is correct</li>
+<li>State machine implications</li>
+</ul>
+</li>
+<li>
+<p><strong>ROS 2 Execution Model</strong></p>
+<ul>
+<li>How callbacks are scheduled</li>
+<li>Mutex and reentrancy</li>
+<li>Executor types and their performance</li>
+<li>Real-time considerations</li>
+</ul>
+</li>
+<li>
+<p><strong>Transform Chains</strong></p>
+<ul>
+<li>Why TF2 exists</li>
+<li>Frame relationships in complex robots</li>
+<li>Broadcasting and listening</li>
+<li>Time-stamped transformations</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="connection-to-later-chapters">Connection to Later Chapters<a href="#connection-to-later-chapters" class="hash-link" aria-label="Direct link to Connection to Later Chapters" title="Direct link to Connection to Later Chapters">​</a></h2>
+<p>The Advanced tier prepares you for:</p>
+<ul>
+<li><strong>Chapter 2 (Digital Twin)</strong>: You&#x27;ll load these URDF files into Gazebo and Isaac Sim</li>
+<li><strong>Chapter 3 (Perception)</strong>: You&#x27;ll attach sensors to your URDF and process their data</li>
+<li><strong>Chapter 4 (Planning)</strong>: You&#x27;ll use action servers to execute planned trajectories</li>
+<li><strong>Chapter 5 (Vision-Language-Action)</strong>: You&#x27;ll integrate perception with planning</li>
+<li><strong>Chapter 6 (Capstone)</strong>: You&#x27;ll bring it all together in a complete humanoid</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-next">What&#x27;s Next?<a href="#whats-next" class="hash-link" aria-label="Direct link to What&#x27;s Next?" title="Direct link to What&#x27;s Next?">​</a></h2>
+<p>After completing this tier:</p>
+<ol>
+<li><strong>Solidify</strong> your understanding with exercises</li>
+<li><strong>Build</strong> something ambitious (extend the humanoid model)</li>
+<li><strong>Experiment</strong> with your own URDF designs</li>
+<li><strong>Review</strong> production patterns for real-world use</li>
+<li><strong>Move Forward</strong> to <strong>Chapter 2: The Digital Twin</strong> where you&#x27;ll simulate these robots in Gazebo and Unity</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="resources">Resources<a href="#resources" class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources">​</a></h2>
+<ul>
+<li><strong>URDF Official Documentation</strong>: <a href="https://wiki.ros.org/urdf" target="_blank" rel="noopener noreferrer">https://wiki.ros.org/urdf</a></li>
+<li><strong>URDF ROS 2 Guide</strong>: <a href="https://docs.ros.org/en/humble/Concepts/Intermediate/URDF/URDF-Main.html" target="_blank" rel="noopener noreferrer">https://docs.ros.org/en/humble/Concepts/Intermediate/URDF/URDF-Main.html</a></li>
+<li><strong>XACRO Tutorial</strong>: <a href="https://wiki.ros.org/xacro" target="_blank" rel="noopener noreferrer">https://wiki.ros.org/xacro</a></li>
+<li><strong>TF2 Documentation</strong>: <a href="https://docs.ros.org/en/humble/Concepts/Intermediate/Tf2/Main.html" target="_blank" rel="noopener noreferrer">https://docs.ros.org/en/humble/Concepts/Intermediate/Tf2/Main.html</a></li>
+<li><strong>RViz2 Plugins</strong>: <a href="https://github.com/ros2/rviz" target="_blank" rel="noopener noreferrer">https://github.com/ros2/rviz</a></li>
+<li><strong>Action Servers Guide</strong>: <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.html" target="_blank" rel="noopener noreferrer">https://docs.ros.org/en/humble/Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.html</a></li>
+<li><strong>Gazebo + ROS 2</strong>: <a href="https://gazebosim.org/docs/fortress/ros_integration/" target="_blank" rel="noopener noreferrer">https://gazebosim.org/docs/fortress/ros_integration/</a></li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ready-to-master-ros-2">Ready to Master ROS 2?<a href="#ready-to-master-ros-2" class="hash-link" aria-label="Direct link to Ready to Master ROS 2?" title="Direct link to Ready to Master ROS 2?">​</a></h2>
+<p>Begin with <strong><a href="/robot-book/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid">Lesson A1: URDF &amp; Humanoid Robot Description</a></strong>.</p>
+<hr>
+<p><em>&quot;At this level, you&#x27;re not just writing code—you&#x27;re architecting the nervous system of robots.&quot;</em></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/01-ros2-nervous-system/advanced/README.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/robot-book/docs/ros2-nervous-system/intermediate/exercises/intermediate_exercises"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Intermediate Tier Exercises</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/robot-book/docs/ros2-nervous-system/advanced/a_lesson1_urdf_humanoid"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">URDF &amp; Humanoid Robot Description</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#welcome-to-the-advanced-tier" class="table-of-contents__link toc-highlight">Welcome to the Advanced Tier</a></li><li><a href="#tier-overview" class="table-of-contents__link toc-highlight">Tier Overview</a></li><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a></li><li><a href="#lessons-in-this-tier" class="table-of-contents__link toc-highlight">Lessons in This Tier</a><ul><li><a href="#lesson-a1-urdf--humanoid-robot-description" class="table-of-contents__link toc-highlight">Lesson A1: URDF &amp; Humanoid Robot Description</a></li><li><a href="#lesson-a2-advanced-ros-2-patterns--ai-integration" class="table-of-contents__link toc-highlight">Lesson A2: Advanced ROS 2 Patterns &amp; AI Integration</a></li></ul></li><li><a href="#progression--scaffolding" class="table-of-contents__link toc-highlight">Progression &amp; Scaffolding</a></li><li><a href="#estimated-timeline" class="table-of-contents__link toc-highlight">Estimated Timeline</a></li><li><a href="#code-examples-in-this-tier" class="table-of-contents__link toc-highlight">Code Examples in This Tier</a></li><li><a href="#hands-on-exercises" class="table-of-contents__link toc-highlight">Hands-On Exercises</a></li><li><a href="#ai-assisted-learning" class="table-of-contents__link toc-highlight">AI-Assisted Learning</a></li><li><a href="#advanced-concepts-covered" class="table-of-contents__link toc-highlight">Advanced Concepts Covered</a><ul><li><a href="#urdf-in-depth" class="table-of-contents__link toc-highlight">URDF in Depth</a></li><li><a href="#action-patterns" class="table-of-contents__link toc-highlight">Action Patterns</a></li><li><a href="#multi-robot-systems" class="table-of-contents__link toc-highlight">Multi-Robot Systems</a></li><li><a href="#ai-integration" class="table-of-contents__link toc-highlight">AI Integration</a></li><li><a href="#production-concerns" class="table-of-contents__link toc-highlight">Production Concerns</a></li></ul></li><li><a href="#what-you-will-do-in-this-tier" class="table-of-contents__link toc-highlight">What You WILL Do in This Tier</a></li><li><a href="#what-you-wont-do" class="table-of-contents__link toc-highlight">What You Won&#39;t Do</a></li><li><a href="#theory-deep-dives" class="table-of-contents__link toc-highlight">Theory Deep-Dives</a></li><li><a href="#connection-to-later-chapters" class="table-of-contents__link toc-highlight">Connection to Later Chapters</a></li><li><a href="#whats-next" class="table-of-contents__link toc-highlight">What&#39;s Next?</a></li><li><a href="#resources" class="table-of-contents__link toc-highlight">Resources</a></li><li><a href="#ready-to-master-ros-2" class="table-of-contents__link toc-highlight">Ready to Master ROS 2?</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Content</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/robot-book/docs/ros2-nervous-system/chapter_1_introduction">Start Reading</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Robotics Learning Platform. Built with Docusaurus.</div></div></div></footer><div class="chatbotWidget_mbmf"><button class="toggleButton_q8cV"><img src="/img/robot-avatar.png" alt="Chat" class="buttonIcon_V0Ql"><div class="statusDot_w4wX"></div></button></div></div>
+</body>
+</html>
