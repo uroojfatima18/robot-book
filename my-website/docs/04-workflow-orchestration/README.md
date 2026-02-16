@@ -125,7 +125,7 @@ By the end of this chapter, students will be able to:
 1. **Start with the Introduction**: Read [introduction.md](./introduction.md) for context
 2. **Begin Beginner Tier**: Start with [Beginner Tier README](./beginner/README.md)
 3. **Progress Sequentially**: Complete each tier before moving to the next
-4. **Use AI Prompts**: Leverage [AI prompts](./ai-prompts/) when you need help
+4. **Use AI Prompts**: Leverage [AI prompts](./ai-prompts/README.md) when you need help
 5. **Complete Exercises**: Practice with exercises in each tier
 
 ---

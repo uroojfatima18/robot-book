@@ -307,7 +307,7 @@ Diagrams are in the `diagrams/` directory. All examples are production-ready and
 - [Glossary](./glossary.md) - All terms defined
 
 **Want Help?**
-- [AI Prompts](./ai-prompts/) - Get assistance from AI
+- [AI Prompts](./ai-prompts/README.md) - Get assistance from AI
 
 ---
 
