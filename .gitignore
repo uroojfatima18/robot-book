@@ -55,15 +55,23 @@ Thumbs.db
 # Environment & Private
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 *.local
 .claude/
 .specify/
 archive/
 history/
 old-backend/
+backend/cache/
+backend/.next/
+coverage/
 
 # Temporary
 *.tmp
 *.temp
 *.log
+backend-logs.txt
+docusaurus-logs.txt
 tmpclaude-*-cwd
