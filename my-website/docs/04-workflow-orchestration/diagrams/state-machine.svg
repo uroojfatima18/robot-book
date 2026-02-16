@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <style>
+      .state { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; }
+      .state-active { fill: #e8f5e9; stroke: #388e3c; stroke-width: 3; }
+      .arrow { fill: none; stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+      .text { font-family: Arial, sans-serif; font-size: 14px; text-anchor: middle; }
+      .title { font-size: 16px; font-weight: bold; }
+      .event { font-size: 12px; fill: #666; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" class="text title" fill="#333">Robot Navigation State Machine</text>
+
+  <!-- States -->
+  <circle cx="150" cy="150" r="50" class="state-active"/>
+  <text x="150" y="155" class="text" fill="#333">IDLE</text>
+
+  <circle cx="400" cy="150" r="50" class="state"/>
+  <text x="400" y="155" class="text" fill="#333">NAVIGATING</text>
+
+  <circle cx="650" cy="150" r="50" class="state"/>
+  <text x="650" y="155" class="text" fill="#333">AVOIDING</text>
+
+  <circle cx="400" cy="300" r="50" class="state"/>
+  <text x="400" y="305" class="text" fill="#333">REACHED</text>
+
+  <circle cx="150" cy="300" r="50" class="state"/>
+  <text x="150" y="305" class="text" fill="#333">ERROR</text>
+
+  <!-- Transitions -->
+  <line x1="200" y1="150" x2="350" y2="150" class="arrow"/>
+  <text x="275" y="140" class="text event">set_destination</text>
+
+  <line x1="430" y1="185" x2="620" y2="165" class="arrow"/>
+  <text x="525" y="175" class="text event">obstacle_detected</text>
+
+  <line x1="620" y1="135" x2="430" y2="115" class="arrow"/>
+  <text x="525" y="115" class="text event">path_clear</text>
+
+  <line x1="400" y1="200" x2="400" y2="250" class="arrow"/>
+  <text x="440" y="225" class="text event">goal_reached</text>
+
+  <line x1="350" y1="300" x2="200" y2="300" class="arrow"/>
+  <text x="275" y="290" class="text event">return_to_idle</text>
+
+  <line x1="110" y1="190" x2="110" y2="260" class="arrow"/>
+  <line x1="110" y1="260" x2="150" y2="260" class="arrow"/>
+  <text x="80" y="225" class="text event" transform="rotate(-90 80 225)">error</text>
+
+  <!-- Legend -->
+  <rect x="50" y="350" width="700" height="40" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="60" y="370" class="text" fill="#333" style="font-size: 12px; text-anchor: start;">States: IDLE (active), NAVIGATING, AVOIDING obstacles, REACHED goal, ERROR | Events trigger transitions between states</text>
+</svg>

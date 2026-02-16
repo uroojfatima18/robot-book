@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500">
+  <title>Action Server Lifecycle</title>
+  <desc>State diagram showing the action server lifecycle from goal receipt through execution to completion, including cancellation paths. Color-blind safe palette with distinct shapes.</desc>
+
+  <!-- Background -->
+  <rect width="700" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333">Action Server Lifecycle</text>
+
+  <!-- Legend -->
+  <g transform="translate(520, 50)">
+    <rect width="160" height="100" fill="#f8f9fa" stroke="#dee2e6" rx="5"/>
+    <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">Legend</text>
+
+    <rect x="10" y="30" width="20" height="15" fill="#2563eb" rx="3"/>
+    <text x="35" y="42" font-family="Arial, sans-serif" font-size="10" fill="#333333">Active state</text>
+
+    <rect x="10" y="50" width="20" height="15" fill="#059669" rx="3"/>
+    <text x="35" y="62" font-family="Arial, sans-serif" font-size="10" fill="#333333">Success state</text>
+
+    <rect x="10" y="70" width="20" height="15" fill="#dc2626" rx="3"/>
+    <text x="35" y="82" font-family="Arial, sans-serif" font-size="10" fill="#333333">Failure/Cancel</text>
+  </g>
+
+  <!-- CLIENT SIDE -->
+  <text x="100" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#666666">Client</text>
+
+  <!-- SERVER SIDE -->
+  <text x="400" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#666666">Server</text>
+
+  <!-- Divider line -->
+  <line x1="250" y1="60" x2="250" y2="480" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- ==================== -->
+  <!-- CLIENT STATES        -->
+  <!-- ==================== -->
+
+  <!-- Client: Idle -->
+  <rect x="50" y="100" width="100" height="40" fill="#f3f4f6" stroke="#9ca3af" stroke-width="2" rx="5"/>
+  <text x="100" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333333">Idle</text>
+
+  <!-- Client: Waiting for Accept -->
+  <rect x="50" y="180" width="100" height="40" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="5"/>
+  <text x="100" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">Waiting for</text>
+  <text x="100" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333333">Accept</text>
+
+  <!-- Client: Monitoring -->
+  <rect x="50" y="280" width="100" height="40" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="100" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Monitoring</text>
+
+  <!-- Client: Done -->
+  <rect x="50" y="400" width="100" height="40" fill="#059669" stroke="#047857" stroke-width="2" rx="5"/>
+  <text x="100" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Done</text>
+
+  <!-- ==================== -->
+  <!-- SERVER STATES        -->
+  <!-- ==================== -->
+
+  <!-- Server: Idle -->
+  <rect x="350" y="100" width="100" height="40" fill="#f3f4f6" stroke="#9ca3af" stroke-width="2" rx="5"/>
+  <text x="400" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333333">Idle</text>
+
+  <!-- Server: Accepting -->
+  <rect x="350" y="180" width="100" height="40" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="5"/>
+  <text x="400" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333333">Accepting</text>
+
+  <!-- Server: Executing -->
+  <rect x="350" y="280" width="100" height="40" fill="#2563eb" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="400" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Executing</text>
+
+  <!-- Server: Succeeded -->
+  <rect x="280" y="400" width="80" height="40" fill="#059669" stroke="#047857" stroke-width="2" rx="5"/>
+  <text x="320" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Succeeded</text>
+
+  <!-- Server: Aborted -->
+  <rect x="370" y="400" width="80" height="40" fill="#dc2626" stroke="#b91c1c" stroke-width="2" rx="5"/>
+  <text x="410" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Aborted</text>
+
+  <!-- Server: Canceled -->
+  <rect x="460" y="400" width="80" height="40" fill="#f59e0b" stroke="#d97706" stroke-width="2" rx="5"/>
+  <text x="500" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Canceled</text>
+
+  <!-- Rejected (branching from Accepting) -->
+  <rect x="510" y="180" width="80" height="40" fill="#dc2626" stroke="#b91c1c" stroke-width="2" rx="5"/>
+  <text x="550" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Rejected</text>
+
+  <!-- ==================== -->
+  <!-- ARROWS & LABELS      -->
+  <!-- ==================== -->
+
+  <!-- Client Idle → Waiting -->
+  <line x1="100" y1="140" x2="100" y2="175" stroke="#333333" stroke-width="2"/>
+  <polygon points="100,178 96,170 104,170" fill="#333333"/>
+  <text x="110" y="160" font-family="Arial, sans-serif" font-size="9" fill="#666666">send_goal()</text>
+
+  <!-- Cross: Client → Server (Goal Request) -->
+  <line x1="150" y1="200" x2="345" y2="200" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="250" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">Goal Request</text>
+
+  <!-- Server Idle → Accepting -->
+  <line x1="400" y1="140" x2="400" y2="175" stroke="#333333" stroke-width="2"/>
+  <polygon points="400,178 396,170 404,170" fill="#333333"/>
+
+  <!-- Server Accepting → Rejected -->
+  <line x1="450" y1="200" x2="505" y2="200" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="508,200 500,196 500,204" fill="#dc2626"/>
+  <text x="480" y="193" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">reject</text>
+
+  <!-- Server Accepting → Executing -->
+  <line x1="400" y1="220" x2="400" y2="275" stroke="#059669" stroke-width="2"/>
+  <polygon points="400,278 396,270 404,270" fill="#059669"/>
+  <text x="435" y="250" font-family="Arial, sans-serif" font-size="9" fill="#059669">accept</text>
+
+  <!-- Cross: Server → Client (Accept) -->
+  <line x1="345" y1="250" x2="155" y2="290" stroke="#059669" stroke-width="2"/>
+  <polygon points="152,291 162,290 158,281" fill="#059669"/>
+  <text x="250" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#059669">Goal Accepted</text>
+
+  <!-- Feedback loop -->
+  <path d="M 350 300 C 280 300, 280 300, 155 300" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="152,300 160,296 160,304" fill="#2563eb"/>
+  <text x="250" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2563eb">Feedback (stream)</text>
+
+  <!-- Cancel request (dashed) -->
+  <path d="M 150 320 C 200 350, 300 350, 350 320" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,2"/>
+  <polygon points="353,318 343,320 347,329" fill="#f59e0b"/>
+  <text x="250" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#f59e0b">Cancel Request</text>
+
+  <!-- Server Executing → Succeeded -->
+  <line x1="370" y1="320" x2="330" y2="395" stroke="#059669" stroke-width="2"/>
+  <polygon points="328,398 337,392 330,387" fill="#059669"/>
+  <text x="333" y="360" font-family="Arial, sans-serif" font-size="9" fill="#059669">succeed()</text>
+
+  <!-- Server Executing → Aborted -->
+  <line x1="400" y1="320" x2="410" y2="395" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="410,398 406,388 414,388" fill="#dc2626"/>
+  <text x="425" y="360" font-family="Arial, sans-serif" font-size="9" fill="#dc2626">abort()</text>
+
+  <!-- Server Executing → Canceled -->
+  <line x1="430" y1="320" x2="490" y2="395" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="492,398 483,392 488,387" fill="#f59e0b"/>
+  <text x="480" y="360" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b">canceled()</text>
+
+  <!-- Result to Client -->
+  <path d="M 320 440 C 250 460, 180 460, 150 440" fill="none" stroke="#059669" stroke-width="2"/>
+  <polygon points="147,438 157,442 155,433" fill="#059669"/>
+  <text x="230" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#059669">Result</text>
+
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Footer note -->
+  <text x="350" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666666">Actions combine goal submission, streaming feedback, and result delivery with cancellation support</text>
+
+</svg>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Chapter 1: The Robotic Nervous System (ROS 2)
+  Diagram: Action Goal-Feedback-Result Pattern
+  Alt-text: Sequence diagram showing an action client sending a goal, receiving
+  multiple feedback messages during execution, and finally receiving the result
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 550" role="img" aria-labelledby="title desc">
+  <title id="title">ROS 2 Action Goal-Feedback-Result Pattern</title>
+  <desc id="desc">Sequence diagram showing how an action client sends a goal to an action server, receives periodic feedback during long-running execution, and finally receives the result. This demonstrates asynchronous communication with progress updates and cancellation support.</desc>
+
+  <!-- Background -->
+  <rect width="750" height="550" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="375" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Action Goal-Feedback-Result Pattern</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fd7e14"/>
+    </marker>
+    <marker id="arrow-orange-left" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#fd7e14"/>
+    </marker>
+  </defs>
+
+  <!-- Client Node -->
+  <rect x="100" y="60" width="140" height="80" rx="10" fill="#fd7e14" stroke="#e36209" stroke-width="2"/>
+  <text x="170" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Action Client</text>
+  <text x="170" y="115" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#fff3cd">behavior_node</text>
+
+  <!-- Server Node -->
+  <rect x="510" y="60" width="140" height="80" rx="10" fill="#fd7e14" stroke="#e36209" stroke-width="2"/>
+  <text x="580" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Action Server</text>
+  <text x="580" y="115" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#fff3cd">navigation_node</text>
+
+  <!-- Action name label -->
+  <rect x="305" y="55" width="140" height="35" rx="5" fill="#fff3cd" stroke="#fd7e14" stroke-width="2"/>
+  <text x="375" y="77" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#856404">/navigate_to_pose</text>
+
+  <!-- Lifelines -->
+  <line x1="170" y1="140" x2="170" y2="480" stroke="#fd7e14" stroke-width="2" stroke-dasharray="8,4"/>
+  <line x1="580" y1="140" x2="580" y2="480" stroke="#fd7e14" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- Step 1: Goal -->
+  <rect x="160" y="160" width="20" height="30" fill="#ffc078"/>
+  <line x1="180" y1="175" x2="570" y2="175" stroke="#fd7e14" stroke-width="2" marker-end="url(#arrow-orange)"/>
+  <rect x="280" y="158" width="190" height="35" rx="5" fill="white" stroke="#fd7e14" stroke-width="1"/>
+  <text x="375" y="175" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#856404">Goal: {pose: kitchen}</text>
+  <text x="375" y="188" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#6c757d" font-style="italic">send_goal_async()</text>
+
+  <!-- Server executing -->
+  <rect x="570" y="190" width="20" height="200" fill="#ffc078"/>
+  <text x="610" y="295" font-family="Arial, sans-serif" font-size="10" fill="#495057" font-style="italic" transform="rotate(90 610 295)">Executing...</text>
+
+  <!-- Step 2: Feedback 1 -->
+  <line x1="570" y1="230" x2="180" y2="230" stroke="#fd7e14" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrow-orange-left)"/>
+  <rect x="280" y="218" width="190" height="25" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="375" y="235" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#856404">Feedback: 25% complete</text>
+
+  <!-- Step 3: Feedback 2 -->
+  <line x1="570" y1="280" x2="180" y2="280" stroke="#fd7e14" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrow-orange-left)"/>
+  <rect x="280" y="268" width="190" height="25" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="375" y="285" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#856404">Feedback: 50% complete</text>
+
+  <!-- Step 4: Feedback 3 -->
+  <line x1="570" y1="330" x2="180" y2="330" stroke="#fd7e14" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrow-orange-left)"/>
+  <rect x="280" y="318" width="190" height="25" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="375" y="335" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#856404">Feedback: 75% complete</text>
+
+  <!-- Step 5: Result -->
+  <line x1="570" y1="400" x2="180" y2="400" stroke="#fd7e14" stroke-width="3" marker-end="url(#arrow-orange-left)"/>
+  <rect x="280" y="385" width="190" height="30" rx="5" fill="white" stroke="#28a745" stroke-width="2"/>
+  <text x="375" y="405" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#155724">Result: SUCCESS</text>
+
+  <!-- Client active indicator -->
+  <rect x="160" y="175" width="20" height="225" fill="none" stroke="#fd7e14" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Timeline labels -->
+  <text x="50" y="175" font-family="Arial, sans-serif" font-size="10" fill="#495057">1. Send goal</text>
+  <text x="50" y="280" font-family="Arial, sans-serif" font-size="10" fill="#495057">2. Feedback</text>
+  <text x="50" y="400" font-family="Arial, sans-serif" font-size="10" fill="#495057">3. Result</text>
+
+  <!-- Cancel option note -->
+  <rect x="30" y="320" width="100" height="40" rx="5" fill="#fee2e2" stroke="#dc3545" stroke-width="1"/>
+  <text x="80" y="338" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#721c24">Can cancel</text>
+  <text x="80" y="350" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#721c24">at any time</text>
+
+  <!-- Key characteristics box -->
+  <rect x="50" y="440" width="650" height="95" rx="8" fill="white" stroke="#dee2e6" stroke-width="2"/>
+  <text x="375" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Key Characteristics</text>
+
+  <circle cx="90" cy="490" r="5" fill="#fd7e14"/>
+  <text x="105" y="494" font-family="Arial, sans-serif" font-size="11" fill="#495057">Asynchronous: Client can do other work while waiting</text>
+
+  <circle cx="400" cy="490" r="5" fill="#fd7e14"/>
+  <text x="415" y="494" font-family="Arial, sans-serif" font-size="11" fill="#495057">Cancellable: Goals can be aborted</text>
+
+  <circle cx="90" cy="515" r="5" fill="#fd7e14"/>
+  <text x="105" y="519" font-family="Arial, sans-serif" font-size="11" fill="#495057">Best for: Navigation, manipulation, any long-running robot task</text>
+</svg>

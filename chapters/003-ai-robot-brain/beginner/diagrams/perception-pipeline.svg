@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">Perception Pipeline</title>
+  <desc id="desc">Flowchart showing the four stages of robotic perception: Sensing (orange) captures raw data from sensors, Preprocessing (sky blue) filters noise and calibrates, Feature Extraction (blue) identifies patterns like edges and objects, and Interpretation (green) produces semantic understanding for decision-making. Arrows connect each stage from left to right.</desc>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { stroke: #000000; stroke-width: 2; }
+    .title { font-family: sans-serif; font-size: 16px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .subtitle { font-family: sans-serif; font-size: 12px; fill: #000000; text-anchor: middle; }
+    .arrow { stroke: #000000; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .sensing { fill: #E69F00; }
+    .preprocessing { fill: #56B4E9; }
+    .features { fill: #0072B2; }
+    .interpretation { fill: #009E73; }
+  </style>
+
+  <!-- Stage 1: Sensing -->
+  <rect x="20" y="80" width="180" height="120" rx="10" class="box sensing"/>
+  <text x="110" y="120" class="title">1. Sensing</text>
+  <text x="110" y="145" class="subtitle">Raw data capture</text>
+  <text x="110" y="165" class="subtitle">Cameras, LIDAR, IMU</text>
+  <text x="110" y="185" class="subtitle">Pixels, distances, forces</text>
+
+  <!-- Arrow 1 -->
+  <line x1="200" y1="140" x2="230" y2="140" class="arrow"/>
+
+  <!-- Stage 2: Preprocessing -->
+  <rect x="230" y="80" width="180" height="120" rx="10" class="box preprocessing"/>
+  <text x="320" y="120" class="title">2. Preprocessing</text>
+  <text x="320" y="145" class="subtitle">Clean and prepare</text>
+  <text x="320" y="165" class="subtitle">Noise filtering</text>
+  <text x="320" y="185" class="subtitle">Calibration, sync</text>
+
+  <!-- Arrow 2 -->
+  <line x1="410" y1="140" x2="440" y2="140" class="arrow"/>
+
+  <!-- Stage 3: Feature Extraction -->
+  <rect x="440" y="80" width="180" height="120" rx="10" class="box features"/>
+  <text x="530" y="120" class="title" fill="#FFFFFF">3. Features</text>
+  <text x="530" y="145" class="subtitle" fill="#FFFFFF">Find patterns</text>
+  <text x="530" y="165" class="subtitle" fill="#FFFFFF">Edges, corners, planes</text>
+  <text x="530" y="185" class="subtitle" fill="#FFFFFF">Object detection</text>
+
+  <!-- Arrow 3 -->
+  <line x1="620" y1="140" x2="650" y2="140" class="arrow"/>
+
+  <!-- Stage 4: Interpretation -->
+  <rect x="650" y="80" width="180" height="120" rx="10" class="box interpretation"/>
+  <text x="740" y="120" class="title" fill="#FFFFFF">4. Interpretation</text>
+  <text x="740" y="145" class="subtitle" fill="#FFFFFF">Semantic meaning</text>
+  <text x="740" y="165" class="subtitle" fill="#FFFFFF">Classification</text>
+  <text x="740" y="185" class="subtitle" fill="#FFFFFF">Decision support</text>
+
+  <!-- Input/Output labels -->
+  <text x="110" y="60" class="subtitle" font-style="italic">Physical world</text>
+  <text x="740" y="60" class="subtitle" font-style="italic">Understanding</text>
+
+  <!-- Bottom annotation -->
+  <text x="450" y="250" class="subtitle">Real-time processing: data flows continuously through the pipeline</text>
+</svg>

@@ -1,0 +1,222 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  position: relative;
+  z-index: 1;
+  background-color: #0b0d14; /* Match main page background */
+}
+
+/* Tab Container */
+.tabContainer {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+}
+
+.tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 1rem;
+  color: #8b949e;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab:hover {
+  color: #00ffff;
+}
+
+.activeTab {
+  color: #00ffff !important;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+
+.authCard {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(10, 11, 16, 0.85);
+  backdrop-filter: blur(20px);
+  border: 2px solid #00ffff; /* Cyan border */
+  border-radius: 4px;
+  padding: 2.5rem;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative corner markers */
+.authCard::before,
+.authCard::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00ffff; /* Cyan corners */
+  transition: all 0.3s ease;
+}
+
+.authCard::before {
+  top: 0; left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.authCard::after {
+  bottom: 0; right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.authHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.authHeader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  color: #00ffff; /* Cyan title */
+}
+
+.authHeader p {
+  color: #aeb4c0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 0.75rem;
+  color: #00ffff; /* Cyan labels */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.inputGroup input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-bottom: 1px solid #444;
+  padding: 1rem;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+  background: rgba(0, 255, 255, 0.08);
+  border-bottom-color: #00ffff; /* Cyan focus */
+}
+
+.authButton {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #00ffff; /* Cyan button border */
+  padding: 1rem;
+  color: #00ffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.authButton:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.authFooter {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aeb4c0;
+}
+
+.authFooter a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #00ffff; /* Cyan underline */
+  text-underline-offset: 4px;
+}
+
+.authFooter a:hover {
+  color: #00ffff;
+}
+
+/* Glitch Effect with Theme Colors */
+.glitchTitle {
+  position: relative;
+  color: #00ffff; /* Cyan title */
+}
+
+.glitchTitle::before,
+.glitchTitle::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.glitchTitle::before {
+  color: #ffed4e; /* Mustard glitch */
+  z-index: -1;
+  animation: glitch-effect 3s infinite;
+}
+
+.glitchTitle::after {
+  color: #ffea00; /* Gold glitch */
+  z-index: -2;
+  animation: glitch-effect 2s infinite reverse;
+}
+
+@keyframes glitch-effect {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}

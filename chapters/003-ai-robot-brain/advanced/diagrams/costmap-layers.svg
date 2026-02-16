@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" role="img" aria-labelledby="title desc">
+  <title id="title">Costmap Layer Composition</title>
+  <desc id="desc">Diagram showing how costmap layers stack and combine. At the bottom, the Static Layer (gray) contains the loaded map with walls shown as black rectangles. Above it, the Obstacle Layer (orange) shows real-time detected obstacles as circles. At the top, the Inflation Layer (gradient from red to yellow to green) expands all obstacles. On the right, the combined result shows the final costmap used for planning.</desc>
+
+  <style>
+    .title { font-family: sans-serif; font-size: 14px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .subtitle { font-family: sans-serif; font-size: 11px; fill: #000000; text-anchor: middle; }
+    .label { font-family: sans-serif; font-size: 10px; fill: #000000; }
+    .box { stroke: #000000; stroke-width: 2; }
+  </style>
+
+  <!-- Layer stack on left -->
+  <!-- Static Layer -->
+  <rect x="50" y="280" width="250" height="80" fill="#E0E0E0" class="box"/>
+  <text x="175" y="305" class="title">Static Layer</text>
+  <text x="175" y="325" class="subtitle">From loaded map</text>
+  <!-- Walls in static layer -->
+  <rect x="80" y="340" width="60" height="15" fill="#000000"/>
+  <rect x="200" y="340" width="40" height="15" fill="#000000"/>
+
+  <!-- Obstacle Layer -->
+  <rect x="50" y="180" width="250" height="80" fill="#FFECD2" class="box"/>
+  <text x="175" y="205" class="title">Obstacle Layer</text>
+  <text x="175" y="225" class="subtitle">Real-time sensor data</text>
+  <!-- Dynamic obstacles -->
+  <circle cx="120" cy="245" r="12" fill="#E69F00"/>
+  <circle cx="220" cy="240" r="10" fill="#E69F00"/>
+
+  <!-- Inflation Layer -->
+  <rect x="50" y="80" width="250" height="80" fill="#FFE4E1" class="box"/>
+  <text x="175" y="105" class="title">Inflation Layer</text>
+  <text x="175" y="125" class="subtitle">Expanded for safety</text>
+  <!-- Inflation gradient circles -->
+  <defs>
+    <radialGradient id="inflationGrad">
+      <stop offset="0%" style="stop-color:#D55E00"/>
+      <stop offset="30%" style="stop-color:#F0E442"/>
+      <stop offset="100%" style="stop-color:#009E73" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="120" cy="140" r="30" fill="url(#inflationGrad)"/>
+  <circle cx="220" cy="140" r="25" fill="url(#inflationGrad)"/>
+
+  <!-- Arrows showing combination -->
+  <text x="175" y="50" class="title">Layers Stack</text>
+  <path d="M 175 65 L 175 80" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow to combined -->
+  <path d="M 300 200 L 350 200" stroke="#000" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="325" y="190" class="label">Combine</text>
+
+  <!-- Combined costmap on right -->
+  <rect x="380" y="100" width="280" height="200" fill="#F5F5F5" class="box"/>
+  <text x="520" y="130" class="title">Combined Costmap</text>
+
+  <!-- Grid representation -->
+  <g transform="translate(400, 150)">
+    <!-- Free space (white) -->
+    <rect x="0" y="0" width="240" height="130" fill="#FFFFFF" stroke="#CCC"/>
+
+    <!-- Static walls -->
+    <rect x="20" y="100" width="50" height="25" fill="#000000"/>
+    <rect x="150" y="100" width="35" height="25" fill="#000000"/>
+
+    <!-- Dynamic obstacle with inflation -->
+    <circle cx="80" cy="50" r="35" fill="#F0E442" opacity="0.5"/>
+    <circle cx="80" cy="50" r="20" fill="#D55E00" opacity="0.7"/>
+    <circle cx="80" cy="50" r="10" fill="#000000"/>
+
+    <circle cx="180" cy="60" r="30" fill="#F0E442" opacity="0.5"/>
+    <circle cx="180" cy="60" r="15" fill="#D55E00" opacity="0.7"/>
+    <circle cx="180" cy="60" r="8" fill="#000000"/>
+
+    <!-- Wall inflation -->
+    <rect x="10" y="90" width="70" height="10" fill="#D55E00" opacity="0.5"/>
+    <rect x="140" y="90" width="55" height="10" fill="#D55E00" opacity="0.5"/>
+  </g>
+
+  <!-- Legend -->
+  <rect x="400" y="320" width="15" height="15" fill="#FFFFFF" stroke="#000"/>
+  <text x="420" y="332" class="label">Free (cost 0)</text>
+
+  <rect x="480" y="320" width="15" height="15" fill="#F0E442"/>
+  <text x="500" y="332" class="label">Inflated</text>
+
+  <rect x="560" y="320" width="15" height="15" fill="#D55E00"/>
+  <text x="580" y="332" class="label">Inscribed</text>
+
+  <rect x="640" y="320" width="15" height="15" fill="#000000"/>
+  <text x="660" y="332" class="label">Lethal</text>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+  </defs>
+</svg>

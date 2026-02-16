@@ -1,0 +1,231 @@
+.sectionContainer {
+  padding: 6rem 0;
+  background-color: #0b0d14;
+  color: #fff;
+  border-top: 1px solid rgba(0, 243, 255, 0.1);
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.subHeader {
+  color: #6e7687;
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Learning Cards */
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover, .card.active {
+  background: rgba(0, 243, 255, 0.05);
+  border-color: #00f3ff;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardNumber {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #6e7687;
+  font-weight: 700;
+}
+
+.cardBadge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.badgeBeginner { background: rgba(0, 255, 157, 0.1); color: #00ff9d; border: 1px solid rgba(0, 255, 157, 0.3); }
+.badgeIntermediate { background: rgba(0, 153, 255, 0.1); color: #0099ff; border: 1px solid rgba(0, 153, 255, 0.3); }
+.badgeAdvanced { background: rgba(255, 183, 0, 0.1); color: #ffb700; border: 1px solid rgba(255, 183, 0, 0.3); }
+
+.cardTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #e0e0e0;
+}
+
+.card.active .cardTitle {
+  color: #00f3ff;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin: 0;
+}
+
+/* Status Icon (Check/Circle) */
+.statusIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: transparent;
+}
+
+.card.active .statusIcon {
+  border-color: #00f3ff;
+  color: #00f3ff;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+}
+
+/* Visualization Panel */
+.visContainer {
+  height: 100%;
+  background: rgba(14, 17, 26, 0.5);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.visLabel {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #0099ff;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.visLabel::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #0099ff;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  box-shadow: 0 0 10px #0099ff;
+}
+
+/* CSS Sensor Map Animation */
+.sensorMap {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.centralNode {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #00f3ff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00f3ff;
+  z-index: 10;
+}
+
+.orbitRing {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(0, 243, 255, 0.2);
+  border-radius: 50%;
+}
+
+.ring1 { width: 100px; height: 100px; animation: spin 20s linear infinite; }
+.ring2 { width: 200px; height: 200px; animation: spin-reverse 30s linear infinite; }
+.ring3 { width: 300px; height: 300px; border-style: solid; border-color: rgba(0, 243, 255, 0.1); }
+
+.node {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #0b0d14;
+  border: 2px solid #0099ff;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.nodeLabel {
+  position: absolute;
+  color: #0099ff;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Space Grotesk', monospace;
+}
+
+.nodeValue {
+  position: absolute;
+  color: #fff;
+  font-size: 0.8rem;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Space Grotesk', monospace;
+}
+
+/* Connecting lines */
+.connector {
+  position: absolute;
+  top: 50%; left: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.5));
+  transform-origin: 0 0;
+  z-index: 1;
+}
+
+@keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes spin-reverse { 100% { transform: translate(-50%, -50%) rotate(-360deg); } }

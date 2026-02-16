@@ -1,0 +1,327 @@
+/* Chatbot Widget Styles */
+.chatbotWidget {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Floating Toggle Button */
+.toggleButton {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  padding: 0;
+  border: 2px solid #00f3ff;
+  background: rgba(10, 11, 16, 0.9);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.3), inset 0 0 10px rgba(0, 243, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButton:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.6);
+}
+
+.buttonIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Status Indicator on Button */
+.statusDot {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 14px;
+  height: 14px;
+  background: #0f0;
+  border: 2px solid #000;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Chat Card Window */
+.chatCard {
+  width: 380px;
+  height: 550px;
+  margin-bottom: 20px;
+  background: rgba(18, 20, 28, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(50, 60, 80, 0.5);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transform-origin: bottom right;
+  animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  overflow: hidden;
+}
+
+.chatCard.closing {
+  animation: popOut 0.2s ease-in forwards;
+}
+
+/* Header */
+.cardHeader {
+  padding: 1.2rem;
+  background: rgba(30, 35, 45, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #00f3ff;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.headerTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerName {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #00f3ff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.headerStatus {
+  color: #8b949e;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.headerStatus::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #0f0;
+  border-radius: 50%;
+  margin-right: 6px;
+  box-shadow: 0 0 5px #0f0;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #8b949e;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+  padding: 4px;
+}
+
+.closeBtn:hover {
+  color: #fff;
+}
+
+/* Body */
+.msgBody {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  /* Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}
+
+.msgBody::-webkit-scrollbar {
+  width: 6px;
+}
+.msgBody::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 3px;
+}
+
+/* Messages */
+.msg {
+  max-width: 85%;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.msgBot {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e6edf3;
+  padding: 1rem;
+  border-radius: 4px 12px 12px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.msgUser {
+  align-self: flex-end;
+  background: #005adb; /* Solid Blue as per image */
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px 12px 4px 12px;
+}
+
+/* Input Area */
+.inputArea {
+  padding: 1.2rem;
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputField {
+  width: 100%;
+  background: rgba(30, 35, 45, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.8rem 2.5rem 0.8rem 1rem;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.inputField:focus {
+  border-color: #005adb;
+}
+
+.sendBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #005adb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.sendBtn:hover {
+  transform: scale(1.1);
+  color: #00f3ff;
+}
+
+/* Welcome Message */
+.welcomeMessage {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+.welcomeMessage p {
+  margin: 0 0 0.8rem 0;
+}
+
+.welcomeMessage p:last-of-type {
+  margin-bottom: 0.5rem;
+}
+
+.welcomeMessage ul {
+  margin: 0.5rem 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.welcomeMessage li {
+  margin: 0.4rem 0;
+  color: #00f3ff;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.welcomeMessage li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #00f3ff;
+}
+
+/* Streaming Cursor */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #00f3ff;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Error Message */
+.msgError {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Disabled State */
+.inputField:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sendBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes popOut {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to { opacity: 0; transform: scale(0.9) translateY(20px); display: none; }
+}

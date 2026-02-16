@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" role="img" aria-labelledby="title desc">
+  <title id="title">SLAM Toolbox Process Flow</title>
+  <desc id="desc">Flowchart showing how SLAM Toolbox processes data. LIDAR scans enter scan matching module, which compares new scans against existing map features. Results feed into pose graph optimization which refines the robot trajectory. Loop closure detection runs in parallel to detect when robot revisits locations and correct accumulated drift. All components contribute to generating the final occupancy grid map output.</desc>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { stroke: #000000; stroke-width: 2; }
+    .title { font-family: sans-serif; font-size: 14px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .subtitle { font-family: sans-serif; font-size: 11px; fill: #000000; text-anchor: middle; }
+    .label { font-family: sans-serif; font-size: 10px; fill: #000000; }
+    .arrow { stroke: #000000; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .input { fill: #E69F00; }
+    .process { fill: #56B4E9; }
+    .optimize { fill: #0072B2; }
+    .output { fill: #009E73; }
+    .loop { fill: #CC79A7; }
+  </style>
+
+  <!-- Input: LIDAR Scans -->
+  <rect x="30" y="130" width="120" height="60" rx="10" class="box input"/>
+  <text x="90" y="155" class="title">LIDAR Scans</text>
+  <text x="90" y="175" class="subtitle">/scan topic</text>
+
+  <!-- Arrow to Scan Matching -->
+  <line x1="150" y1="160" x2="190" y2="160" class="arrow"/>
+
+  <!-- Scan Matching -->
+  <rect x="190" y="120" width="150" height="80" rx="10" class="box process"/>
+  <text x="265" y="150" class="title">Scan Matching</text>
+  <text x="265" y="170" class="subtitle">Compare new scan</text>
+  <text x="265" y="185" class="subtitle">to existing map</text>
+
+  <!-- Arrow to Pose Graph -->
+  <line x1="340" y1="160" x2="380" y2="160" class="arrow"/>
+
+  <!-- Pose Graph Optimization -->
+  <rect x="380" y="120" width="150" height="80" rx="10" class="box optimize"/>
+  <text x="455" y="145" class="title" fill="#FFFFFF">Pose Graph</text>
+  <text x="455" y="163" class="title" fill="#FFFFFF">Optimization</text>
+  <text x="455" y="185" class="subtitle" fill="#FFFFFF">Refine trajectory</text>
+
+  <!-- Arrow to Map -->
+  <line x1="530" y1="160" x2="570" y2="160" class="arrow"/>
+
+  <!-- Output: Occupancy Grid -->
+  <rect x="570" y="130" width="140" height="60" rx="10" class="box output"/>
+  <text x="640" y="155" class="title" fill="#FFFFFF">Occupancy Grid</text>
+  <text x="640" y="175" class="subtitle" fill="#FFFFFF">/map topic</text>
+
+  <!-- Loop Closure Detection (parallel process) -->
+  <rect x="280" y="250" width="160" height="70" rx="10" class="box loop"/>
+  <text x="360" y="275" class="title" fill="#FFFFFF">Loop Closure</text>
+  <text x="360" y="293" class="title" fill="#FFFFFF">Detection</text>
+  <text x="360" y="310" class="subtitle" fill="#FFFFFF">Correct drift</text>
+
+  <!-- Arrow from Scan Matching to Loop Closure -->
+  <path d="M 265 200 L 265 230 L 320 250" class="arrow"/>
+  <text x="220" y="225" class="label">Features</text>
+
+  <!-- Arrow from Loop Closure to Pose Graph -->
+  <path d="M 400 250 L 455 200" class="arrow"/>
+  <text x="440" y="235" class="label">Corrections</text>
+
+  <!-- Odometry input -->
+  <rect x="30" y="40" width="100" height="50" rx="5" class="box input"/>
+  <text x="80" y="62" class="title">Odometry</text>
+  <text x="80" y="78" class="subtitle">/odom topic</text>
+
+  <!-- Arrow from Odom to Scan Matching -->
+  <path d="M 130 65 L 200 65 L 200 120" class="arrow"/>
+  <text x="165" y="55" class="label">Initial pose</text>
+
+  <!-- Annotations -->
+  <text x="640" y="80" class="subtitle" text-anchor="middle">Output: PGM + YAML files</text>
+  <line x1="640" y1="85" x2="640" y2="130" stroke="#000" stroke-width="1" stroke-dasharray="3,3"/>
+</svg>

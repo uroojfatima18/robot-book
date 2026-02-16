@@ -1,0 +1,498 @@
+openapi: 3.1.0
+info:
+  title: RAG Chatbot API
+  description: |
+    API for the Robotics Book RAG Chatbot with Authentication.
+
+    Authentication is handled by Better Auth at `/api/auth/*` endpoints.
+    This spec documents the chatbot-specific endpoints.
+  version: 1.0.0
+  contact:
+    name: Robotics Book Team
+
+servers:
+  - url: /api
+    description: API base path
+
+tags:
+  - name: Chat
+    description: Chatbot conversation endpoints
+  - name: Conversations
+    description: Conversation history management
+  - name: Admin
+    description: Admin-only content management
+
+paths:
+  /chat:
+    post:
+      operationId: sendMessage
+      summary: Send a message to the chatbot
+      description: |
+        Sends a user question to the RAG chatbot and receives a streaming response.
+        Requires authentication and email verification.
+        Subject to rate limiting (10 messages/minute).
+      tags:
+        - Chat
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: Streaming response
+          content:
+            text/event-stream:
+              schema:
+                type: string
+                description: Server-Sent Events stream of response tokens
+          headers:
+            X-Conversation-Id:
+              schema:
+                type: string
+                format: uuid
+              description: ID of the conversation (new or existing)
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/EmailNotVerified'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /chat/context:
+    post:
+      operationId: sendContextualMessage
+      summary: Send a contextual message with selected text
+      description: |
+        Sends a question with user-selected text from the book as primary context.
+        The chatbot will prioritize the selected text when answering.
+      tags:
+        - Chat
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContextualChatRequest'
+      responses:
+        '200':
+          description: Streaming response
+          content:
+            text/event-stream:
+              schema:
+                type: string
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/EmailNotVerified'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /conversations:
+    get:
+      operationId: listConversations
+      summary: List user's conversations
+      description: Returns a paginated list of the user's conversations, most recent first.
+      tags:
+        - Conversations
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            maximum: 100
+        - name: cursor
+          in: query
+          schema:
+            type: string
+            format: date-time
+          description: Cursor for pagination (updated_at of last item)
+      responses:
+        '200':
+          description: List of conversations
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConversationList'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /conversations/{conversationId}:
+    get:
+      operationId: getConversation
+      summary: Get a conversation with messages
+      description: Returns a conversation and its messages with cursor-based pagination.
+      tags:
+        - Conversations
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 50
+            maximum: 100
+        - name: cursor
+          in: query
+          schema:
+            type: string
+            format: date-time
+          description: Cursor for pagination (created_at of last message)
+      responses:
+        '200':
+          description: Conversation with messages
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConversationDetail'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      operationId: deleteConversation
+      summary: Delete a conversation
+      description: Permanently deletes a conversation and all its messages.
+      tags:
+        - Conversations
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Conversation deleted
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /admin/ingest:
+    post:
+      operationId: ingestContent
+      summary: Ingest book content
+      description: |
+        Ingests book content into the vector database.
+        Content is chunked, embedded, and stored with metadata.
+        Admin only.
+      tags:
+        - Admin
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngestRequest'
+      responses:
+        '202':
+          description: Ingestion started
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IngestResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /admin/stats:
+    get:
+      operationId: getUsageStats
+      summary: Get usage statistics
+      description: Returns chatbot usage statistics. Admin only.
+      tags:
+        - Admin
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: period
+          in: query
+          schema:
+            type: string
+            enum: [day, week, month]
+            default: week
+      responses:
+        '200':
+          description: Usage statistics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsageStats'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT access token from Better Auth
+
+  schemas:
+    ChatRequest:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+          minLength: 1
+          maxLength: 2000
+          description: User's question
+          example: "How do I configure a ROS 2 node?"
+        conversationId:
+          type: string
+          format: uuid
+          description: Existing conversation ID (optional, creates new if omitted)
+
+    ContextualChatRequest:
+      type: object
+      required:
+        - message
+        - selectedText
+      properties:
+        message:
+          type: string
+          minLength: 1
+          maxLength: 2000
+          description: User's question about the selected text
+        selectedText:
+          type: string
+          minLength: 1
+          maxLength: 5000
+          description: Text selected from the book interface
+        pageId:
+          type: string
+          description: ID of the page containing the selection
+        conversationId:
+          type: string
+          format: uuid
+
+    ConversationList:
+      type: object
+      properties:
+        conversations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConversationSummary'
+        hasMore:
+          type: boolean
+        nextCursor:
+          type: string
+          format: date-time
+
+    ConversationSummary:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        messageCount:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    ConversationDetail:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
+        hasMore:
+          type: boolean
+        nextCursor:
+          type: string
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+
+    Message:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+    IngestRequest:
+      type: object
+      required:
+        - content
+        - chapter
+      properties:
+        content:
+          type: string
+          minLength: 1
+          description: Raw text content to ingest
+        chapter:
+          type: string
+          description: Chapter name/identifier
+          example: "Chapter 2: ROS 2 Fundamentals"
+        source:
+          type: string
+          description: Source file or section name
+        pageId:
+          type: string
+          description: Page identifier for linking
+
+    IngestResponse:
+      type: object
+      properties:
+        jobId:
+          type: string
+          format: uuid
+          description: Ingestion job ID for tracking
+        chunksCreated:
+          type: integer
+          description: Number of chunks created
+        status:
+          type: string
+          enum: [processing, completed, failed]
+
+    UsageStats:
+      type: object
+      properties:
+        period:
+          type: string
+        totalMessages:
+          type: integer
+        uniqueUsers:
+          type: integer
+        avgResponseTime:
+          type: number
+          description: Average response time in milliseconds
+        topChapters:
+          type: array
+          items:
+            type: object
+            properties:
+              chapter:
+                type: string
+              queryCount:
+                type: integer
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Human-readable error message
+
+  responses:
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error: "UNAUTHORIZED"
+            message: "Authentication required"
+
+    EmailNotVerified:
+      description: Email verification required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error: "EMAIL_NOT_VERIFIED"
+            message: "Please verify your email to use the chatbot"
+
+    Forbidden:
+      description: Insufficient permissions
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error: "FORBIDDEN"
+            message: "Admin access required"
+
+    RateLimited:
+      description: Rate limit exceeded
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/Error'
+              - type: object
+                properties:
+                  retryAfter:
+                    type: integer
+                    description: Seconds until rate limit resets
+          example:
+            error: "RATE_LIMITED"
+            message: "Rate limit exceeded. Please wait before sending another message."
+            retryAfter: 6
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error: "NOT_FOUND"
+            message: "Conversation not found"
+
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error: "BAD_REQUEST"
+            message: "Invalid request body"
