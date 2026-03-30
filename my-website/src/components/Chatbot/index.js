@@ -10,7 +10,30 @@ export default function Chatbot() {
   const { messages, streamingContent, isLoading, error, sendMessage } = useChatAPI();
 
   const [inputText, setInputText] = useState("");
+  const [selectedText, setSelectedText] = useState("");
   const messagesEndRef = useRef(null);
+
+  // Handle text selection from the book
+  useEffect(() => {
+    const handleSelection = () => {
+      const selection = window.getSelection().toString().trim();
+      if (selection) {
+        setSelectedText(selection);
+      }
+    };
+
+    document.addEventListener("selectionchange", handleSelection);
+    return () => document.removeEventListener("selectionchange", handleSelection);
+  }, []);
+
+  const handleSend = (e) => {
+    e.preventDefault();
+    if (!inputText.trim() || isLoading) return;
+
+    sendMessage(inputText, selectedText);
+    setInputText("");
+    setSelectedText(""); // Clear selection after sending
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -19,14 +42,6 @@ export default function Chatbot() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isOpen, streamingContent]);
-
-  const handleSend = (e) => {
-    e.preventDefault();
-    if (!inputText.trim() || isLoading) return;
-
-    sendMessage(inputText);
-    setInputText("");
-  };
 
   return (
     <div className={styles.chatbotWidget}>
@@ -59,6 +74,7 @@ export default function Chatbot() {
                   <li>Navigation, SLAM & perception</li>
                   <li>Adaptive robotics & learning</li>
                 </ul>
+                <p className={styles.tip}>💡 <b>Tip:</b> Select any text in the book to ask a specific question about it!</p>
               </div>
             )}
 
@@ -86,6 +102,14 @@ export default function Chatbot() {
 
           {/* Input */}
           <div className={styles.inputArea}>
+            {selectedText && (
+              <div className={styles.selectionIndicator}>
+                <div className={styles.selectionHeader}>
+                  <span>Context: "<i>{selectedText.substring(0, 50)}{selectedText.length > 50 ? '...' : ''}</i>"</span>
+                  <button onClick={() => setSelectedText('')}>✕</button>
+                </div>
+              </div>
+            )}
             <form className={styles.inputWrapper} onSubmit={handleSend}>
               <input
                 className={styles.inputField}

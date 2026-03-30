@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = "http://127.0.0.1:8001/api";
 
 export function useChatAPI() {
   const [messages, setMessages] = useState([]);
@@ -25,12 +25,12 @@ export function useChatAPI() {
     setMessages((prev) => [...prev, userMessage]);
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/chat/public`, {
+      const response = await fetch(`${API_BASE_URL}/ask`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: content }),
+        body: JSON.stringify({ question: content }),
       });
 
       if (!response.ok) {

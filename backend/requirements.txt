@@ -1,0 +1,9 @@
+openai-agents
+openai
+fastapi
+uvicorn[standard]
+qdrant-client[async]
+asyncpg
+python-dotenv
+pydantic
+google-generativeai

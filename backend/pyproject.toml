@@ -1,0 +1,17 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "RAG Chatbot Backend for Robot Book"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai-agents",
+    "openai",
+    "fastapi",
+    "uvicorn[standard]",
+    "qdrant-client[async]",
+    "asyncpg",
+    "python-dotenv",
+    "pydantic",
+    "google-generativeai",
+]

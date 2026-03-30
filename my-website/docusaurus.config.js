@@ -105,7 +105,7 @@ const config = {
             items: [
               {
                 label: 'Start Reading',
-                to: '/docs/ros2-nervous-system/chapter_1_introduction',
+                to: '/docs/01-ros2-nervous-system/chapter_1_introduction',
               },
             ],
           },
