@@ -21,10 +21,10 @@ from app.db.neon_client import ensure_table, upsert_chunk
 async def process_ingestion():
     """Execute the full ingestion pipeline."""
     print("--- Starting Ingestion Pipeline ---")
-    
+
     # 1. Initialize databases
     print("[1/4] Ensuring DB collections and tables exist...")
-    await ensure_collection()
+    ensure_collection()
     await ensure_table()
 
     # 2. Extract and chunk content
@@ -78,7 +78,7 @@ async def process_ingestion():
                 ))
             
             # Upsert into Qdrant
-            await upsert_chunks(points)
+            upsert_chunks(points)
             
             # Upsert into Neon (sequential for metadata)
             for chunk in batch:

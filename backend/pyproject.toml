@@ -9,7 +9,7 @@ dependencies = [
     "openai",
     "fastapi",
     "uvicorn[standard]",
-    "qdrant-client[async]",
+    "qdrant-client[async]~=1.7.0",
     "asyncpg",
     "python-dotenv",
     "pydantic",

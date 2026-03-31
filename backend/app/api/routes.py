@@ -8,8 +8,10 @@ Implementation of the retrieval gate:
 """
 
 from fastapi import APIRouter, HTTPException
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from typing import List
+import json
 
 from app.rag.retriever import retrieve_relevant_chunks
 from app.agents.book_agent import ask_book
@@ -41,61 +43,68 @@ class HealthResponse(BaseModel):
 
 # --- API Endpoints ---
 
-@router.post("/ask", response_model=ChatResponse)
+@router.post("/ask")
 async def ask(payload: ChatRequest):
     """
-    Main RAG Chat endpoint. 
+    Main RAG Chat endpoint with SSE streaming.
     Guarantees no hallucination by checking for context before calling the LLM.
+    Streams response as Server-Sent Events for real-time display.
     """
     question = payload.question.strip()
     if not question:
         raise HTTPException(status_code=422, detail="Question cannot be empty.")
 
-    try:
-        # 1. Step 1: CONTEXT — Determine if we use selected text or RAG.
-        selected_text = payload.selected_text.strip() if payload.selected_text else None
-        
-        if selected_text:
-            # If the user selected text, we prioritize answering ONLY based on that.
-            context_str = f"USER SELECTED TEXT:\n{selected_text}"
-            chunks = [] # No DB chunks needed when answering selected text
-        else:
-            # RETRIEVAL — Retrieve FIRST, always.
-            # This reduces the context to only relevant parts of the book.
-            chunks = await retrieve_relevant_chunks(question, limit=5)
+    async def stream_response():
+        try:
+            # 1. Step 1: CONTEXT — Determine if we use selected text or RAG.
+            selected_text = payload.selected_text.strip() if payload.selected_text else None
+            
+            if selected_text:
+                # If the user selected text, we prioritize answering ONLY based on that.
+                context_str = f"USER SELECTED TEXT:\n{selected_text}"
+                chunks = [] # No DB chunks needed when answering selected text
+            else:
+                # RETRIEVAL — Retrieve FIRST, always.
+                # This reduces the context to only relevant parts of the book.
+                chunks = await retrieve_relevant_chunks(question, limit=5)
 
-            # 2. Step 2: GATING — Hallucination prevention at the code level.
-            # If no relevant chunks are found, we return the fallback message IMMEDIATELY.
-            # The expensive (and potentially hallucinatory) LLM is NEVER called in this case.
-            if not chunks:
-                return ChatResponse(
-                    answer="This information is not present in the book.",
-                    sources=[]
-                )
+                # 2. Step 2: GATING — Hallucination prevention at the code level.
+                # If no relevant chunks are found, return fallback message immediately.
+                if not chunks:
+                    answer = "This information is not present in the book."
+                    # Stream the fallback answer
+                    for char in answer:
+                        event = json.dumps({"type": "token", "data": char})
+                        yield f"data: {event}\n\n"
+                    yield 'data: {"type": "done"}\n\n'
+                    return
 
-            # Join all chunk texts to create a focused pool of knowledge for the model.
-            context_str = "\n\n---\n\n".join(chunk.text for chunk in chunks)
-        
-        # 3. Step 3: CONVERSATION — build context and call LLM.
-        # We only pass the focused context, not the whole book.
-        answer = await ask_book(question, context_str)
+                # Join all chunk texts to create a focused pool of knowledge for the model.
+                context_str = "\n\n---\n\n".join(chunk.text for chunk in chunks)
+            
+            # 3. Step 3: CONVERSATION — build context and call LLM.
+            # We only pass the focused context, not the whole book.
+            answer = await ask_book(question, context_str)
 
-        # 4. Step 4: SOURCES — Format the response with source metadata for the reader.
-        sources = [
-            SourceRef(title=c.title, chapter=c.chapter, source_url=c.source_url)
-            for c in chunks
-        ]
+            # Stream the answer character by character
+            for char in answer:
+                event = json.dumps({"type": "token", "data": char})
+                yield f"data: {event}\n\n"
 
-        return ChatResponse(
-            answer=answer,
-            sources=sources
-        )
-    except Exception as e:
-        import traceback
-        traceback.print_exc()
-        if "429" in str(e) or "Quota" in str(e) or "quota" in str(e):
-            raise HTTPException(status_code=429, detail="Your Gemini API quota has been exceeded. Please check your plan and billing details at Google AI Studio.")
-        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+            # Signal end of stream
+            yield 'data: {"type": "done"}\n\n'
+            
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            if "429" in str(e) or "Quota" in str(e) or "quota" in str(e):
+                error_msg = "Your Gemini API quota has been exceeded. Please check your plan and billing details at Google AI Studio."
+            else:
+                error_msg = f"Internal Server Error: {str(e)}"
+            event = json.dumps({"type": "error", "message": error_msg})
+            yield f"data: {event}\n\n"
+
+    return StreamingResponse(stream_response(), media_type="text/event-stream")
 
 @router.get("/health", response_model=HealthResponse)
 async def health():
@@ -103,13 +112,13 @@ async def health():
     Verify connectivity to Qdrant Cloud and Neon PostgreSQL.
     Useful for health checks and troubleshooting.
     """
-    qdrant_ok = await ping_qdrant()
+    qdrant_ok = ping_qdrant()
     neon_ok = await ping_neon()
-    
+
     total_count = await get_chunk_count()
-    
+
     is_healthy = qdrant_ok and neon_ok
-    
+
     return HealthResponse(
         status="ok" if is_healthy else "degraded",
         qdrant="connected" if qdrant_ok else "disconnected",

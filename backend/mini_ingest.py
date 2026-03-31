@@ -12,7 +12,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 async def minimal_ingest():
     print("--- Starting Minimal Ingest (5 chunks) ---")
-    await ensure_collection()
+    ensure_collection()
     await ensure_table()
     
     # Get all chunks
@@ -46,7 +46,7 @@ async def minimal_ingest():
                     "chunk_index": chunk.chunk_index
                 }
             )
-            await upsert_chunks([point])
+            upsert_chunks([point])
             
             # Upsert to Neon
             await upsert_chunk(

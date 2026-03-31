@@ -29,7 +29,7 @@ async def retrieve_relevant_chunks(question: str, limit: int = 5) -> list[BookCh
 
     # 2. Search Qdrant for the closest semantic matches
     # This returns ScoredPoint objects which contain the chunk metadata in 'payload'
-    scored_points = await search_chunks(vector=query_vector, limit=limit)
+    scored_points = search_chunks(vector=query_vector, limit=limit)
 
     if not scored_points:
         return []

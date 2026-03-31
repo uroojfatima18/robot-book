@@ -27,7 +27,7 @@ async def get_pool() -> Pool:
             dsn=DATABASE_URL,
             min_size=1,
             max_size=5,
-            command_timeout=30,
+            command_timeout=120,
         )
     return _pool
 
