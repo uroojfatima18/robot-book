@@ -53,23 +53,17 @@ robot-book/
 
 ### Running the Application
 
-#### Option 1: Run both together
-```bash
-cd my-website
-npm run dev
-```
 
-#### Option 2: Run separately
 **Terminal 1 - Backend:**
 ```bash
 cd backend
-npm run dev
+uv run uvicorn main:app --reload --port 8001
 ```
 
 **Terminal 2 - Frontend:**
 ```bash
 cd my-website
-npm start
+npm run  start
 ```
 
 ### Accessing the Application
@@ -81,15 +75,15 @@ npm start
 - **Interactive Book Content:** Learn ROS 2, digital twins, AI-powered robotics
 - **AI Chatbot:** Ask questions about robotics topics
 - **RAG-powered Answers:** Get accurate responses from verified book content
-- **User Authentication:** Secure access with Better Auth
+
 
 ## Book Chapters
 
 1. **ROS 2 Nervous System** - Robot communication fundamentals
 2. **Digital Twin Simulation** - Virtual robot environments
 3. **AI Robot Brain** - Machine learning for robotics
-4. **Workflow Orchestration** - Task management and automation
-5. **Adaptive Robotics** - Dynamic behavior and learning
+4. **Vision-Language-Action** - Task management and automation
+
 
 ## Tech Stack
 
@@ -100,10 +94,11 @@ npm start
 
 ### Backend
 - Next.js 14 (App Router)
-- Better Auth
 - Drizzle ORM
 - Qdrant Vector DB
-- Google Gemini AI
+- OpenAI Agent SDK
+- Openrouter API + model
+- neon db
 
 ## License
 
