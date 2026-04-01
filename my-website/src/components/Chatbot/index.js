@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { useAuth } from '../AuthContext';
 import { useChatAPI } from '../../hooks/useChatAPI';
 import styles from './styles.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +13,8 @@ export default function Chatbot() {
   const [inputText, setInputText] = useState("");
   const [selectedText, setSelectedText] = useState("");
   const messagesEndRef = useRef(null);
+  
+  const botAvatarUrl = useBaseUrl('/img/robot-avatar.png');
 
   // Handle text selection from the book
   useEffect(() => {
@@ -50,7 +53,7 @@ export default function Chatbot() {
           {/* Header */}
           <div className={styles.cardHeader}>
             <div className={styles.headerInfo}>
-              <img src="/img/robot-avatar.png" alt="AI" className={styles.headerAvatar} />
+              <img src={botAvatarUrl} alt="AI" className={styles.headerAvatar} />
               <div className={styles.headerTexts}>
                 <span className={styles.headerName}>AI ASSISTANT</span>
                 <span className={styles.headerStatus}>
@@ -133,7 +136,7 @@ export default function Chatbot() {
       <button className={styles.toggleButton} onClick={() => setIsOpen(!isOpen)}>
         {/* Using the generated avatar as the icon for the button too, or could be a different icon.
             The image showed a robot face in a circle. */}
-        <img src="/img/robot-avatar.png" alt="Chat" className={styles.buttonIcon} />
+        <img src={botAvatarUrl} alt="Chat" className={styles.buttonIcon} />
         <div className={styles.statusDot} />
       </button>
     </div>

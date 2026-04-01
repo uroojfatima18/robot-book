@@ -74,7 +74,7 @@ const config = {
         title: 'Robotics Book',
         logo: {
           alt: 'Robotics Book Logo',
-          src: 'img/logo.svg',
+          src: 'img/robot-avatar.png',
         },
         items: [
           {
