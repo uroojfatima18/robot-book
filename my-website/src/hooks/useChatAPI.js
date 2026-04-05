@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 
-const API_BASE_URL = "http://127.0.0.1:8001/api";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8001/api";
 
 export function useChatAPI() {
   const [messages, setMessages] = useState([]);
