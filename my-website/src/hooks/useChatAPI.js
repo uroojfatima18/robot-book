@@ -2,7 +2,13 @@
 
 import { useState, useCallback } from "react";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8001/api";
+// Detect environment and set API URL accordingly
+const API_BASE_URL = 
+  typeof window !== 'undefined' && window.location.hostname === 'uroojfatima18.github.io'
+    ? "https://Uroojfatima22-robot-book-backend.hf.space/api"
+    : "http://localhost:8001/api";
+
+console.log('✅ API Base URL:', API_BASE_URL);
 
 export function useChatAPI() {
   const [messages, setMessages] = useState([]);
