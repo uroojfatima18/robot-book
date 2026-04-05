@@ -1,4 +1,4 @@
-# Physical AI & Humanoid Robotics Book
+# Physical AI & Humanoid Robotics Book ok
 
 A comprehensive educational platform for learning robotics, ROS 2, AI, and humanoid robot development.
 
