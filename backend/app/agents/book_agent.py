@@ -56,6 +56,10 @@ async def ask_book(question: str, context: str) -> str:
     This function is only called after relevant chunks are found.
     If no chunks were found, the route handler returns the fallback message directly.
     """
+    print(f"[AGENT] Called with question: {question}")
+    print(f"[AGENT] Context length: {len(context)} chars")
+    print(f"[AGENT] Context preview: {context[:200]}...")
+    
     prompt = f"""
 Book Context:
 {context}
@@ -65,12 +69,16 @@ Question:
 """
 
     try:
+        print(f"[AGENT] Invoking LLM with prompt length: {len(prompt)}")
         result = await Runner.run(
             book_agent,
             input=prompt,
             run_config=_run_config,
         )
+        print(f"[AGENT] LLM returned: {result.final_output[:100]}")
         return result.final_output
     except Exception as e:
-        print(f"[Agent] Error during LLM call: {e}")
+        print(f"[AGENT] Error during LLM call: {type(e).__name__}: {e}")
+        import traceback
+        traceback.print_exc()
         return "Sorry, I encountered an error while processing your request."

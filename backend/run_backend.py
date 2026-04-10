@@ -2,22 +2,21 @@
 """Direct backend startup without uvicorn CLI"""
 import os
 import sys
-import asyncio
 
-# Ensure backend is in path
-backend_path = r"C:\Users\dell\Desktop\robot-book\backend"
-if backend_path not in sys.path:
-    sys.path.insert(0, backend_path)
-
-os.chdir(backend_path)
+# Auto-detect environment and set correct path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+os.chdir(current_dir)
 
 import uvicorn
 from main import app
 
 if __name__ == "__main__":
+    port = int(os.getenv("PORT", 7860 if os.path.exists("/.dockerenv") else 8001))
     uvicorn.run(
         app,
         host="0.0.0.0",
-        port=8001,  # Use 8001 since 8000 is taken by frontend
+        port=port,
         log_level="info"
     )

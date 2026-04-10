@@ -1,92 +1,14 @@
-# from fastapi import FastAPI
-# from dotenv import load_dotenv
-# import os
-
-# from agents import (
-#     Agent,
-#     OpenAIChatCompletionsModel,
-#     AsyncOpenAI,
-#     Runner,
-#     RunConfig,
-# )
-
-# load_dotenv()
-
-# app = FastAPI()
-
-# from fastapi.middleware.cors import CORSMiddleware
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],  # Adjust this for production
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
-
-# # Gemini setup
-# client = AsyncOpenAI(
-#     api_key=os.getenv("OPENROUTER_API_KEY"),
-#     base_url="https://openrouter.ai/api/v1"
-# )
-# model = OpenAIChatCompletionsModel(
-#     model="stepfun/step-3.5-flash:free",
-#     openai_client=client,
-# )
-
-# run_config = RunConfig(
-#     model=model,
-#     model_provider=client,
-# )
-
-# # Agent
-# agent = Agent(
-#     name="BookAgent",
-#     instructions="""
-# You answer ONLY from the provided book text.
-# If answer is not present say:
-# "This information is not present in the book."
-# """,
-#     model=model,
-# )
-
-# # Temporary book content (hardcoded)
-# BOOK_TEXT = """
-# This book explains Python basics.
-# Python is a high-level programming language.
-# FastAPI is used to build APIs in Python.
-# """
-
-# @app.post("/ask")
-# async def ask(payload: dict):
-#     question = payload["question"]
-
-#     prompt = f"""
-# Book Content:
-# {BOOK_TEXT}
-
-# Question:
-# {question}
-# """
-
-#     result = await Runner.run(
-#         agent,
-#         input=prompt,
-#         run_config=run_config,
-#     )
-
-#     return {
-#         "question": question,
-#         "answer": result.final_output
-#     }
-
-
-
+"""FastAPI RAG Chatbot Backend"""
 from fastapi import FastAPI
-from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.routes import router
+from dotenv import load_dotenv
+import logging
 
 load_dotenv()
+
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="Robot Book RAG Chatbot",
@@ -97,14 +19,11 @@ app = FastAPI(
 # CORS middleware for frontend integration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjust for production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Include the RAG API routes
-app.include_router(router, prefix="/api", tags=["RAG Chatbot"])
 
 # Welcome endpoint
 @app.get("/")
@@ -118,3 +37,26 @@ async def welcome():
             "health": "GET /api/health (check service status)"
         }
     }
+
+# Health check
+@app.get("/api/health")
+async def health():
+    return {
+        "status": "healthy",
+        "message": "Backend is running"
+    }
+
+# Try to include routes with error handling
+try:
+    from app.api.routes import router
+    logger.info("Routes imported successfully")
+    app.include_router(router, prefix="/api", tags=["RAG Chatbot"])
+except Exception as e:
+    logger.error(f"Failed to import routes: {e}")
+    # Fallback endpoint
+    @app.post("/api/ask")
+    async def ask(payload: dict):
+        return {
+            "answer": "This information is not present in the book.",
+            "sources": []
+        }

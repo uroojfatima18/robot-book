@@ -34,12 +34,11 @@ ENV PATH=/root/.local/bin:$PATH \
     PYTHONDONTWRITEBYTECODE=1 \
     PORT=7860
 
-# Expose port (Hugging Face Spaces standard)
+# Expose port
 EXPOSE 7860
 
-# Create start script
-RUN echo '#!/bin/bash\npython -c "import uvicorn; from main import app; uvicorn.run(app, host=\"0.0.0.0\", port=7860, log_level=\"info\")"' \
-    > /app/start.sh && chmod +x /app/start.sh
+# Run the application directly with uvicorn
+CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \

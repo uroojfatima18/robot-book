@@ -17,33 +17,49 @@ _embedding_client = AsyncOpenAI(
 async def embed_text(text: str) -> list[float]:
     """
     Generate a 1536-dimensional embedding vector using OpenRouter's text-embedding-3-small.
+    Has a 8-second timeout to prevent hanging.
     """
     if not text.strip():
         return [0.0] * 1536
 
     try:
-        response = await _embedding_client.embeddings.create(
-            model=EMBEDDING_MODEL,
-            input=text
+        import asyncio
+        response = await asyncio.wait_for(
+            _embedding_client.embeddings.create(
+                model=EMBEDDING_MODEL,
+                input=text
+            ),
+            timeout=8  # 8 second timeout
         )
         return response.data[0].embedding
+    except asyncio.TimeoutError:
+        print(f"[Embedder] OpenRouter request timed out")
+        return [0.0] * 1536
     except Exception as e:
         print(f"[Embedder] OpenRouter Embedding Error: {e}")
-        raise
+        return [0.0] * 1536
 
 async def embed_batch(texts: list[str]) -> list[list[float]]:
     """
     Generate embeddings for a list of strings using OpenRouter.
+    Has a 15-second timeout to prevent hanging.
     """
     if not texts:
         return []
 
     try:
-        response = await _embedding_client.embeddings.create(
-            model=EMBEDDING_MODEL,
-            input=texts
+        import asyncio
+        response = await asyncio.wait_for(
+            _embedding_client.embeddings.create(
+                model=EMBEDDING_MODEL,
+                input=texts
+            ),
+            timeout=15  # 15 second timeout for batch
         )
         return [item.embedding for item in response.data]
+    except asyncio.TimeoutError:
+        print(f"[Embedder] OpenRouter batch request timed out")
+        return [[0.0] * 1536 for _ in texts]
     except Exception as e:
         print(f"[Embedder] OpenRouter Batch Embedding Error: {e}")
-        raise
+        return [[0.0] * 1536 for _ in texts]

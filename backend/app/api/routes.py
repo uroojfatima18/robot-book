@@ -66,7 +66,18 @@ async def ask(payload: ChatRequest):
             else:
                 # RETRIEVAL — Retrieve FIRST, always.
                 # This reduces the context to only relevant parts of the book.
-                chunks = await retrieve_relevant_chunks(question, limit=5)
+                try:
+                    import asyncio
+                    chunks = await asyncio.wait_for(
+                        retrieve_relevant_chunks(question, limit=5),
+                        timeout=10  # 10 second timeout for embedding + search
+                    )
+                except asyncio.TimeoutError:
+                    print(f"[RAG] Retrieval timeout for question: {question}")
+                    chunks = []
+                except Exception as e:
+                    print(f"[RAG] Retrieval error: {e}")
+                    chunks = []
 
                 # 2. Step 2: GATING — Hallucination prevention at the code level.
                 # If no relevant chunks are found, return fallback message immediately.

@@ -11,19 +11,19 @@ const FEATURES = [
     title: 'Robotics Fundamentals',
     description: 'Learn the core principles of robot design, kinematics, and control systems.',
     icon: '🤖',
-    link: '/docs/ros2-nervous-system/chapter_1_introduction'
+    link: '/docs/01-ros2-nervous-system/chapter_1_introduction'
   },
   {
     title: 'Programming & Control',
     description: 'Master ROS 2, Python, and C++ for building intelligent robotic systems.',
     icon: '💻',
-    link: '/docs/digital-twin/chapter_2_introduction'
+    link: '/docs/02-digital-twin/introduction'
   },
   {
     title: 'AI & Machine Learning',
     description: 'Integrate computer vision, deep learning, and autonomous decision-making.',
     icon: '🧠',
-    link: '/docs/ai-robot-brain/chapter_3_introduction'
+    link: '/docs/03-ai-robot-brain/introduction'
   },
 ];
 
@@ -83,12 +83,12 @@ function HomepageHeader() {
             <div className={styles.heroButtons}>
               <Link
                 className="button button--primary button--lg margin-right--md"
-                to="/docs/ros2-nervous-system/chapter_1_introduction">
+                to="/docs/01-ros2-nervous-system/chapter_1_introduction">
                 Begin Learning
               </Link>
               <Link
                 className="button button--secondary button--lg button--outline"
-                to="/docs/">
+                to="/docs/01-ros2-nervous-system/introduction">
                 View Contents
               </Link>
             </div>
