@@ -4,17 +4,24 @@ import { useAuth } from '../AuthContext';
 import { useChatAPI } from '../../hooks/useChatAPI';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Link from '@docusaurus/Link';
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
-  const { user } = useAuth();
-  const { messages, streamingContent, isLoading, error, sendMessage } = useChatAPI();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const auth = useAuth();
+  const user = auth ? auth.user : null;
+  
+  const chatAPI = useChatAPI();
+  const { messages, streamingContent, isLoading, error, sendMessage } = chatAPI || {
+    messages: [], streamingContent: "", isLoading: false, error: null, sendMessage: () => {}
+  };
 
   const [inputText, setInputText] = useState("");
   const [selectedText, setSelectedText] = useState("");
   const messagesEndRef = useRef(null);
   
-  const botAvatarUrl = useBaseUrl('/img/robot-avatar.png');
+  const botAvatarUrl = useBaseUrl('img/robot-avatar.png');
 
   // Handle text selection from the book
   useEffect(() => {
@@ -49,7 +56,7 @@ export default function Chatbot() {
   return (
     <div className={styles.chatbotWidget}>
       {isOpen && (
-        <div className={styles.chatCard}>
+        <div className={clsx(styles.chatCard, isExpanded && styles.expanded)}>
           {/* Header */}
           <div className={styles.cardHeader}>
             <div className={styles.headerInfo}>
@@ -61,7 +68,16 @@ export default function Chatbot() {
                 </span>
               </div>
             </div>
-            <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>✕</button>
+            <div className={styles.headerActions}>
+              <button 
+                className={styles.actionBtn} 
+                onClick={() => setIsExpanded(!isExpanded)}
+                title={isExpanded ? "Shrink" : "Expand"}
+              >
+                {isExpanded ? '⬂' : '⬃'}
+              </button>
+              <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>✕</button>
+            </div>
           </div>
 
           {/* Messages */}
@@ -134,8 +150,6 @@ export default function Chatbot() {
 
       {/* Floating Toggle Button */}
       <button className={styles.toggleButton} onClick={() => setIsOpen(!isOpen)}>
-        {/* Using the generated avatar as the icon for the button too, or could be a different icon.
-            The image showed a robot face in a circle. */}
         <img src={botAvatarUrl} alt="Chat" className={styles.buttonIcon} />
         <div className={styles.statusDot} />
       </button>

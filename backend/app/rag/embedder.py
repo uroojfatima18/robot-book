@@ -29,7 +29,7 @@ async def embed_text(text: str) -> list[float]:
                 model=EMBEDDING_MODEL,
                 input=text
             ),
-            timeout=8  # 8 second timeout
+            timeout=20  # increased to 20 seconds
         )
         return response.data[0].embedding
     except asyncio.TimeoutError:
@@ -54,7 +54,7 @@ async def embed_batch(texts: list[str]) -> list[list[float]]:
                 model=EMBEDDING_MODEL,
                 input=texts
             ),
-            timeout=15  # 15 second timeout for batch
+            timeout=40  # increased to 40 seconds
         )
         return [item.embedding for item in response.data]
     except asyncio.TimeoutError:

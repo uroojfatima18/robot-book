@@ -64,13 +64,15 @@ async def ask(payload: ChatRequest):
                 context_str = f"USER SELECTED TEXT:\n{selected_text}"
                 chunks = [] # No DB chunks needed when answering selected text
             else:
-                # RETRIEVAL — Retrieve FIRST, always.
-                # This reduces the context to only relevant parts of the book.
+                # RETRIEVAL — Retrieve context from the book.
+                question_lower = question.lower()
+                is_small_talk = any(word in question_lower for word in ["hi", "hello", "hey", "who are you", "help", "greet"]) and len(question.split()) < 4
+
                 try:
                     import asyncio
                     chunks = await asyncio.wait_for(
                         retrieve_relevant_chunks(question, limit=5),
-                        timeout=10  # 10 second timeout for embedding + search
+                        timeout=30  # Wait more than the embedder timeout
                     )
                 except asyncio.TimeoutError:
                     print(f"[RAG] Retrieval timeout for question: {question}")
@@ -79,28 +81,49 @@ async def ask(payload: ChatRequest):
                     print(f"[RAG] Retrieval error: {e}")
                     chunks = []
 
-                # 2. Step 2: GATING — Hallucination prevention at the code level.
-                # If no relevant chunks are found, return fallback message immediately.
-                if not chunks:
-                    answer = "This information is not present in the book."
-                    # Stream the fallback answer
-                    for char in answer:
-                        event = json.dumps({"type": "token", "data": char})
-                        yield f"data: {event}\n\n"
-                    yield 'data: {"type": "done"}\n\n'
-                    return
-
-                # Join all chunk texts to create a focused pool of knowledge for the model.
-                context_str = "\n\n---\n\n".join(chunk.text for chunk in chunks)
+                # 2. Step 2: GATING — ONLY block if it's a technical query with NO context.
+                # If it's small talk or we have chunks, proceed to LLM.
+                if not chunks and not is_small_talk:
+                    # Only return "not in book" for longer, technical-looking queries.
+                    if len(question.split()) > 3:
+                        answer = "This information is not present in the book."
+                        for char in answer:
+                            event = json.dumps({"type": "token", "data": char})
+                            yield f"data: {event}\n\n"
+                        yield 'data: {"type": "done"}\n\n'
+                        return
+                    else:
+                        # Fallback for short non-technical queries
+                        context_str = "No specific technical context found. You are allowed to greet the user and have a friendly conversation as the Robot Book Assistant."
+                else:
+                    # Join all chunk texts to create context
+                    context_str = "\n\n---\n\n".join(chunk.text for chunk in chunks) if chunks else "The user is greeting you. Be polite and welcoming."
             
             # 3. Step 3: CONVERSATION — build context and call LLM.
-            # We only pass the focused context, not the whole book.
             answer = await ask_book(question, context_str)
 
             # Stream the answer character by character
             for char in answer:
                 event = json.dumps({"type": "token", "data": char})
                 yield f"data: {event}\n\n"
+
+            # Signal sources if any were used
+            if chunks:
+                source_list = []
+                # Remove duplicates based on source_url
+                seen_urls = set()
+                for c in chunks:
+                    if c.source_url and c.source_url not in seen_urls:
+                        source_list.append({
+                            "title": c.title,
+                            "chapter": c.chapter,
+                            "source_url": c.source_url
+                        })
+                        seen_urls.add(c.source_url)
+                
+                if source_list:
+                    event = json.dumps({"type": "sources", "data": source_list})
+                    yield f"data: {event}\n\n"
 
             # Signal end of stream
             yield 'data: {"type": "done"}\n\n'

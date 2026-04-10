@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8001/api";
+const API_BASE_URL = "http://127.0.0.1:8001/api";
 
 export function useChatAPI() {
   const [messages, setMessages] = useState([]);
@@ -46,17 +46,20 @@ export function useChatAPI() {
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let fullContent = "";
+      let messageSources = [];
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
 
-        const chunk = decoder.decode(value);
-        const lines = chunk.split("\n");
+        const chunk = decoder.decode(value, { stream: true });
+        // Handle multiple SSE events in one chunk more robustly
+        const lines = chunk.split(/\r?\n\r?\n/);
 
-        for (const line of lines) {
+        for (const rawLine of lines) {
+          const line = rawLine.trim();
           if (line.startsWith("data: ")) {
-            const data = line.slice(6);
+            const data = line.slice(6).trim();
             if (data === "[DONE]") continue;
 
             try {
@@ -65,22 +68,24 @@ export function useChatAPI() {
               if (event.type === "token") {
                 fullContent += event.data;
                 setStreamingContent(fullContent);
+              } else if (event.type === "sources") {
+                messageSources = event.data;
               } else if (event.type === "done") {
-                // Add assistant message
                 const assistantMessage = {
                   id: Date.now() + 1,
                   role: "assistant",
                   content: fullContent,
+                  sources: messageSources || [],
                   createdAt: new Date(),
                 };
                 setMessages((prev) => [...prev, assistantMessage]);
                 setStreamingContent("");
+                fullContent = ""; // Reset for next use
               } else if (event.type === "error") {
                 throw new Error(event.message || "Error from server");
               }
             } catch (parseError) {
-              // Ignore JSON parse errors for partial chunks
-              console.debug("Parse error (expected for partial chunks):", parseError);
+              console.debug("Parse error:", parseError, "on line:", line);
             }
           }
         }

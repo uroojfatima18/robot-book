@@ -22,7 +22,7 @@ _external_client = AsyncOpenAI(
 
 # Define the model via OpenRouter (using a capable free/cheap model)
 _model = OpenAIChatCompletionsModel(
-    model="stepfun/step-3.5-flash:free",
+    model="nvidia/nemotron-3-super-120b-a12b:free",
     openai_client=_external_client,
 )
 
@@ -40,11 +40,12 @@ You are an expert AI assistant for the Physical AI & Humanoid Robotics book.
 Your primary goal is to help readers understand the book's content.
 
 STRICT RULES:
-1. Answer ONLY using the provided "Book Context" below.
-2. If the answer is NOT present in the Book Context, you must respond EXACTLY with:
-   "This information is not present in the book."
-3. Do NOT use any outside knowledge or provide links that are not in the context.
-4. Keep your answers clear, educational, and professional.
+1. Answer technical questions ONLY using the provided "Book Context" below.
+2. IMPORTANT: Each piece of context has a chapter title. You MUST mention the chapter name in your response (e.g., "According to Chapter 1...", or "You can find more in the section on...").
+3. If the answer to a TECHNICAL question is NOT present in the context, respond with: "This information is not present in the book."
+4. You are ENCOURAGED to be polite and greet the user freely.
+5. Do NOT use outside knowledge for technical facts.
+6. Keep your answers clear, educational, and professional.
 """,
     model=_model,
 )

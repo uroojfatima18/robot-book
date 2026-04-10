@@ -1,13 +1,22 @@
 import React from 'react';
-import Chatbot from '@site/src/components/Chatbot';
-import { AuthProvider } from '@site/src/components/AuthContext';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
-// Integration of Auth and Global Chatbot
 export default function Root({children}) {
   return (
-    <AuthProvider>
+    <>
       {children}
-      <Chatbot />
-    </AuthProvider>
+      <BrowserOnly>
+        {() => {
+          // Dynamic requires to prevent SSR crashes on documentation pages
+          const { AuthProvider } = require('../components/AuthContext');
+          const Chatbot = require('../components/Chatbot').default;
+          return (
+            <AuthProvider>
+              <Chatbot />
+            </AuthProvider>
+          );
+        }}
+      </BrowserOnly>
+    </>
   );
 }

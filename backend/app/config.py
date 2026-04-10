@@ -10,10 +10,11 @@ load_dotenv(find_dotenv())
 
 
 def _require(key: str) -> str:
-    """Get env var or raise clear error on missing value."""
+    """Get env var or log warning if missing."""
     value = os.getenv(key)
     if not value:
-        raise ValueError(f"Missing required environment variable: {key}")
+        print(f"⚠️  WARNING: Missing environment variable: {key}")
+        return "MISSING" # Return placeholder to prevent crash
     return value
 
 

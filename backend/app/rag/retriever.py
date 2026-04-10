@@ -58,7 +58,7 @@ async def retrieve_relevant_chunks(question: str, limit: int = 5) -> list[BookCh
                 ))
             
             if chunks:
-                print(f"[RETRIEVER] Found {len(chunks)} Qdrant chunks, returning")
+                print(f"[RETRIEVER] Found {len(chunks)} Qdrant chunks. Sample Source URL: {chunks[0].source_url if chunks else 'None'}")
                 return chunks
             else:
                 print(f"[RETRIEVER] Qdrant returned points but no valid payloads")

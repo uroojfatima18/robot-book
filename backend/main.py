@@ -38,13 +38,28 @@ async def welcome():
         }
     }
 
-# Health check
-@app.get("/api/health")
-async def health():
-    return {
-        "status": "healthy",
-        "message": "Backend is running"
-    }
+# Startup event to ensure database tables and collections exist
+@app.on_event("startup")
+async def startup_event():
+    logger.info("🚀 Backend is starting up...")
+    try:
+        from app.db.neon_client import ensure_table
+        from app.db.qdrant_client import ensure_collection
+        
+        logger.info("[DB] Checking Neon PostgreSQL...")
+        await ensure_table()
+        
+        logger.info("[DB] Checking Qdrant Cloud...")
+        # ensure_collection is synchronous in our client
+        ensure_collection()
+        
+        logger.info("✅ Startup sequence complete.")
+    except Exception as e:
+        logger.error(f"❌ Error during startup sequence: {e}")
+        # We don't exit, we let the app run so we can debug.
+
+# Included routes are below
+# Health and Ask are handled by the router in app/api/routes.py
 
 # Try to include routes with error handling
 try:
